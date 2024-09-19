@@ -1,18 +1,19 @@
-# Welcome.
+# Welcome
 
 
 **Find me on Telegram:** [probabilityone](https://t.me/probabilityone)
 
+<!--
 ---
 
 `The world wasn't always filled with noise,`
-`              `
+`            `
 `but behind the veil of the obvious—`
-`             `
+`           `
 `where meaning is quietly set into motion;`
 `        `
-`embedded in systems, frameworks, and structures.`
-`           `
+`in systems, frameworks, and structures.`
+`         `
 `        it is also where changes happens.`
         `               `
 `our work is elsewhere—unseen, but not unmade.`
@@ -23,10 +24,10 @@
 `Is it the code, or the system behind it? `  `         `
 `   Our universe is defined by chaos and entropy, ` 
 `       `   
-`   what we create are brief pockets of order.  `
-`   We build these pockets—  `
+`what we create are brief pockets of order.`
+` We build these pockets—  `
 `        `
-`   not just to fight the chaos,` 
+`  not just to fight the chaos,` 
 `but to harmonize with it.`
 `       `   
 ` Technology, economy, data and cities—  all interconnected.`
