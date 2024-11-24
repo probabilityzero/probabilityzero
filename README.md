@@ -1,7 +1,7 @@
 **Welcome**
 
 
-**You can find me on Telegram:** [probabilityone](https://t.me/probabilityone)
+**You can reach out to me:** [probabilityone](https://t.me/probabilityone)
 
 <!--
 ---
