@@ -1,7 +1,12 @@
-**Welcome**
 
 
 **You can reach out to me:** [probabilityone](https://t.me/probabilityone)
+
+
+
+### Visitor Count
+  <img src="https://profile-counter.glitch.me/probabilityone/count.svg" />
+</p>
 
 <!--
 ---
