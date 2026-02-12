@@ -8,7 +8,7 @@ data.sort((a, b) => {
   return a.type.localeCompare(b.type);
 });
 
-const archivedStatuses = ["Successful", "Failed", "-"];
+const archivedStatuses = ["successful", "failed", "-"];
 
 const isArchived = (status) => archivedStatuses.includes(status);
 
@@ -16,7 +16,7 @@ const active = data.filter(item => !isArchived(item.status));
 const archived = data.filter(item => isArchived(item.status));
 
 function generateTable(items) {
-  let table = `| Projects | | Status |\n`;
+  let table = `| projects | repositories | status |\n`;
   table += `|------|---------|--------|\n`;
 
   let lastType = "";
@@ -31,7 +31,7 @@ function generateTable(items) {
   return table;
 }
 
-let output = `### Projects navigate\n\n`;
+let output = `### My Projects\n\n`;
 
 output += generateTable(active);
 
