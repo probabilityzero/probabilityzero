@@ -2,9 +2,8 @@ name: Generate README
 
 on:
   push:
-    paths:
-      - projects.json
-      - generate-readme.js
+    branches:
+      - main
 
 permissions:
   contents: write
