@@ -6,6 +6,9 @@ on:
       - projects.json
       - generate-readme.js
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,4 +29,3 @@ jobs:
           git add README.md
           git commit -m "Auto-update README" || echo "No changes"
           git push
-
