@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 
 const data = JSON.parse(fs.readFileSync("projects.json", "utf8"));
@@ -9,20 +8,40 @@ data.sort((a, b) => {
   return a.type.localeCompare(b.type);
 });
 
-let output = `# Projects\n\n`;
-output += `| Type | Project | Status |\n`;
-output += `|------|---------|--------|\n`;
+const archivedStatuses = ["Successful", "Failed", "-"];
 
-let lastType = "";
+const isArchived = (status) => archivedStatuses.includes(status);
 
-data.forEach(item => {
-  const type = item.type === lastType ? "" : item.type;
-  lastType = item.type;
+const active = data.filter(item => !isArchived(item.status));
+const archived = data.filter(item => isArchived(item.status));
 
-  output += `| ${type} | [${item.name}](${base}${item.name}) | ${item.status} |\n`;
-});
+function generateTable(items) {
+  let table = `| Type | Project | Status |\n`;
+  table += `|------|---------|--------|\n`;
+
+  let lastType = "";
+
+  items.forEach(item => {
+    const type = item.type === lastType ? "" : item.type;
+    lastType = item.type;
+
+    table += `| ${type} | [${item.name}](${base}${item.name}) | ${item.status} |\n`;
+  });
+
+  return table;
+}
+
+let output = `### Projects navigation\n\n`;
+
+output += generateTable(active);
+
+if (archived.length > 0) {
+  output += `\n---\n\n`;
+  output += `<details>\n<summary>Completed / Failed</summary>\n\n`;
+  output += generateTable(archived);
+  output += `\n</details>\n`;
+}
 
 fs.writeFileSync("README.md", output);
 
 console.log("README generated.");
-

@@ -1,27 +1,26 @@
 [
   { "type": "Lifebook", "name": "lifebook", "status": "Active" },
-  { "type": "Lifebook", "name": "lifebook-taskforce", "status": "Active" },
+  { "type": "Lifebook", "name": "taskforce", "status": "Active" },
+  { "type": "Lifebook", "name": "sol", "status": "Successful" },
 
   { "type": "Games", "name": "games", "status": "Active" },
   { "type": "Games", "name": "games.py", "status": "Active" },
-
-  { "type": "Coding", "name": "sandbox", "status": "Active" },
-  { "type": "Coding", "name": "devapps", "status": "Active" },
+  { "type": "Games", "name": "moonview", "status": "Experimental" },
 
   { "type": "Portfolio", "name": "portfoliofortarique", "status": "Active" },
   { "type": "Portfolio", "name": "portfolioforelenasili", "status": "Active" },
+  { "type": "Portfolio", "name": "portfolioforitsas", "status": "Successful" },
+  { "type": "Portfolio", "name": "websiteforhanslabs", "status": "-" },
 
-  { "type": "Experimental", "name": "moonview", "status": "Active" },
-  { "type": "Experimental", "name": "wordview", "status": "Active" },
-  { "type": "Experimental", "name": "metaview", "status": "Active" },
-  { "type": "Experimental", "name": "ideview", "status": "Active" },
+  { "type": "Tools", "name": "sandbox", "status": "Active" },
+  { "type": "Tools", "name": "devapps", "status": "Active" },
+  { "type": "Tools", "name": "ideview", "status": "Active" },
 
-  { "type": "Core", "name": "sol", "status": "Archived" },
-  { "type": "Core", "name": "mash3d", "status": "Archived" },
-  { "type": "Core", "name": "astronomy", "status": "Archived" },
+  { "type": "Interactive", "name": "mash3d", "status": "Successful" },
+  { "type": "Interactive", "name": "astronomy", "status": "Successful" },
 
-  { "type": "Portfolio", "name": "portfolioforitsas", "status": "Archived" },
+  { "type": "Data", "name": "sparklineo", "status": "-" },
 
-  { "type": "Data", "name": "sparklineo", "status": "Archived" }
+  { "type": "Utilities", "name": "wordview", "status": "Active" },
+  { "type": "Utilities", "name": "metaview", "status": "Active" }
 ]
-
