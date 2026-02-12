@@ -5,7 +5,7 @@
 
   { "type": "Games", "name": "games", "status": "active" },
   { "type": "Games", "name": "games.py", "status": "active" },
-  { "type": "Games", "name": "moonview", "status": "experimental" },
+  { "type": "Games", "name": "moonview", "status": "-" },
   { "type": "Games", "name": "hunch", "status": "failed" },
   { "type": "Games", "name": "echecs", "status": "-" }, 
   { "type": "Games", "name": "tictactoe", "status": "-" },
@@ -13,16 +13,16 @@
 
   { "type": "Portfolio", "name": "portfoliofortarique", "status": "active" },
   { "type": "Portfolio", "name": "tariquenotes", "status": "active" },
-  { "type": "Portfolio", "name": "portfolioforelenasili", "status": "active" },
+  { "type": "Portfolio", "name": "portfolioforelenasili", "status": "successful" },
   { "type": "Portfolio", "name": "portfolioforitsas", "status": "successful" },
   { "type": "Portfolio", "name": "hanslabswebsite", "status": "-" }, 
   { "type": "Portfolio", "name": "k", "status": "-" },
   { "type": "Portfolio", "name": "hanslibrary", "status": "active" },
   { "type": "Portfolio", "name": "hanslibraryshow", "status": "experimental" },
   { "type": "Portfolio", "name": "infinitegallery", "status": "experimental" },
-  { "type": "Portfolio", "name": "elsoreilgallery", "status": "experimental" },
+  { "type": "Portfolio", "name": "elsoreilgallery", "status": "-" },
   { "type": "Portfolio", "name": "yearofthesnake", "status": "experimental" },
-  { "type": "Portfolio", "name": "terminalfortarique", "status": "experimental" },
+  { "type": "Portfolio", "name": "terminalfortarique", "status": "-" },
   { "type": "Portfolio", "name": "probabilityzero", "status": "-" },
 
   { "type": "Interactive", "name": "mash3d", "status": "successful" },
@@ -32,10 +32,10 @@
 
   { "type": "Tools", "name": "sandbox", "status": "active" },
   { "type": "Tools", "name": "devbox", "status": "active" },
-  { "type": "Tools", "name": "codeview", "status": "active" },
+  { "type": "Tools", "name": "codeview", "status": "-" },
 
-  { "type": "Utilities", "name": "wordview", "status": "active" },
-  { "type": "Utilities", "name": "metaview", "status": "active" },
+  { "type": "Utilities", "name": "wordview", "status": "-" },
+  { "type": "Utilities", "name": "metaview", "status": "-" },
 
   { "type": "Storage", "name": "jupyterkernels", "status": "-" },
   { "type": "Storage", "name": "cloudstorage", "status": "-" }, 
@@ -61,7 +61,7 @@
   { "type": "Themes", "name": "jadevinetheme", "status": "-" },
 
   { "type": "Chatbots", "name": "llmcolony", "status": "experimental" },
-  { "type": "Chatbots", "name": "simtube", "status": "experimental" }, 
+  { "type": "Chatbots", "name": "simtube", "status": "-" }, 
   { "type": "Chatbots", "name": "telegramllmbot", "status": "experimental" },
 
   { "type": "Templates", "name": "whatawonderfulworld", "status": "-" },
