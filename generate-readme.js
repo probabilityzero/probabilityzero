@@ -16,7 +16,7 @@ const active = data.filter(item => !isArchived(item.status));
 const archived = data.filter(item => isArchived(item.status));
 
 function generateTable(items) {
-  let table = `| Type | Project | Status |\n`;
+  let table = `| Projects | | Status |\n`;
   table += `|------|---------|--------|\n`;
 
   let lastType = "";
@@ -31,17 +31,17 @@ function generateTable(items) {
   return table;
 }
 
-let output = `### Projects navigation\n\n`;
+let output = `### Projects navigate\n\n`;
 
 output += generateTable(active);
 
-if (archived.length > 0) {
-  output += `\n---\n\n`;
-  output += `<details>\n<summary>Completed / Failed</summary>\n\n`;
+if (archived.length > 0) { 
+  output += `<details>\n<summary>Archived Projects</summary>\n\n`;
+  output += `\n`;
   output += generateTable(archived);
   output += `\n</details>\n`;
 }
 
-fs.writeFileSync("README.md", output);
+fs.writeFileSync("readme.md", output);
 
 console.log("README generated.");
