@@ -42,6 +42,6 @@ if (archived.length > 0) {
   output += `\n</details>\n`;
 }
 
-fs.writeFileSync("readme.md", output);
+fs.writeFileSync("README.md", output);
 
 console.log("README generated.");
