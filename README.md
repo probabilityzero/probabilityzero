@@ -9,8 +9,6 @@
 | Lifebook | [lifebook](https://github.com/probabilityzero/lifebook) | active |
 |  | [taskforce](https://github.com/probabilityzero/taskforce) | active |
 | Portfolio | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | active |
-|  | [hanslibraryshow](https://github.com/probabilityzero/hanslibraryshow) | experimental |
-|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | experimental |
 |  | [portfoliofortarique](https://github.com/probabilityzero/portfoliofortarique) | active |
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | active |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | experimental |
@@ -35,6 +33,8 @@
 | Others | [pilot](https://github.com/probabilityzero/pilot) | - |
 | Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | - |
 |  | [hanslabswebsite](https://github.com/probabilityzero/hanslabswebsite) | - |
+|  | [hanslibraryshow](https://github.com/probabilityzero/hanslibraryshow) | - |
+|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
 |  | [k](https://github.com/probabilityzero/k) | - |
 |  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) | successful |
 |  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | successful |
