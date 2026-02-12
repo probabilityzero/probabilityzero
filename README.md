@@ -1,47 +1,47 @@
-### Projects navigate
+### My Projects
 
-| Projects | | Status |
+| projects | repositories | status |
 |------|---------|--------|
-| Chatbots | [llmcolony](https://github.com/probabilityzero/llmcolony) | Experimental |
-|  | [simtube](https://github.com/probabilityzero/simtube) | Experimental |
-|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | Experimental |
-| Games | [games](https://github.com/probabilityzero/games) | Active |
-|  | [games.py](https://github.com/probabilityzero/games.py) | Active |
-|  | [moonview](https://github.com/probabilityzero/moonview) | Experimental |
-| Lifebook | [lifebook](https://github.com/probabilityzero/lifebook) | Active |
-|  | [taskforce](https://github.com/probabilityzero/taskforce) | Active |
-| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | Experimental |
-|  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | Active |
-|  | [hanslibraryshow](https://github.com/probabilityzero/hanslibraryshow) | Experimental |
-|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | Experimental |
-|  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) | Active |
-|  | [portfoliofortarique](https://github.com/probabilityzero/portfoliofortarique) | Active |
-|  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | Active |
-|  | [terminalfortarique](https://github.com/probabilityzero/terminalfortarique) | Experimental |
-|  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | Experimental |
-| Tools | [codeview](https://github.com/probabilityzero/codeview) | Active |
-|  | [devbox](https://github.com/probabilityzero/devbox) | Active |
-|  | [sandbox](https://github.com/probabilityzero/sandbox) | Active |
-| Utilities | [metaview](https://github.com/probabilityzero/metaview) | Active |
-|  | [wordview](https://github.com/probabilityzero/wordview) | Active |
+| Chatbots | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
+|  | [simtube](https://github.com/probabilityzero/simtube) | experimental |
+|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | experimental |
+| Games | [games](https://github.com/probabilityzero/games) | active |
+|  | [games.py](https://github.com/probabilityzero/games.py) | active |
+|  | [moonview](https://github.com/probabilityzero/moonview) | experimental |
+| Lifebook | [lifebook](https://github.com/probabilityzero/lifebook) | active |
+|  | [taskforce](https://github.com/probabilityzero/taskforce) | active |
+| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | experimental |
+|  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | active |
+|  | [hanslibraryshow](https://github.com/probabilityzero/hanslibraryshow) | experimental |
+|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | experimental |
+|  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) | active |
+|  | [portfoliofortarique](https://github.com/probabilityzero/portfoliofortarique) | active |
+|  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | active |
+|  | [terminalfortarique](https://github.com/probabilityzero/terminalfortarique) | experimental |
+|  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | experimental |
+| Tools | [codeview](https://github.com/probabilityzero/codeview) | active |
+|  | [devbox](https://github.com/probabilityzero/devbox) | active |
+|  | [sandbox](https://github.com/probabilityzero/sandbox) | active |
+| Utilities | [metaview](https://github.com/probabilityzero/metaview) | active |
+|  | [wordview](https://github.com/probabilityzero/wordview) | active |
 <details>
 <summary>Archived Projects</summary>
 
 
-| Projects | | Status |
+| projects | repositories | status |
 |------|---------|--------|
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) | - |
 | Games | [echecs](https://github.com/probabilityzero/echecs) | - |
-|  | [hunch](https://github.com/probabilityzero/hunch) | Failed |
+|  | [hunch](https://github.com/probabilityzero/hunch) | failed |
 |  | [tictactoe](https://github.com/probabilityzero/tictactoe) | - |
 |  | [wordle](https://github.com/probabilityzero/wordle) | - |
-| Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | Successful |
-|  | [mash3d](https://github.com/probabilityzero/mash3d) | Successful |
-| Lifebook | [sol](https://github.com/probabilityzero/sol) | Successful |
+| Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
+|  | [mash3d](https://github.com/probabilityzero/mash3d) | successful |
+| Lifebook | [sol](https://github.com/probabilityzero/sol) | successful |
 | Others | [pilot](https://github.com/probabilityzero/pilot) | - |
 | Portfolio | [hanslabswebsite](https://github.com/probabilityzero/hanslabswebsite) | - |
 |  | [k](https://github.com/probabilityzero/k) | - |
-|  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | Successful |
+|  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | successful |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | - |
 | Storage | [aiwritingtools](https://github.com/probabilityzero/aiwritingtools) | - |
 |  | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
