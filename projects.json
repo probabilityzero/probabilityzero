@@ -1,0 +1,27 @@
+[
+  { "type": "Lifebook", "name": "lifebook", "status": "Active" },
+  { "type": "Lifebook", "name": "lifebook-taskforce", "status": "Active" },
+
+  { "type": "Games", "name": "games", "status": "Active" },
+  { "type": "Games", "name": "games.py", "status": "Active" },
+
+  { "type": "Coding", "name": "sandbox", "status": "Active" },
+  { "type": "Coding", "name": "devapps", "status": "Active" },
+
+  { "type": "Portfolio", "name": "portfoliofortarique", "status": "Active" },
+  { "type": "Portfolio", "name": "portfolioforelenasili", "status": "Active" },
+
+  { "type": "Experimental", "name": "moonview", "status": "Active" },
+  { "type": "Experimental", "name": "wordview", "status": "Active" },
+  { "type": "Experimental", "name": "metaview", "status": "Active" },
+  { "type": "Experimental", "name": "ideview", "status": "Active" },
+
+  { "type": "Core", "name": "sol", "status": "Archived" },
+  { "type": "Core", "name": "mash3d", "status": "Archived" },
+  { "type": "Core", "name": "astronomy", "status": "Archived" },
+
+  { "type": "Portfolio", "name": "portfolioforitsas", "status": "Archived" },
+
+  { "type": "Data", "name": "sparklineo", "status": "Archived" }
+]
+

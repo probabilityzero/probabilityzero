@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Repositories</title>
+  <style>
+    body { font-family: system-ui; max-width: 900px; margin: 40px auto; }
+    button { padding: 6px 12px; margin-bottom: 20px; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; }
+    .archived { opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+<h2>Repositories</h2>
+<button id="toggle">Show Archived</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Language</th>
+    </tr>
+  </thead>
+  <tbody id="repos"></tbody>
+</table>
+
+<script>
+let showArchived = false;
+const tbody = document.getElementById("repos");
+const toggleBtn = document.getElementById("toggle");
+
+async function fetchRepos() {
+  const res = await fetch("https://api.github.com/users/probabilityzero/repos?per_page=100");
+  return await res.json();
+}
+
+function render(repos) {
+  tbody.innerHTML = "";
+  repos
+    .filter(repo => showArchived ? true : !repo.archived)
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .forEach(repo => {
+      const row = document.createElement("tr");
+      if (repo.archived) row.classList.add("archived");
+      row.innerHTML = `
+        <td><a href="${repo.html_url}" target="_blank">${repo.name}</a></td>
+        <td>${repo.language || "-"}</td>
+      `;
+      tbody.appendChild(row);
+    });
+}
+
+toggleBtn.onclick = async () => {
+  showArchived = !showArchived;
+  toggleBtn.textContent = showArchived ? "Hide Archived" : "Show Archived";
+  const repos = await fetchRepos();
+  render(repos);
+};
+
+fetchRepos().then(render);
+</script>
+
+</body>
+</html>
+
