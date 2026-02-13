@@ -3,6 +3,7 @@
 | projects | repositories | status |
 |------|---------|--------|
 | Chatbots | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
+|  | [nextlangchain](https://github.com/probabilityzero/nextlangchain) | experimental |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | experimental |
 | Games | [games](https://github.com/probabilityzero/games) | active |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
