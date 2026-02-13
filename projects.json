@@ -62,7 +62,7 @@
 
   { "type": "Chatbots", "name": "llmcolony", "status": "experimental" },
   { "type": "Chatbots", "name": "simtube", "status": "-" }, 
-  { "type": "Chatbots", "name": "telegramllmbot", "status": "experimental" },, 
+  { "type": "Chatbots", "name": "telegramllmbot", "status": "experimental" },
   { "type": "Chatbots", "name": "nextlangchain", "status": "experimental" },
 
   { "type": "Templates", "name": "whatawonderfulworld", "status": "-" },
