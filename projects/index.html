@@ -2,519 +2,638 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Projects Index</title>
+<title>Projects</title>
+
 <style>
-body{font-family:system-ui;background:#0b0c10;color:#e6e6e6;margin:0;padding:24px}
-h1{margin-bottom:8px}
-h2{margin-top:32px}
-table{width:100%;border-collapse:collapse;margin-top:12px}
-th,td{padding:10px;border-bottom:1px solid #222;text-align:left}
-th{position:sticky;top:0;background:#111}
-a{color:#7dd3fc;text-decoration:none}
-.live{background:#065f46;color:#a7f3d0;padding:4px 8px;border-radius:6px}
-input{width:100%;padding:10px;margin:16px 0;background:#111;border:1px solid #333;color:#eee;border-radius:8px}
+body{
+  margin:0;
+  background:#0b0f14;
+  color:#d6e3ff;
+  font-family:monospace;
+  image-rendering:pixelated;
+}
+
+/* Title bar */
+.titlebar{
+  background:linear-gradient(#0b3a6b,#082748);
+  color:#eaf6ff;
+  padding:8px 12px;
+  font-weight:bold;
+  border-bottom:2px solid #3aa0ff;
+  letter-spacing:1px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Center container */
+.wrap{
+  max-width:900px;
+  margin:28px auto;
+  padding:0 16px;
+}
+
+/* Retro buttons */
+.btn{
+  background:#0b3a6b;
+  border:2px solid #3aa0ff;
+  color:#eaf6ff;
+  padding:4px 10px;
+  text-decoration:none;
+  font-size:13px;
+  cursor:pointer;
+  margin-left:6px;
+  box-shadow:0 0 6px #3aa0ff40 inset;
+}
+
+.btn:hover{
+  background:#104b8c;
+}
+
+.btn.live{
+  background:#063f2e;
+  border-color:#2cffb2;
+  color:#baffea;
+}
+
+/* Search box */
+.search{
+  width:100%;
+  margin:14px 0 18px;
+  padding:8px;
+  background:#06080c;
+  border:2px solid #3aa0ff;
+  color:#eaf6ff;
+  font-family:monospace;
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#06080c;
+  border:2px solid #3aa0ff;
+}
+
+th,td{
+  padding:8px;
+  border-bottom:1px solid #1a2638;
+  text-align:left;
+}
+
+th{
+  background:#082748;
+  position:sticky;
+  top:0;
+}
+
+tr[data-archived="true"]{
+  opacity:.55;
+}
 </style>
 </head>
+
 <body>
 
-<h1>Projects</h1>
-<input id="search" placeholder="Search projects…" />
+<div class="titlebar">
+  <span>PROJECT REGISTRY</span>
+  <a class="btn" href="/probabilityzero">BACK</a>
+</div>
 
+<div class="wrap">
 
-  <section>
-    <h2>My Projects</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Type</th>
-          <th>Project</th>
-          <th>Status</th>
-          <th>Live</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
+<input id="search" class="search" placeholder="SEARCH PROJECTS">
+
+<div style="margin-bottom:10px;">
+  <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>TYPE</th>
+  <th>REPOSITORY</th>
+  <th>STATUS</th>
+</tr>
+</thead>
+<tbody>
+
+      <tr data-archived="false">
         <td>1</td>
         <td>Chatbots</td>
-        <td><a href="https://github.com/probabilityzero/llmcolony" target="_blank">llmcolony</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/llmcolony" target="_blank">llmcolony</a>
+        </td>
         <td>experimental</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>2</td>
         <td>Chatbots</td>
-        <td><a href="https://github.com/probabilityzero/nextlangchain" target="_blank">nextlangchain</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/nextlangchain" target="_blank">nextlangchain</a>
+        </td>
         <td>experimental</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>3</td>
         <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/games" target="_blank">games</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/games" target="_blank">games</a> <a class="btn live" href="https://quiz.tarique.me" target="_blank">LIVE</a>
+        </td>
         <td>active</td>
-        <td><a class="live" href="https://quiz.tarique.me" target="_blank">Live</a></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>4</td>
         <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/games.py" target="_blank">games.py</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/games.py" target="_blank">games.py</a>
+        </td>
         <td>active</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>5</td>
         <td>Lifebook</td>
-        <td><a href="https://github.com/probabilityzero/healthline" target="_blank">healthline</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/healthline" target="_blank">healthline</a>
+        </td>
         <td>early</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>6</td>
         <td>Lifebook</td>
-        <td><a href="https://github.com/probabilityzero/lifebook" target="_blank">lifebook</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/lifebook" target="_blank">lifebook</a>
+        </td>
         <td>active</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>7</td>
         <td>Tutorship</td>
-        <td><a href="https://github.com/probabilityzero/da" target="_blank">da</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/da" target="_blank">da</a>
+        </td>
         <td>active</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>8</td>
         <td>Tutorship</td>
-        <td><a href="https://github.com/probabilityzero/ds" target="_blank">ds</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/ds" target="_blank">ds</a>
+        </td>
         <td>active</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="false">
         <td>9</td>
         <td>Tutorship</td>
-        <td><a href="https://github.com/probabilityzero/nma" target="_blank">nma</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/nma" target="_blank">nma</a>
+        </td>
         <td>early</td>
-        <td></td>
-      </tr></tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Han's Projects</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Type</th>
-          <th>Project</th>
-          <th>Status</th>
-          <th>Live</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>1</td>
-        <td>Cosmosys</td>
-        <td><a href="https://github.com/hanslibrary/cosmosys" target="_blank">cosmosys</a></td>
-        <td>early</td>
-        <td></td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>The Medium House</td>
-        <td><a href="https://github.com/hanslibrary/thetraveler" target="_blank">thetraveler</a></td>
-        <td>early</td>
-        <td></td>
-      </tr></tbody>
-    </table>
-  </section>
-
-<details>
-  <summary>Archived</summary>
-  
-  <section>
-    <h2>Archived Projects</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Type</th>
-          <th>Project</th>
-          <th>Status</th>
-          <th>Live</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>1</td>
-        <td>Chatbots</td>
-        <td><a href="https://github.com/probabilityzero/simtube" target="_blank">simtube</a></td>
-        <td>failed</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Chatbots</td>
-        <td><a href="https://github.com/probabilityzero/telegramllmbot" target="_blank">telegramllmbot</a></td>
-        <td>successful</td>
-        <td><a class="live" href="https://t.me/hansuserbot" target="_blank">Live</a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Data</td>
-        <td><a href="https://github.com/probabilityzero/sparklineo" target="_blank">sparklineo</a></td>
-        <td>-</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/echecs" target="_blank">echecs</a></td>
-        <td>-</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/hunch" target="_blank">hunch</a></td>
-        <td>failed</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/moonview" target="_blank">moonview</a></td>
-        <td>-</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/tictactoe" target="_blank">tictactoe</a></td>
-        <td>-</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Games</td>
-        <td><a href="https://github.com/probabilityzero/wordle" target="_blank">wordle</a></td>
-        <td>-</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>Interactive</td>
-        <td><a href="https://github.com/probabilityzero/astronomy" target="_blank">astronomy</a></td>
-        <td>successful</td>
-        <td></td>
-      </tr>
-      <tr>
+      <tr data-archived="true">
         <td>10</td>
-        <td>Interactive</td>
-        <td><a href="https://github.com/probabilityzero/mash3d" target="_blank">mash3d</a></td>
-        <td>successful</td>
-        <td></td>
+        <td>Chatbots</td>
+        <td>
+          <a href="https://github.com/probabilityzero/simtube" target="_blank">simtube</a>
+        </td>
+        <td>failed</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>11</td>
-        <td>Lifebook</td>
-        <td><a href="https://github.com/probabilityzero/sol" target="_blank">sol</a></td>
+        <td>Chatbots</td>
+        <td>
+          <a href="https://github.com/probabilityzero/telegramllmbot" target="_blank">telegramllmbot</a> <a class="btn live" href="https://t.me/hansuserbot" target="_blank">LIVE</a>
+        </td>
         <td>successful</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>12</td>
-        <td>Lifebook</td>
-        <td><a href="https://github.com/probabilityzero/taskforce" target="_blank">taskforce</a></td>
-        <td>archived</td>
-        <td></td>
+        <td>Data</td>
+        <td>
+          <a href="https://github.com/probabilityzero/sparklineo" target="_blank">sparklineo</a>
+        </td>
+        <td>-</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>13</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/elsoreilgallery" target="_blank">elsoreilgallery</a></td>
+        <td>Games</td>
+        <td>
+          <a href="https://github.com/probabilityzero/echecs" target="_blank">echecs</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>14</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/hanslabswebsite" target="_blank">hanslabswebsite</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Games</td>
+        <td>
+          <a href="https://github.com/probabilityzero/hunch" target="_blank">hunch</a>
+        </td>
+        <td>failed</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>15</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/hanslibrary" target="_blank">hanslibrary</a></td>
-        <td>live</td>
-        <td><a class="live" href="https://hanslibrary.online" target="_blank">Live</a></td>
+        <td>Games</td>
+        <td>
+          <a href="https://github.com/probabilityzero/moonview" target="_blank">moonview</a>
+        </td>
+        <td>-</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>16</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/infinitegallery" target="_blank">infinitegallery</a></td>
+        <td>Games</td>
+        <td>
+          <a href="https://github.com/probabilityzero/tictactoe" target="_blank">tictactoe</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>17</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/K" target="_blank">K</a></td>
+        <td>Games</td>
+        <td>
+          <a href="https://github.com/probabilityzero/wordle" target="_blank">wordle</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>18</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/portfolioforelenasili" target="_blank">portfolioforelenasili</a></td>
+        <td>Interactive</td>
+        <td>
+          <a href="https://github.com/probabilityzero/astronomy" target="_blank">astronomy</a>
+        </td>
         <td>successful</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>19</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/portfolioforitsas" target="_blank">portfolioforitsas</a></td>
+        <td>Interactive</td>
+        <td>
+          <a href="https://github.com/probabilityzero/mash3d" target="_blank">mash3d</a>
+        </td>
         <td>successful</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>20</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/probabilityzero" target="_blank">probabilityzero</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Lifebook</td>
+        <td>
+          <a href="https://github.com/probabilityzero/sol" target="_blank">sol</a>
+        </td>
+        <td>successful</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>21</td>
-        <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/tarique.bash" target="_blank">tarique.bash</a></td>
-        <td>live</td>
-        <td><a class="live" href="https://bash.tarique.me" target="_blank">Live</a></td>
+        <td>Lifebook</td>
+        <td>
+          <a href="https://github.com/probabilityzero/taskforce" target="_blank">taskforce</a>
+        </td>
+        <td>archived</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>22</td>
         <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/tariquenotes" target="_blank">tariquenotes</a></td>
-        <td>live</td>
-        <td></td>
+        <td>
+          <a href="https://github.com/probabilityzero/elsoreilgallery" target="_blank">elsoreilgallery</a>
+        </td>
+        <td>-</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>23</td>
         <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/tariqueportfolio" target="_blank">tariqueportfolio</a></td>
-        <td>live</td>
-        <td></td>
+        <td>
+          <a href="https://github.com/probabilityzero/hanslabswebsite" target="_blank">hanslabswebsite</a>
+        </td>
+        <td>-</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>24</td>
         <td>Portfolio</td>
-        <td><a href="https://github.com/probabilityzero/yearofthesnake" target="_blank">yearofthesnake</a></td>
+        <td>
+          <a href="https://github.com/probabilityzero/hanslibrary" target="_blank">hanslibrary</a> <a class="btn live" href="https://hanslibrary.online" target="_blank">LIVE</a>
+        </td>
         <td>live</td>
-        <td><a class="live" href="https://snakecollection.vercel.app/" target="_blank">Live</a></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>25</td>
-        <td>Software</td>
-        <td><a href="https://github.com/probabilityzero/aristocrat" target="_blank">aristocrat</a></td>
-        <td>idea</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/infinitegallery" target="_blank">infinitegallery</a>
+        </td>
+        <td>-</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>26</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/ascensionquests" target="_blank">ascensionquests</a></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/K" target="_blank">K</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>27</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/cloudstorage" target="_blank">cloudstorage</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/portfolioforelenasili" target="_blank">portfolioforelenasili</a>
+        </td>
+        <td>successful</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>28</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/jupyterkernels" target="_blank">jupyterkernels</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/portfolioforitsas" target="_blank">portfolioforitsas</a>
+        </td>
+        <td>successful</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>29</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/macoscursor" target="_blank">macoscursor</a></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/probabilityzero" target="_blank">probabilityzero</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>30</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/obsidianplugins" target="_blank">obsidianplugins</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/tarique.bash" target="_blank">tarique.bash</a> <a class="btn live" href="https://bash.tarique.me" target="_blank">LIVE</a>
+        </td>
+        <td>live</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>31</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/powershellprofile" target="_blank">powershellprofile</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/tariquenotes" target="_blank">tariquenotes</a>
+        </td>
+        <td>live</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>32</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/udlsimonprince" target="_blank">udlsimonprince</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/tariqueportfolio" target="_blank">tariqueportfolio</a>
+        </td>
+        <td>live</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>33</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/windowsicons" target="_blank">windowsicons</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Portfolio</td>
+        <td>
+          <a href="https://github.com/probabilityzero/yearofthesnake" target="_blank">yearofthesnake</a> <a class="btn live" href="https://snakecollection.vercel.app/" target="_blank">LIVE</a>
+        </td>
+        <td>live</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>34</td>
-        <td>Storage</td>
-        <td><a href="https://github.com/probabilityzero/windowsstartmenu" target="_blank">windowsstartmenu</a></td>
-        <td>-</td>
-        <td></td>
+        <td>Software</td>
+        <td>
+          <a href="https://github.com/probabilityzero/aristocrat" target="_blank">aristocrat</a>
+        </td>
+        <td>idea</td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>35</td>
-        <td>Templates</td>
-        <td><a href="https://github.com/probabilityzero/geminichatbot" target="_blank">geminichatbot</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/ascensionquests" target="_blank">ascensionquests</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>36</td>
-        <td>Templates</td>
-        <td><a href="https://github.com/probabilityzero/whatawonderfulworld" target="_blank">whatawonderfulworld</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/cloudstorage" target="_blank">cloudstorage</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>37</td>
-        <td>Themes</td>
-        <td><a href="https://github.com/probabilityzero/jadevinetheme" target="_blank">jadevinetheme</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/jupyterkernels" target="_blank">jupyterkernels</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>38</td>
-        <td>Tools</td>
-        <td><a href="https://github.com/probabilityzero/codeview" target="_blank">codeview</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/macoscursor" target="_blank">macoscursor</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>39</td>
-        <td>Tools</td>
-        <td><a href="https://github.com/probabilityzero/endbox" target="_blank">endbox</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/obsidianplugins" target="_blank">obsidianplugins</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>40</td>
-        <td>Tools</td>
-        <td><a href="https://github.com/probabilityzero/metaview" target="_blank">metaview</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/powershellprofile" target="_blank">powershellprofile</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>41</td>
-        <td>Tools</td>
-        <td><a href="https://github.com/probabilityzero/sandbox" target="_blank">sandbox</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/udlsimonprince" target="_blank">udlsimonprince</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>42</td>
-        <td>Tools</td>
-        <td><a href="https://github.com/probabilityzero/wordview" target="_blank">wordview</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/windowsicons" target="_blank">windowsicons</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>43</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/emxkernel" target="_blank">emxkernel</a></td>
+        <td>Storage</td>
+        <td>
+          <a href="https://github.com/probabilityzero/windowsstartmenu" target="_blank">windowsstartmenu</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>44</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/exam.net" target="_blank">exam.net</a></td>
+        <td>Templates</td>
+        <td>
+          <a href="https://github.com/probabilityzero/geminichatbot" target="_blank">geminichatbot</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>45</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/friendsacrossglobe" target="_blank">friendsacrossglobe</a></td>
+        <td>Templates</td>
+        <td>
+          <a href="https://github.com/probabilityzero/whatawonderfulworld" target="_blank">whatawonderfulworld</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>46</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/gameoflife" target="_blank">gameoflife</a></td>
+        <td>Themes</td>
+        <td>
+          <a href="https://github.com/probabilityzero/jadevinetheme" target="_blank">jadevinetheme</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>47</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/myasp.net" target="_blank">myasp.net</a></td>
+        <td>Tools</td>
+        <td>
+          <a href="https://github.com/probabilityzero/codeview" target="_blank">codeview</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>48</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/reminder" target="_blank">reminder</a></td>
+        <td>Tools</td>
+        <td>
+          <a href="https://github.com/probabilityzero/endbox" target="_blank">endbox</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>49</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/roguelike" target="_blank">roguelike</a></td>
+        <td>Tools</td>
+        <td>
+          <a href="https://github.com/probabilityzero/metaview" target="_blank">metaview</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>50</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/todolist" target="_blank">todolist</a></td>
+        <td>Tools</td>
+        <td>
+          <a href="https://github.com/probabilityzero/sandbox" target="_blank">sandbox</a>
+        </td>
         <td>-</td>
-        <td></td>
       </tr>
-      <tr>
+      <tr data-archived="true">
         <td>51</td>
-        <td>Tutorials</td>
-        <td><a href="https://github.com/probabilityzero/whiteboard" target="_blank">whiteboard</a></td>
+        <td>Tools</td>
+        <td>
+          <a href="https://github.com/probabilityzero/wordview" target="_blank">wordview</a>
+        </td>
         <td>-</td>
-        <td></td>
-      </tr></tbody>
-    </table>
-  </section>
-</details>
+      </tr>
+      <tr data-archived="true">
+        <td>52</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/emxkernel" target="_blank">emxkernel</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>53</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/exam.net" target="_blank">exam.net</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>54</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/friendsacrossglobe" target="_blank">friendsacrossglobe</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>55</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/gameoflife" target="_blank">gameoflife</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>56</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/myasp.net" target="_blank">myasp.net</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>57</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/reminder" target="_blank">reminder</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>58</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/roguelike" target="_blank">roguelike</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>59</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/todolist" target="_blank">todolist</a>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr data-archived="true">
+        <td>60</td>
+        <td>Tutorials</td>
+        <td>
+          <a href="https://github.com/probabilityzero/whiteboard" target="_blank">whiteboard</a>
+        </td>
+        <td>-</td>
+      </tr>
+</tbody>
+</table>
+
+</div>
 
 <script>
-const search = document.getElementById('search');
-search.addEventListener('input', e => {
-  const q = e.target.value.toLowerCase();
-  document.querySelectorAll('tbody tr').forEach(tr => {
-    tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+const rows = [...document.querySelectorAll("tbody tr")];
+const toggle = document.getElementById("toggleArchive");
+const search = document.getElementById("search");
+
+let showArchived = false;
+
+function applyFilters(){
+  const q = search.value.toLowerCase();
+  rows.forEach(r=>{
+    const archived = r.dataset.archived === "true";
+    const text = r.innerText.toLowerCase();
+
+    const visible =
+      (showArchived || !archived) &&
+      text.includes(q);
+
+    r.style.display = visible ? "" : "none";
   });
-});
+}
+
+toggle.onclick = ()=>{
+  showArchived = !showArchived;
+  toggle.textContent = showArchived ? "HIDE ARCHIVED" : "SHOW ARCHIVED";
+  applyFilters();
+};
+
+search.oninput = applyFilters;
+
+applyFilters();
 </script>
 
 </body>
