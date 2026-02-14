@@ -1,34 +1,36 @@
 ### My projects
 
-| Name | Repositories | Status |
-|------|---------|--------|
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|--------|---------|--------|
 | Chatbots | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 |  | [nextlangchain](https://github.com/probabilityzero/nextlangchain) | experimental |
-|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [experimental](https://t.me/hansuserbot) |
-| Games | [games](https://github.com/probabilityzero/games) | [active](https://games.tarique.me) |
+| Games | [games](https://github.com/probabilityzero/games) | [active](https://quiz.tarique.me) |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
 |  | [nma](https://github.com/probabilityzero/nma) | early |
 | Lifebook | [lifebook](https://github.com/probabilityzero/lifebook) | active |
 |  | [taskforce](https://github.com/probabilityzero/taskforce) | active |
 | Portfolio | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | active |
-|  | [portfoliofortarique](https://github.com/probabilityzero/portfoliofortarique) | active |
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | active |
+|  | [tariqueportfolio](https://github.com/probabilityzero/tariqueportfolio) | active |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [experimental](https://snakecollection.vercel.app/) |
 | Tools | [devbox](https://github.com/probabilityzero/devbox) | active |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | active |
+| Tutorship | [da](https://github.com/probabilityzero/da) | active |
+|  | [ds](https://github.com/probabilityzero/ds) | active |
 ### Han's projects [↗](https://github.com/hanslibrary/)
 
-| Name | Repositories | Status |
-|------|---------|--------|
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|--------|---------|--------|
 | Blackmarket | [blackmarketdev](https://github.com/hanslibrary/blackmarketdev) | early |
 | Cosmosys | [cosmosys](https://github.com/hanslibrary/cosmosys) | early |
 |  | [cosmosys-careers](https://github.com/hanslibrary/cosmosys-careers) | early |
 <details>
 <summary>Archived projects</summary>
 
-| Name | Repositories | Status |
-|------|---------|--------|
-| Chatbots | [simtube](https://github.com/probabilityzero/simtube) | - |
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|--------|---------|--------|
+| Chatbots | [simtube](https://github.com/probabilityzero/simtube) | failed |
+|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) | - |
 | Games | [echecs](https://github.com/probabilityzero/echecs) | - |
 |  | [hunch](https://github.com/probabilityzero/hunch) | failed |
@@ -43,11 +45,11 @@
 |  | [hanslabswebsite](https://github.com/probabilityzero/hanslabswebsite) | - |
 |  | [hanslibraryshow](https://github.com/probabilityzero/hanslibraryshow) | - |
 |  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
-|  | [k](https://github.com/probabilityzero/k) | - |
+|  | [K](https://github.com/probabilityzero/K) | - |
 |  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) | successful |
 |  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | successful |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | - |
-|  | [terminalfortarique](https://github.com/probabilityzero/terminalfortarique) | - |
+|  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) | - |
 | Storage | [aiwritingtools](https://github.com/probabilityzero/aiwritingtools) | - |
 |  | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [cloudstorage](https://github.com/probabilityzero/cloudstorage) | - |
