@@ -1,7 +1,11 @@
 const fs = require("fs");
 
 const data = JSON.parse(fs.readFileSync("projects.json", "utf8"));
-const base = "https://github.com/probabilityzero/";
+
+const bases = {
+  prime: "https://github.com/probabilityzero/",
+  han: "https://github.com/hanslibrary/"
+};
 
 data.sort((a, b) => {
   if (a.type === b.type) return a.name.localeCompare(b.name);
@@ -9,14 +13,23 @@ data.sort((a, b) => {
 });
 
 const archivedStatuses = ["successful", "failed", "-"];
-
 const isArchived = (status) => archivedStatuses.includes(status);
 
-const active = data.filter(item => !isArchived(item.status));
-const archived = data.filter(item => isArchived(item.status));
+const myProjects = data.filter(p => p.owner === "prime");
+const hanProjects = data.filter(p => p.owner === "han");
+
+const myActive = myProjects.filter(p => !isArchived(p.status));
+const myArchived = myProjects.filter(p => isArchived(p.status));
+
+const hanActive = hanProjects;
+
+function renderStatus(item) {
+  if (item.live) return `[${item.status}](${item.live})`;
+  return item.status;
+}
 
 function generateTable(items) {
-  let table = `| projects | repositories | status |\n`;
+  let table = `| Name | Repositories | Status |\n`;
   table += `|------|---------|--------|\n`;
 
   let lastType = "";
@@ -25,21 +38,26 @@ function generateTable(items) {
     const type = item.type === lastType ? "" : item.type;
     lastType = item.type;
 
-    table += `| ${type} | [${item.name}](${base}${item.name}) | ${item.status} |\n`;
+    const base = bases[item.owner] || bases.prime;
+
+    table += `| ${type} | [${item.name}](${base}${item.name}) | ${renderStatus(item)} |\n`;
   });
 
   return table;
 }
 
-let output = `### My Projects\n\n`;
+let output = "";
 
-output += generateTable(active);
+output += `### My Projects\n\n`;
+output += generateTable(myActive);
 
-if (archived.length > 0) { 
+output += `### Han's Projects [↗](${bases.han})\n\n`;
+output += generateTable(hanActive);
+
+if (myArchived.length > 0) {
   output += `<details>\n<summary>Archived Projects</summary>\n\n`;
-  output += `\n`;
-  output += generateTable(archived);
-  output += `\n</details>\n`;
+  output += generateTable(myArchived);
+  output += `\n</details>\n\n`;
 }
 
 fs.writeFileSync("README.md", output);

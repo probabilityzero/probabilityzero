@@ -1,11 +1,11 @@
 ### My Projects
 
-| projects | repositories | status |
+| Name | Repositories | Status |
 |------|---------|--------|
 | Chatbots | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 |  | [nextlangchain](https://github.com/probabilityzero/nextlangchain) | experimental |
-|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | experimental |
-| Games | [games](https://github.com/probabilityzero/games) | active |
+|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [experimental](https://t.me/hansuserbot) |
+| Games | [games](https://github.com/probabilityzero/games) | [active](https://games.tarique.me) |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
 |  | [nma](https://github.com/probabilityzero/nma) | early |
 | Lifebook | [lifebook](https://github.com/probabilityzero/lifebook) | active |
@@ -13,14 +13,20 @@
 | Portfolio | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | active |
 |  | [portfoliofortarique](https://github.com/probabilityzero/portfoliofortarique) | active |
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | active |
-|  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | experimental |
+|  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [experimental](https://snakecollection.vercel.app/) |
 | Tools | [devbox](https://github.com/probabilityzero/devbox) | active |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | active |
+### Han's Projects [↗](https://github.com/hanslibrary/)
+
+| Name | Repositories | Status |
+|------|---------|--------|
+| Blackmarket | [blackmarketdev](https://github.com/hanslibrary/blackmarketdev) | early |
+| Cosmosys | [cosmosys](https://github.com/hanslibrary/cosmosys) | early |
+|  | [cosmosys-careers](https://github.com/hanslibrary/cosmosys-careers) | early |
 <details>
 <summary>Archived Projects</summary>
 
-
-| projects | repositories | status |
+| Name | Repositories | Status |
 |------|---------|--------|
 | Chatbots | [simtube](https://github.com/probabilityzero/simtube) | - |
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) | - |
@@ -69,3 +75,4 @@
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
 
 </details>
+
