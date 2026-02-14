@@ -7,7 +7,7 @@ const bases = {
   han: "https://github.com/hanslibrary/"
 };
 
-const archivedStatuses = ["successful", "archived", "failed", "-"];
+const archivedStatuses = ["successful", "archived", "live", "failed", "-"];
 const isArchived = status => archivedStatuses.includes(status);
 
 function renderStatus(item) {
@@ -49,7 +49,7 @@ function collectAll(portfolio) {
 
 function generateTable(items, owner) {
   let table =
-    `| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |\n`;
+    `| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |\n`;
 
   table += `|--------|---------|--------|\n`;
 
@@ -73,14 +73,13 @@ const primeActive = collectProjects(data.prime, false);
 const primeArchived = collectProjects(data.prime, true);
 const hanActive = collectAll(data.han);
 
-output += `### My projects\n\n`;
 output += generateTable(primeActive, "prime");
 
-output += `### Han's projects [↗](${bases.han})\n\n`;
+output += `#### [Han's ↗](${bases.han})\n\n`;
 output += generateTable(hanActive, "han");
 
 if (primeArchived.length > 0) {
-  output += `<details>\n<summary>Archived projects</summary>\n\n`;
+  output += `<details>\n<summary>Archived</summary>\n\n`;
   output += generateTable(primeArchived, "prime");
   output += `\n</details>\n\n`;
 }

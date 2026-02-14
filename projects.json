@@ -2,7 +2,8 @@
   "prime": {
     "Lifebook": [
       { "name": "lifebook", "status": "active" },
-      { "name": "taskforce", "status": "active" },
+      { "name": "taskforce", "status": "archived" },
+      { "name": "healthline", "status": "early" },
       { "name": "sol", "status": "successful" }
     ],
 
@@ -18,18 +19,17 @@
     ],
 
     "Portfolio": [
-      { "name": "tariqueportfolio", "status": "active" },
-      { "name": "tariquenotes", "status": "active" },
+      { "name": "tariqueportfolio", "status": "live" },
+      { "name": "tariquenotes", "status": "live" },
+      { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
       { "name": "portfolioforelenasili", "status": "successful" },
       { "name": "portfolioforitsas", "status": "successful" },
       { "name": "hanslabswebsite", "status": "-" },
       { "name": "K", "status": "-" },
-      { "name": "hanslibrary", "status": "active" },
-      { "name": "hanslibraryshow", "status": "-" },
+      { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
       { "name": "infinitegallery", "status": "-" },
       { "name": "elsoreilgallery", "status": "-" },
-      { "name": "yearofthesnake", "status": "experimental", "live": "https://snakecollection.vercel.app/" },
-      { "name": "tarique.bash", "status": "-" },
+      { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "-" }
     ],
 
@@ -43,14 +43,15 @@
     ],
 
     "Tools": [
-      { "name": "sandbox", "status": "active" },
-      { "name": "devbox", "status": "active" },
-      { "name": "codeview", "status": "-" }
-    ],
-
-    "Utilities": [
+      { "name": "sandbox", "status": "-" },
+      { "name": "endbox", "status": "active" },
+      { "name": "codeview", "status": "-" },
       { "name": "wordview", "status": "-" },
       { "name": "metaview", "status": "-" }
+    ],
+
+    "Software": [ 
+      { "name": "aristocrat", "status": "idea" }
     ],
 
     "Storage": [
@@ -60,31 +61,9 @@
       { "name": "macoscursor", "status": "-" },
       { "name": "powershellprofile", "status": "-" },
       { "name": "udlsimonprince", "status": "-" },
-      { "name": "aiwritingtools", "status": "-" },
       { "name": "windowsstartmenu", "status": "-" },
       { "name": "obsidianplugins", "status": "-" },
       { "name": "windowsicons", "status": "-" }
-    ],
-
-    "Tutorship": [
-      { "name": "ds", "status": "active" },
-      { "name": "da", "status": "active" }
-    ],
-
-    "Tutorials": [
-      { "name": "gameoflife", "status": "-" },
-      { "name": "whiteboard", "status": "-" },
-      { "name": "emxkernel", "status": "-" },
-      { "name": "exam.net", "status": "-" },
-      { "name": "friendsacrossglobe", "status": "-" },
-      { "name": "myasp.netapp", "status": "-" },
-      { "name": "roguelike", "status": "-" },
-      { "name": "todolist", "status": "-" },
-      { "name": "reminder", "status": "-" }
-    ],
-
-    "Themes": [
-      { "name": "jadevinetheme", "status": "-" }
     ],
 
     "Chatbots": [
@@ -99,18 +78,34 @@
       { "name": "geminichatbot", "status": "-" }
     ],
 
-    "Others": [
-      { "name": "pilot", "status": "-" }
+    "Tutorship": [
+      { "name": "ds", "status": "active" },
+      { "name": "da", "status": "active" }
+    ],
+
+    "Tutorials": [
+      { "name": "gameoflife", "status": "-" },
+      { "name": "whiteboard", "status": "-" },
+      { "name": "emxkernel", "status": "-" },
+      { "name": "exam.net", "status": "-" },
+      { "name": "friendsacrossglobe", "status": "-" },
+      { "name": "myasp.net", "status": "-" },
+      { "name": "roguelike", "status": "-" },
+      { "name": "todolist", "status": "-" },
+      { "name": "reminder", "status": "-" }
+    ],
+
+    "Themes": [
+      { "name": "jadevinetheme", "status": "-" }
     ]
   },
 
   "han": {
     "Cosmosys": [
-      { "name": "cosmosys", "status": "early" },
-      { "name": "cosmosys-careers", "status": "early" }
+      { "name": "cosmosys", "status": "early" }
     ],
-    "Blackmarket": [
-      { "name": "blackmarketdev", "status": "early" }
+    "The Medium House": [
+      { "name": "thetraveler", "status": "early" }
     ]
   }
 }
