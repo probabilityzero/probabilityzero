@@ -47,7 +47,7 @@ function collectAll(portfolio) {
 
 function generateTable(items, owner) {
   let table =
-    `| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |\n`;
+    `| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |\n`;
 
   table += `|--------|---------|--------|\n`;
 
@@ -180,7 +180,7 @@ body::after{
 /* ===== FRAME ===== */
 .wrap{
   max-width:980px;
-  margin:28px auto;
+  margin:28px 8px 100px;
   padding:16px;
   background:#0b1622;
   border:3px solid #3aa0ff;
@@ -291,11 +291,13 @@ td a:hover{ text-decoration:underline; }
 
   <div class="toolbar">
     <input id="search" class="search" placeholder="SEARCH PROJECTS">
-
-    <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
+    
+    <p>SORT BY<p>
     <button id="sortName" class="btn secondary">SORT NAME</button>
     <button id="sortType" class="btn secondary">SORT TYPE</button>
 
+    <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
+    
     <span id="counter" class="counter"></span>
   </div>
 
