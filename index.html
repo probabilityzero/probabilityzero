@@ -15,32 +15,7 @@ body{
   overflow:hidden;
 }
 
-/* grid */
-body::before{
-  content:"";
-  position:fixed; inset:0;
-  background:
-    linear-gradient(#0a1a2b 1px, transparent 1px),
-    linear-gradient(90deg,#0a1a2b 1px, transparent 1px);
-  background-size:40px 40px;
-  opacity:.35;
-  pointer-events:none;
-}
-
-/* scanlines */
-body::after{
-  content:"";
-  position:fixed; inset:0;
-  background:repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent 2px,
-    rgba(0,0,0,.18) 3px
-  );
-  pointer-events:none;
-}
-
-/* ===== BOOT PRELOADER ===== */
+/* ===== BOOT ===== */
 .boot{
   position:fixed; inset:0;
   background:#02060b;
@@ -48,15 +23,9 @@ body::after{
   font-family:monospace;
   display:flex; align-items:flex-end; justify-content:center;
   padding-bottom:60px;
-  overflow:hidden;
   z-index:9999;
 }
-
-.boot p{
-  animation:rise 2.2s ease-out forwards;
-  opacity:0;
-}
-
+.boot p{ animation:rise 2.2s ease-out forwards; opacity:0; }
 @keyframes rise{
   from{transform:translateY(80px); opacity:0}
   to{transform:translateY(0); opacity:1}
@@ -65,7 +34,7 @@ body::after{
 /* ===== LAYOUT ===== */
 .shell{
   display:grid;
-  grid-template-columns:260px 1fr 260px;
+  grid-template-columns:280px 720px 280px;
   gap:18px;
   height:100vh;
   padding:22px;
@@ -73,7 +42,7 @@ body::after{
 }
 
 /* mobile */
-@media(max-width:900px){
+@media(max-width:1100px){
   .shell{
     grid-template-columns:1fr;
     grid-template-rows:auto auto auto;
@@ -88,7 +57,7 @@ body::after{
 .panel{
   background:#0b1622;
   border:2px solid #3aa0ff;
-  box-shadow:0 0 18px #3aa0ff30 inset;
+  box-shadow:0 0 16px #3aa0ff30 inset;
 }
 
 .titlebar{
@@ -96,8 +65,7 @@ body::after{
   padding:8px 12px;
   font-weight:bold;
   border-bottom:2px solid #3aa0ff;
-  display:flex;
-  justify-content:space-between;
+  display:flex; justify-content:space-between;
   align-items:center;
 }
 
@@ -106,17 +74,26 @@ body::after{
   background:#19ff8a; box-shadow:0 0 8px #19ff8a;
 }
 
-/* ===== LEFT STATUS ===== */
-.stat{ padding:14px; font-size:14px; line-height:1.7 }
-
-/* clock */
-.clock{
-  font-size:36px;
-  letter-spacing:3px;
-  margin-bottom:12px;
+/* ===== LEFT : ROBOT TELEMETRY ===== */
+.stat{
+  padding:14px;
+  font-family:monospace;
+  line-height:1.6;
+  font-size:14px;
 }
 
-/* ===== CENTER SCREEN ===== */
+.clock{
+  font-size:32px;
+  letter-spacing:3px;
+  margin-bottom:14px;
+}
+
+.metric{
+  margin-bottom:8px;
+  color:#9cd4ff;
+}
+
+/* ===== CENTER ===== */
 .center{ display:flex; flex-direction:column }
 
 .profile{
@@ -124,10 +101,10 @@ body::after{
 }
 
 .avatar video{
-  width:130px; height:130px;
+  width:120px; height:120px;
   object-fit:cover;
   border:3px solid #3aa0ff;
-  box-shadow:0 0 14px #3aa0ff80;
+  box-shadow:0 0 12px #3aa0ff80;
 }
 
 .info{ line-height:1.7 }
@@ -150,24 +127,32 @@ body::after{
   color:#eaf6ff;
 }
 
-.button.secondary{ background:linear-gradient(#3aa0ff,#1d6fd1) }
-.button.warn{ background:linear-gradient(#0b3a6b,#082748) }
-
-/* ===== SUMMARY (BLINK) ===== */
+/* ===== SUMMARY ===== */
 .summary{
-  margin:0 18px 18px;
-  padding:14px;
+  margin:0 18px 10px;
+  padding:12px;
   border:2px solid #3aa0ff;
   background:#08121c;
   animation:blink 1.6s infinite alternate;
 }
-
 @keyframes blink{
-  from{box-shadow:0 0 8px #3aa0ff40 inset}
-  to{box-shadow:0 0 16px #3aa0ff90 inset}
+  from{box-shadow:0 0 6px #3aa0ff40 inset}
+  to{box-shadow:0 0 14px #3aa0ff90 inset}
 }
 
-/* ===== RIGHT CONTACT ===== */
+/* terminal */
+.terminal{
+  margin:0 18px 18px;
+  background:#000;
+  color:#baffea;
+  padding:12px;
+  font-family:monospace;
+  border:2px solid #3aa0ff;
+  height:180px;
+  overflow:auto;
+}
+
+/* ===== RIGHT : CONTACT ===== */
 .contacts{
   padding:14px;
   display:flex;
@@ -185,12 +170,11 @@ body::after{
   text-align:center;
 }
 
-/* ===== FOOTER ===== */
-.footer{
-  text-align:center;
-  padding:10px;
-  font-size:12px;
-  border-top:2px solid #3aa0ff;
+/* gif box */
+.gifbox img{
+  width:100%;
+  border:2px solid #3aa0ff;
+  margin-bottom:10px;
 }
 </style>
 
@@ -210,17 +194,20 @@ body::after{
     <div class="titlebar">SYSTEM<div class="led"></div></div>
     <div class="stat">
       <div class="clock" id="clock"></div>
-      <div>STATE: ONLINE</div>
-      <div>POWER: NOMINAL</div>
-      <div>LINK: STABLE</div>
-    </div>
+
+  <div class="metric">CORE STATUS: STABLE</div>
+  <div class="metric">NETWORK: LINKED</div>
+  <div class="metric">POWER FLOW: NORMAL</div>
+  <div class="metric">THERMALS: OPTIMAL</div>
+  <div class="metric">SECURITY: PASSIVE</div>
+</div>
+
   </div>
 
   <!-- CENTER -->
 
   <div class="panel center">
 
-```
 <div class="titlebar">
   PRIME :: WORKSTATION
   <div class="led"></div>
@@ -234,58 +221,29 @@ body::after{
   </div>
 
   <div class="info">
-    <div><b>Handle:</b> probabilityzero</div>
-    <div><b>Role:</b> Systems • Tools • Experiments</div>
-    <div><b>Status:</b> ONLINE</div>
-    <div><b>Location:</b> Network Edge</div>
+    <div><b>User:</b> probabilityzero</div>
+    <div><b>Node:</b> PRIME EDGE</div>
   </div>
 
 </div>
 
 <div class="grid">
 
-  <a class="button warn" href="/probabilityzero/projects">
-    REGISTRY
-  </a>
-
-  <a class="button secondary"
-     href="https://github.com/probabilityzero/"
-     target="_blank">
-    GITHUB
-  </a>
-
-  <a class="button"
-     href="https://t.me/probabilityzero"
-     target="_blank">
-    TELEGRAM
-  </a>
-
-  <a class="button secondary"
-     href="https://codeforces.com/profile/probabilityzero"
-     target="_blank">
-    CODEFORCES
-  </a>
-
-  <a class="button"
-     href="mailto:contact@probabilityzero.dev">
-    EMAIL
-  </a>
-
-  <a class="button" href="/probabilityzero">
-    MAIN INDEX
-  </a>
+  <a class="button" href="/probabilityzero/projects">PROJECT REGISTRY</a>
+  <!-- <a class="button" href="/probabilityzero">MAIN INDEX</a>
+  <a class="button" href="mailto:contact@probabilityzero.dev">SIGNAL</a> -->
 
 </div>
 
 <div class="summary">
-  Core node active. Interface operational.
-  Awaiting command input.
+  SUMMARY :: Interface operational — awaiting directives.
 </div>
 
-<div class="footer">
-  PRIME NETWORK • READY
-</div>
-```
+<div class="terminal" id="terminal">
+
+> Boot complete
+> Systems nominal
+guest@PC ~ </div>
 
   </div>
 
@@ -293,30 +251,44 @@ body::after{
 
   <div class="panel right">
     <div class="titlebar">CONTACT<div class="led"></div></div>
-    <div class="contacts">
-      <a class="link" href="https://github.com/probabilityzero" target="_blank">GitHub Node</a>
-      <a class="link" href="https://t.me/probabilityzero" target="_blank">Telegram Channel</a>
-      <a class="link" href="https://codeforces.com/profile/probabilityzero" target="_blank">Codeforces</a>
-      <a class="link" href="mailto:contact@probabilityzero.dev">Direct Signal</a>
-    </div>
+ 
+<div class="contacts">
+
+  <div class="gifbox">
+    <img id="randgif" src="">
+  </div>
+
+  <a class="link" href="mailto:contact@probabilityzero.dev">EMAIL</a>
+  <a class="link" href="https://github.com/probabilityzero" target="_blank">GITHUB</a>
+  <a class="link" href="https://codeforces.com/profile/probabilityzero" target="_blank">CODEFORCES</a>
+  <a class="link" href="https://t.me/probabilityzero" target="_blank">TELEGRAM</a>
+
+</div> 
+
   </div>
 
 </div>
 
 <script>
-/* remove boot after delay */
-setTimeout(()=>{
-  document.getElementById("boot").style.display="none";
-}, 2300);
+/* boot */
+setTimeout(()=>document.getElementById("boot").style.display="none",2300);
 
-/* live clock */
+/* clock */
 function updateClock(){
   const d=new Date();
-  const t=d.toLocaleTimeString();
-  document.getElementById("clock").textContent=t;
+  document.getElementById("clock").textContent =
+    d.toTimeString().slice(0,8);
 }
 setInterval(updateClock,1000);
 updateClock();
+
+/* random gif */
+const gifs=[
+"https://i.pinimg.com/originals/80/31/12/803112952a7108f000906544d545256e.gif",
+"https://i.pinimg.com/originals/d2/96/74/d296744858b6f4059d016874ef7561b2.gif"
+];
+document.getElementById("randgif").src =
+  gifs[Math.floor(Math.random()*gifs.length)];
 </script>
 
 </body>
