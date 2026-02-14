@@ -12,48 +12,89 @@ body{
   background:radial-gradient(circle at 50% 20%, #0e1c2f, #05080c 70%);
   color:#d9ecff;
   font-family:Tahoma, Verdana, sans-serif;
+  overflow:hidden;
 }
 
-/* subtle moving scanlines */
+/* grid */
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  background:
+    linear-gradient(#0a1a2b 1px, transparent 1px),
+    linear-gradient(90deg,#0a1a2b 1px, transparent 1px);
+  background-size:40px 40px;
+  opacity:.35;
+  pointer-events:none;
+}
+
+/* scanlines */
 body::after{
   content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
+  position:fixed; inset:0;
   background:repeating-linear-gradient(
     to bottom,
     transparent 0px,
     transparent 2px,
-    rgba(0,0,0,.15) 3px
+    rgba(0,0,0,.18) 3px
   );
-  animation:scan 8s linear infinite;
-  opacity:.35;
+  pointer-events:none;
 }
 
-@keyframes scan{
-  from{transform:translateY(0)}
-  to{transform:translateY(6px)}
+/* ===== BOOT PRELOADER ===== */
+.boot{
+  position:fixed; inset:0;
+  background:#02060b;
+  color:#9cd4ff;
+  font-family:monospace;
+  display:flex; align-items:flex-end; justify-content:center;
+  padding-bottom:60px;
+  overflow:hidden;
+  z-index:9999;
 }
 
-/* ===== MAIN FRAME ===== */
-.frame{
-  width:900px;
-  margin:48px auto;
+.boot p{
+  animation:rise 2.2s ease-out forwards;
+  opacity:0;
+}
+
+@keyframes rise{
+  from{transform:translateY(80px); opacity:0}
+  to{transform:translateY(0); opacity:1}
+}
+
+/* ===== LAYOUT ===== */
+.shell{
+  display:grid;
+  grid-template-columns:260px 1fr 260px;
+  gap:18px;
+  height:100vh;
+  padding:22px;
+  box-sizing:border-box;
+}
+
+/* mobile */
+@media(max-width:900px){
+  .shell{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    overflow:auto;
+  }
+  .left{order:1}
+  .center{order:2}
+  .right{order:3}
+}
+
+/* ===== PANELS ===== */
+.panel{
   background:#0b1622;
-  border:3px solid #3aa0ff;
-  box-shadow:
-    0 0 0 3px #001a33 inset,
-    0 0 40px #3aa0ff40;
-  position:relative;
+  border:2px solid #3aa0ff;
+  box-shadow:0 0 18px #3aa0ff30 inset;
 }
 
-/* ===== TITLE BAR ===== */
 .titlebar{
   background:linear-gradient(#0b3a6b,#082748);
-  color:#eaf6ff;
-  padding:10px 14px;
+  padding:8px 12px;
   font-weight:bold;
-  letter-spacing:1px;
   border-bottom:2px solid #3aa0ff;
   display:flex;
   justify-content:space-between;
@@ -61,112 +102,94 @@ body::after{
 }
 
 .led{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#19ff8a;
-  box-shadow:0 0 8px #19ff8a;
-  margin-left:8px;
+  width:10px;height:10px;border-radius:50%;
+  background:#19ff8a; box-shadow:0 0 8px #19ff8a;
 }
 
-/* ===== CONTENT ===== */
-.content{
-  padding:22px;
+/* ===== LEFT STATUS ===== */
+.stat{ padding:14px; font-size:14px; line-height:1.7 }
+
+/* clock */
+.clock{
+  font-size:36px;
+  letter-spacing:3px;
+  margin-bottom:12px;
 }
 
-/* ===== PROFILE HEADER ===== */
+/* ===== CENTER SCREEN ===== */
+.center{ display:flex; flex-direction:column }
+
 .profile{
-  display:flex;
-  gap:22px;
-  margin-bottom:22px;
+  display:flex; gap:18px; padding:18px;
 }
 
-/* video avatar */
 .avatar video{
-  width:130px;
-  height:130px;
+  width:130px; height:130px;
   object-fit:cover;
   border:3px solid #3aa0ff;
-  background:#000;
-  box-shadow:0 0 12px #3aa0ff80;
+  box-shadow:0 0 14px #3aa0ff80;
 }
 
-/* info block */
-.info{
-  flex:1;
-  line-height:1.7;
-}
+.info{ line-height:1.7 }
 
-.info b{
-  color:#9cd4ff;
-}
-
-/* ===== QUICK BUTTON GRID ===== */
+/* buttons */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-top:18px;
+  gap:10px;
+  padding:0 18px 18px;
 }
 
-/* workstation buttons */
 .button{
-  display:block;
-  padding:14px 12px;
-  background:linear-gradient(#1d6fd1,#104b8c);
-  color:#eaf6ff;
+  padding:12px;
+  text-align:center;
   text-decoration:none;
   font-weight:bold;
-  text-align:center;
+  background:linear-gradient(#1d6fd1,#104b8c);
   border:2px solid #001a33;
-  box-shadow:
-    0 2px 0 #001a33,
-    0 0 10px #3aa0ff40 inset;
-  transition:.15s;
+  color:#eaf6ff;
 }
 
-.button:hover{
-  transform:translateY(-2px);
-  box-shadow:
-    0 4px 0 #001a33,
-    0 0 16px #3aa0ff80 inset;
-}
+.button.secondary{ background:linear-gradient(#3aa0ff,#1d6fd1) }
+.button.warn{ background:linear-gradient(#0b3a6b,#082748) }
 
-/* special variants */
-.button.secondary{
-  background:linear-gradient(#3aa0ff,#1d6fd1);
-}
-
-.button.warn{
-  background:linear-gradient(#0b3a6b,#082748);
-}
-
-/* ===== PANEL ===== */
-.panel{
-  margin-top:24px;
+/* ===== SUMMARY (BLINK) ===== */
+.summary{
+  margin:0 18px 18px;
+  padding:14px;
   border:2px solid #3aa0ff;
   background:#08121c;
+  animation:blink 1.6s infinite alternate;
 }
 
-.panel-title{
-  background:#10263d;
-  padding:8px 10px;
-  border-bottom:2px solid #3aa0ff;
-  font-weight:bold;
+@keyframes blink{
+  from{box-shadow:0 0 8px #3aa0ff40 inset}
+  to{box-shadow:0 0 16px #3aa0ff90 inset}
 }
 
-.panel-body{
+/* ===== RIGHT CONTACT ===== */
+.contacts{
   padding:14px;
-  font-size:14px;
-  color:#c6dbff;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.link{
+  padding:10px;
+  border:2px solid #3aa0ff;
+  text-decoration:none;
+  color:#eaf6ff;
+  background:#0a1a2b;
+  font-weight:bold;
+  text-align:center;
 }
 
 /* ===== FOOTER ===== */
 .footer{
   text-align:center;
-  padding:12px;
+  padding:10px;
   font-size:12px;
-  color:#7aa9d6;
   border-top:2px solid #3aa0ff;
 }
 </style>
@@ -175,16 +198,34 @@ body::after{
 
 <body>
 
-<div class="frame">
+<div class="boot" id="boot">
+  <p>Boot sequence initialized…<br>Welcome to Workstation.</p>
+</div>
 
-  <div class="titlebar">
-    PRIME :: WORKSTATION
-    <div class="led"></div>
+<div class="shell">
+
+  <!-- LEFT -->
+
+  <div class="panel left">
+    <div class="titlebar">SYSTEM<div class="led"></div></div>
+    <div class="stat">
+      <div class="clock" id="clock"></div>
+      <div>STATE: ONLINE</div>
+      <div>POWER: NOMINAL</div>
+      <div>LINK: STABLE</div>
+    </div>
   </div>
 
-  <div class="content">
+  <!-- CENTER -->
+
+  <div class="panel center">
 
 ```
+<div class="titlebar">
+  PRIME :: WORKSTATION
+  <div class="led"></div>
+</div>
+
 <div class="profile">
 
   <div class="avatar">
@@ -203,20 +244,20 @@ body::after{
 
 <div class="grid">
 
-  <a class="button" href="/probabilityzero/projects">
-    PROJECT REGISTRY
+  <a class="button warn" href="/probabilityzero/projects">
+    REGISTRY
   </a>
 
   <a class="button secondary"
      href="https://github.com/probabilityzero/"
      target="_blank">
-    GITHUB NODE
+    GITHUB
   </a>
 
   <a class="button"
      href="https://t.me/probabilityzero"
      target="_blank">
-    TELEGRAM LINK
+    TELEGRAM
   </a>
 
   <a class="button secondary"
@@ -225,34 +266,58 @@ body::after{
     CODEFORCES
   </a>
 
-  <a class="button warn" href="/probabilityzero">
-    MAIN INDEX
-  </a>
-
   <a class="button"
      href="mailto:contact@probabilityzero.dev">
-    SIGNAL
+    EMAIL
+  </a>
+
+  <a class="button" href="/probabilityzero">
+    MAIN INDEX
   </a>
 
 </div>
 
-<div class="panel">
-  <div class="panel-title">SYSTEM SUMMARY</div>
-  <div class="panel-body">
-    Independent workstation focused on software construction,
-    experimental interfaces, and infrastructure tooling.
-    This node aggregates active modules and archived artifacts.
-  </div>
+<div class="summary">
+  Core node active. Interface operational.
+  Awaiting command input.
+</div>
+
+<div class="footer">
+  PRIME NETWORK • READY
 </div>
 ```
 
   </div>
 
-  <div class="footer">
-    PRIME NETWORK • CONTROL INTERFACE • READY
+  <!-- RIGHT -->
+
+  <div class="panel right">
+    <div class="titlebar">CONTACT<div class="led"></div></div>
+    <div class="contacts">
+      <a class="link" href="https://github.com/probabilityzero" target="_blank">GitHub Node</a>
+      <a class="link" href="https://t.me/probabilityzero" target="_blank">Telegram Channel</a>
+      <a class="link" href="https://codeforces.com/profile/probabilityzero" target="_blank">Codeforces</a>
+      <a class="link" href="mailto:contact@probabilityzero.dev">Direct Signal</a>
+    </div>
   </div>
 
 </div>
+
+<script>
+/* remove boot after delay */
+setTimeout(()=>{
+  document.getElementById("boot").style.display="none";
+}, 2300);
+
+/* live clock */
+function updateClock(){
+  const d=new Date();
+  const t=d.toLocaleTimeString();
+  document.getElementById("clock").textContent=t;
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
 
 </body>
 </html>
