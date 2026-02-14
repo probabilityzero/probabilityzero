@@ -118,48 +118,191 @@ if (primeArchived.length > 0) {
 
 fs.writeFileSync("README.md", readme);
 
+
+
+const allRows = [...primeActive.map(p => ({...p, archived:false})),
+                 ...primeArchived.map(p => ({...p, archived:true}))];
+
+function buildRows(rows) {
+  let i = 1;
+  return rows.map(item => {
+    const repo = bases.prime + item.name;
+    const live = item.live
+      ? ` <a class="btn live" href="${item.live}" target="_blank">LIVE</a>`
+      : "";
+    return `
+      <tr data-archived="${item.archived}">
+        <td>${i++}</td>
+        <td>${item.type}</td>
+        <td>
+          <a href="${repo}" target="_blank">${item.name}</a>${live}
+        </td>
+        <td>${item.status}</td>
+      </tr>`;
+  }).join("");
+}
+
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Projects Index</title>
+<title>Projects</title>
+
 <style>
-body{font-family:system-ui;background:#0b0c10;color:#e6e6e6;margin:0;padding:24px}
-h1{margin-bottom:8px}
-h2{margin-top:32px}
-table{width:100%;border-collapse:collapse;margin-top:12px}
-th,td{padding:10px;border-bottom:1px solid #222;text-align:left}
-th{position:sticky;top:0;background:#111}
-a{color:#7dd3fc;text-decoration:none}
-.live{background:#065f46;color:#a7f3d0;padding:4px 8px;border-radius:6px}
-input{width:100%;padding:10px;margin:16px 0;background:#111;border:1px solid #333;color:#eee;border-radius:8px}
+body{
+  margin:0;
+  background:#0b0f14;
+  color:#d6e3ff;
+  font-family:monospace;
+  image-rendering:pixelated;
+}
+
+/* Title bar */
+.titlebar{
+  background:linear-gradient(#0b3a6b,#082748);
+  color:#eaf6ff;
+  padding:8px 12px;
+  font-weight:bold;
+  border-bottom:2px solid #3aa0ff;
+  letter-spacing:1px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Center container */
+.wrap{
+  max-width:900px;
+  margin:28px auto;
+  padding:0 16px;
+}
+
+/* Retro buttons */
+.btn{
+  background:#0b3a6b;
+  border:2px solid #3aa0ff;
+  color:#eaf6ff;
+  padding:4px 10px;
+  text-decoration:none;
+  font-size:13px;
+  cursor:pointer;
+  margin-left:6px;
+  box-shadow:0 0 6px #3aa0ff40 inset;
+}
+
+.btn:hover{
+  background:#104b8c;
+}
+
+.btn.live{
+  background:#063f2e;
+  border-color:#2cffb2;
+  color:#baffea;
+}
+
+/* Search box */
+.search{
+  width:100%;
+  margin:14px 0 18px;
+  padding:8px;
+  background:#06080c;
+  border:2px solid #3aa0ff;
+  color:#eaf6ff;
+  font-family:monospace;
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#06080c;
+  border:2px solid #3aa0ff;
+}
+
+th,td{
+  padding:8px;
+  border-bottom:1px solid #1a2638;
+  text-align:left;
+}
+
+th{
+  background:#082748;
+  position:sticky;
+  top:0;
+}
+
+tr[data-archived="true"]{
+  opacity:.55;
+}
 </style>
 </head>
+
 <body>
 
-<h1>Projects</h1>
-<input id="search" placeholder="Search projects…" />
+<div class="titlebar">
+  <span>PROJECT REGISTRY</span>
+  <a class="btn" href="/probabilityzero">BACK</a>
+</div>
 
-${htmlTable(primeActive, "prime", "My Projects")}
-${htmlTable(hanActive, "han", "Han's Projects")}
+<div class="wrap">
 
-<details>
-  <summary>Archived</summary>
-  ${htmlTable(primeArchived, "prime", "Archived Projects")}
-</details>
+<input id="search" class="search" placeholder="SEARCH PROJECTS">
+
+<div style="margin-bottom:10px;">
+  <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>TYPE</th>
+  <th>REPOSITORY</th>
+  <th>STATUS</th>
+</tr>
+</thead>
+<tbody>
+${buildRows(allRows)}
+</tbody>
+</table>
+
+</div>
 
 <script>
-const search = document.getElementById('search');
-search.addEventListener('input', e => {
-  const q = e.target.value.toLowerCase();
-  document.querySelectorAll('tbody tr').forEach(tr => {
-    tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+const rows = [...document.querySelectorAll("tbody tr")];
+const toggle = document.getElementById("toggleArchive");
+const search = document.getElementById("search");
+
+let showArchived = false;
+
+function applyFilters(){
+  const q = search.value.toLowerCase();
+  rows.forEach(r=>{
+    const archived = r.dataset.archived === "true";
+    const text = r.innerText.toLowerCase();
+
+    const visible =
+      (showArchived || !archived) &&
+      text.includes(q);
+
+    r.style.display = visible ? "" : "none";
   });
-});
+}
+
+toggle.onclick = ()=>{
+  showArchived = !showArchived;
+  toggle.textContent = showArchived ? "HIDE ARCHIVED" : "SHOW ARCHIVED";
+  applyFilters();
+};
+
+search.oninput = applyFilters;
+
+applyFilters();
 </script>
 
 </body>
 </html>`;
+
  
 fs.writeFileSync("projects/index.html", html);
 
