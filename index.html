@@ -34,11 +34,14 @@ body{
 /* ===== LAYOUT ===== */
 .shell{
   display:grid;
-  grid-template-columns:280px 720px 280px;
+  grid-template-columns: minmax(220px, 1fr)
+                       minmax(620px, 900px)
+                       minmax(220px, 1fr);
   gap:18px;
   height:100vh;
   padding:22px;
   box-sizing:border-box;
+  align-items:stretch;
 }
 
 /* mobile */
