@@ -5,6 +5,7 @@
 
   { "type": "Games", "name": "games", "status": "active" },
   { "type": "Games", "name": "games.py", "status": "active" },
+  { "type": "Games", "name": "nma", "status": "early" },
   { "type": "Games", "name": "moonview", "status": "-" },
   { "type": "Games", "name": "hunch", "status": "failed" },
   { "type": "Games", "name": "echecs", "status": "-" }, 
