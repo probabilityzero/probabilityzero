@@ -7,6 +7,7 @@
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | experimental |
 | Games | [games](https://github.com/probabilityzero/games) | active |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
+|  | [nma](https://github.com/probabilityzero/nma) | early |
 | Lifebook | [lifebook](https://github.com/probabilityzero/lifebook) | active |
 |  | [taskforce](https://github.com/probabilityzero/taskforce) | active |
 | Portfolio | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | active |
