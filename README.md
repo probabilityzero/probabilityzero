@@ -4,13 +4,13 @@
 |  | [nextlangchain](https://github.com/probabilityzero/nextlangchain) | experimental |
 | Games | [games](https://github.com/probabilityzero/games) | [active](https://quiz.tarique.me) |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
-|  | [nma](https://github.com/probabilityzero/nma) | early |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) | active |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) | idea |
 | Tools | [endbox](https://github.com/probabilityzero/endbox) | active |
 | Tutorship | [da](https://github.com/probabilityzero/da) | active |
 |  | [ds](https://github.com/probabilityzero/ds) | active |
+|  | [nma](https://github.com/probabilityzero/nma) | early |
 #### [Han's ↗](https://github.com/hanslibrary/)
 
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
