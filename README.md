@@ -1,4 +1,4 @@
-### My Projects
+### My projects
 
 | Name | Repositories | Status |
 |------|---------|--------|
@@ -16,7 +16,7 @@
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [experimental](https://snakecollection.vercel.app/) |
 | Tools | [devbox](https://github.com/probabilityzero/devbox) | active |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | active |
-### Han's Projects [↗](https://github.com/hanslibrary/)
+### Han's projects [↗](https://github.com/hanslibrary/)
 
 | Name | Repositories | Status |
 |------|---------|--------|
@@ -24,7 +24,7 @@
 | Cosmosys | [cosmosys](https://github.com/hanslibrary/cosmosys) | early |
 |  | [cosmosys-careers](https://github.com/hanslibrary/cosmosys-careers) | early |
 <details>
-<summary>Archived Projects</summary>
+<summary>Archived projects</summary>
 
 | Name | Repositories | Status |
 |------|---------|--------|
