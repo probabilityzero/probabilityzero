@@ -41,30 +41,6 @@
       { "name": "sparklineo", "status": "-" }
     ],
 
-    "Tools": [
-      { "name": "sandbox", "status": "-" },
-      { "name": "endbox", "status": "active" },
-      { "name": "codeview", "status": "-" },
-      { "name": "wordview", "status": "-" },
-      { "name": "metaview", "status": "-" }
-    ],
-
-    "Software": [ 
-      { "name": "aristocrat", "status": "idea" }
-    ],
-
-    "Storage": [
-      { "name": "jupyterkernels", "status": "-" },
-      { "name": "cloudstorage", "status": "-" },
-      { "name": "ascensionquests", "status": "-" },
-      { "name": "macoscursor", "status": "-" },
-      { "name": "powershellprofile", "status": "-" },
-      { "name": "udlsimonprince", "status": "-" },
-      { "name": "windowsstartmenu", "status": "-" },
-      { "name": "obsidianplugins", "status": "-" },
-      { "name": "windowsicons", "status": "-" }
-    ],
-
     "Chatbots": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "simtube", "status": "failed" },
@@ -83,6 +59,18 @@
       { "name": "da", "status": "active" }
     ],
 
+    "Tools": [
+      { "name": "sandbox", "status": "-" },
+      { "name": "endbox", "status": "-" },
+      { "name": "codeview", "status": "-" },
+      { "name": "wordview", "status": "-" },
+      { "name": "metaview", "status": "-" }
+    ],
+
+    "Software": [ 
+      { "name": "aristocrat", "status": "idea" }
+    ],
+    
     "Tutorials": [
       { "name": "gameoflife", "status": "-" },
       { "name": "whiteboard", "status": "-" },
@@ -97,6 +85,18 @@
 
     "Themes": [
       { "name": "jadevinetheme", "status": "-" }
+    ],
+    
+    "Storage": [
+      { "name": "jupyterkernels", "status": "-" },
+      { "name": "cloudstorage", "status": "-" },
+      { "name": "ascensionquests", "status": "-" },
+      { "name": "macoscursor", "status": "-" },
+      { "name": "powershellprofile", "status": "-" },
+      { "name": "udlsimonprince", "status": "-" },
+      { "name": "windowsstartmenu", "status": "-" },
+      { "name": "obsidianplugins", "status": "-" },
+      { "name": "windowsicons", "status": "-" }
     ]
   },
 
