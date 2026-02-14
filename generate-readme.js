@@ -7,30 +7,51 @@ const bases = {
   han: "https://github.com/hanslibrary/"
 };
 
-data.sort((a, b) => {
-  if (a.type === b.type) return a.name.localeCompare(b.name);
-  return a.type.localeCompare(b.type);
-});
-
 const archivedStatuses = ["successful", "archived", "failed", "-"];
-const isArchived = (status) => archivedStatuses.includes(status);
-
-const myProjects = data.filter(p => p.owner === "prime");
-const hanProjects = data.filter(p => p.owner === "han");
-
-const myActive = myProjects.filter(p => !isArchived(p.status));
-const myArchived = myProjects.filter(p => isArchived(p.status));
-
-const hanActive = hanProjects;
+const isArchived = status => archivedStatuses.includes(status);
 
 function renderStatus(item) {
-  if (item.live) return `[${item.status}](${item.live})`;
-  return item.status;
+  return item.live ? `[${item.status}](${item.live})` : item.status;
 }
 
-function generateTable(items) {
-  let table = `| Name | Repositories | Status |\n`;
-  table += `|------|---------|--------|\n`;
+function collectProjects(portfolio, archivedFlag) {
+  const result = [];
+
+  Object.entries(portfolio).forEach(([type, items]) => {
+    items.forEach(item => {
+      const archived = isArchived(item.status);
+      if (archivedFlag === archived) {
+        result.push({ ...item, type });
+      }
+    });
+  });
+
+  result.sort((a, b) =>
+    a.type.localeCompare(b.type) || a.name.localeCompare(b.name)
+  );
+
+  return result;
+}
+
+function collectAll(portfolio) {
+  const result = [];
+
+  Object.entries(portfolio).forEach(([type, items]) => {
+    items.forEach(item => result.push({ ...item, type }));
+  });
+
+  result.sort((a, b) =>
+    a.type.localeCompare(b.type) || a.name.localeCompare(b.name)
+  );
+
+  return result;
+}
+
+function generateTable(items, owner) {
+  let table =
+    `| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |\n`;
+
+  table += `|--------|---------|--------|\n`;
 
   let lastType = "";
 
@@ -38,7 +59,7 @@ function generateTable(items) {
     const type = item.type === lastType ? "" : item.type;
     lastType = item.type;
 
-    const base = bases[item.owner] || bases.prime;
+    const base = bases[owner];
 
     table += `| ${type} | [${item.name}](${base}${item.name}) | ${renderStatus(item)} |\n`;
   });
@@ -48,15 +69,19 @@ function generateTable(items) {
 
 let output = "";
 
+const primeActive = collectProjects(data.prime, false);
+const primeArchived = collectProjects(data.prime, true);
+const hanActive = collectAll(data.han);
+
 output += `### My projects\n\n`;
-output += generateTable(myActive);
+output += generateTable(primeActive, "prime");
 
 output += `### Han's projects [↗](${bases.han})\n\n`;
-output += generateTable(hanActive);
+output += generateTable(hanActive, "han");
 
-if (myArchived.length > 0) {
+if (primeArchived.length > 0) {
   output += `<details>\n<summary>Archived projects</summary>\n\n`;
-  output += generateTable(myArchived);
+  output += generateTable(primeArchived, "prime");
   output += `\n</details>\n\n`;
 }
 

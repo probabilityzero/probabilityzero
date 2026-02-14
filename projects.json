@@ -1,77 +1,116 @@
-[
-  { "owner": "prime", "type": "Lifebook", "name": "lifebook", "status": "active" },
-  { "owner": "prime", "type": "Lifebook", "name": "taskforce", "status": "active" },
-  { "owner": "prime", "type": "Lifebook", "name": "sol", "status": "successful" },
+{
+  "prime": {
+    "Lifebook": [
+      { "name": "lifebook", "status": "active" },
+      { "name": "taskforce", "status": "active" },
+      { "name": "sol", "status": "successful" }
+    ],
 
-  { "owner": "prime", "type": "Games", "name": "games", "status": "active", "live": "https://games.tarique.me" },
-  { "owner": "prime", "type": "Games", "name": "games.py", "status": "active" },
-  { "owner": "prime", "type": "Games", "name": "nma", "status": "early" },
-  { "owner": "prime", "type": "Games", "name": "moonview", "status": "-" },
-  { "owner": "prime", "type": "Games", "name": "hunch", "status": "failed" },
-  { "owner": "prime", "type": "Games", "name": "echecs", "status": "-" },
-  { "owner": "prime", "type": "Games", "name": "tictactoe", "status": "-" },
-  { "owner": "prime", "type": "Games", "name": "wordle", "status": "-" },
+    "Games": [
+      { "name": "games", "status": "active", "live": "https://quiz.tarique.me" },
+      { "name": "games.py", "status": "active" },
+      { "name": "nma", "status": "early" },
+      { "name": "moonview", "status": "-" },
+      { "name": "hunch", "status": "failed" },
+      { "name": "echecs", "status": "-" },
+      { "name": "tictactoe", "status": "-" },
+      { "name": "wordle", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Portfolio", "name": "portfoliofortarique", "status": "active" },
-  { "owner": "prime", "type": "Portfolio", "name": "tariquenotes", "status": "active" },
-  { "owner": "prime", "type": "Portfolio", "name": "portfolioforelenasili", "status": "successful" },
-  { "owner": "prime", "type": "Portfolio", "name": "portfolioforitsas", "status": "successful" },
-  { "owner": "prime", "type": "Portfolio", "name": "hanslabswebsite", "status": "-" },
-  { "owner": "prime", "type": "Portfolio", "name": "k", "status": "-" },
-  { "owner": "prime", "type": "Portfolio", "name": "hanslibrary", "status": "active" },
-  { "owner": "prime", "type": "Portfolio", "name": "hanslibraryshow", "status": "-" },
-  { "owner": "prime", "type": "Portfolio", "name": "infinitegallery", "status": "-" },
-  { "owner": "prime", "type": "Portfolio", "name": "elsoreilgallery", "status": "-" },
-  { "owner": "prime", "type": "Portfolio", "name": "yearofthesnake", "status": "experimental", "live": "https://snakecollection.vercel.app/" },
-  { "owner": "prime", "type": "Portfolio", "name": "terminalfortarique", "status": "-" },
-  { "owner": "prime", "type": "Portfolio", "name": "probabilityzero", "status": "-" },
+    "Portfolio": [
+      { "name": "tariqueportfolio", "status": "active" },
+      { "name": "tariquenotes", "status": "active" },
+      { "name": "portfolioforelenasili", "status": "successful" },
+      { "name": "portfolioforitsas", "status": "successful" },
+      { "name": "hanslabswebsite", "status": "-" },
+      { "name": "K", "status": "-" },
+      { "name": "hanslibrary", "status": "active" },
+      { "name": "hanslibraryshow", "status": "-" },
+      { "name": "infinitegallery", "status": "-" },
+      { "name": "elsoreilgallery", "status": "-" },
+      { "name": "yearofthesnake", "status": "experimental", "live": "https://snakecollection.vercel.app/" },
+      { "name": "tarique.bash", "status": "-" },
+      { "name": "probabilityzero", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Interactive", "name": "mash3d", "status": "successful" },
-  { "owner": "prime", "type": "Interactive", "name": "astronomy", "status": "successful" },
+    "Interactive": [
+      { "name": "mash3d", "status": "successful" },
+      { "name": "astronomy", "status": "successful" }
+    ],
 
-  { "owner": "prime", "type": "Data", "name": "sparklineo", "status": "-" },
+    "Data": [
+      { "name": "sparklineo", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Tools", "name": "sandbox", "status": "active" },
-  { "owner": "prime", "type": "Tools", "name": "devbox", "status": "active" },
-  { "owner": "prime", "type": "Tools", "name": "codeview", "status": "-" },
+    "Tools": [
+      { "name": "sandbox", "status": "active" },
+      { "name": "devbox", "status": "active" },
+      { "name": "codeview", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Utilities", "name": "wordview", "status": "-" },
-  { "owner": "prime", "type": "Utilities", "name": "metaview", "status": "-" },
+    "Utilities": [
+      { "name": "wordview", "status": "-" },
+      { "name": "metaview", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Storage", "name": "jupyterkernels", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "cloudstorage", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "ascensionquests", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "macoscursor", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "powershellprofile", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "udlsimonprince", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "aiwritingtools", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "windowsstartmenu", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "obsidianplugins", "status": "-" },
-  { "owner": "prime", "type": "Storage", "name": "windowsicons", "status": "-" },
+    "Storage": [
+      { "name": "jupyterkernels", "status": "-" },
+      { "name": "cloudstorage", "status": "-" },
+      { "name": "ascensionquests", "status": "-" },
+      { "name": "macoscursor", "status": "-" },
+      { "name": "powershellprofile", "status": "-" },
+      { "name": "udlsimonprince", "status": "-" },
+      { "name": "aiwritingtools", "status": "-" },
+      { "name": "windowsstartmenu", "status": "-" },
+      { "name": "obsidianplugins", "status": "-" },
+      { "name": "windowsicons", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Tutorials", "name": "gameoflife", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "whiteboard", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "emxkernel", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "exam.net", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "friendsacrossglobe", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "myasp.netapp", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "roguelike", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "todolist", "status": "-" },
-  { "owner": "prime", "type": "Tutorials", "name": "reminder", "status": "-" },
+    "Tutorship": [
+      { "name": "ds", "status": "active" },
+      { "name": "da", "status": "active" }
+    ],
 
-  { "owner": "prime", "type": "Themes", "name": "jadevinetheme", "status": "-" },
+    "Tutorials": [
+      { "name": "gameoflife", "status": "-" },
+      { "name": "whiteboard", "status": "-" },
+      { "name": "emxkernel", "status": "-" },
+      { "name": "exam.net", "status": "-" },
+      { "name": "friendsacrossglobe", "status": "-" },
+      { "name": "myasp.netapp", "status": "-" },
+      { "name": "roguelike", "status": "-" },
+      { "name": "todolist", "status": "-" },
+      { "name": "reminder", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Chatbots", "name": "llmcolony", "status": "experimental" },
-  { "owner": "prime", "type": "Chatbots", "name": "simtube", "status": "-" },
-  { "owner": "prime", "type": "Chatbots", "name": "telegramllmbot", "status": "experimental", "live": "https://t.me/hansuserbot" },
-  { "owner": "prime", "type": "Chatbots", "name": "nextlangchain", "status": "experimental" },
+    "Themes": [
+      { "name": "jadevinetheme", "status": "-" }
+    ],
 
-  { "owner": "prime", "type": "Templates", "name": "whatawonderfulworld", "status": "-" },
-  { "owner": "prime", "type": "Templates", "name": "geminichatbot", "status": "-" },
+    "Chatbots": [
+      { "name": "llmcolony", "status": "experimental" },
+      { "name": "simtube", "status": "failed" },
+      { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" },
+      { "name": "nextlangchain", "status": "experimental" }
+    ],
 
-  { "owner": "prime", "type": "Others", "name": "pilot", "status": "-" },
+    "Templates": [
+      { "name": "whatawonderfulworld", "status": "-" },
+      { "name": "geminichatbot", "status": "-" }
+    ],
 
-  { "owner": "han", "type": "Cosmosys", "name": "cosmosys", "status": "early" },
-  { "owner": "han", "type": "Cosmosys", "name": "cosmosys-careers", "status": "early" },
-  { "owner": "han", "type": "Blackmarket", "name": "blackmarketdev", "status": "early" }
-]
+    "Others": [
+      { "name": "pilot", "status": "-" }
+    ]
+  },
+
+  "han": {
+    "Cosmosys": [
+      { "name": "cosmosys", "status": "early" },
+      { "name": "cosmosys-careers", "status": "early" }
+    ],
+    "Blackmarket": [
+      { "name": "blackmarketdev", "status": "early" }
+    ]
+  }
+}
