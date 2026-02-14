@@ -7,7 +7,7 @@ const bases = {
   han: "https://github.com/hanslibrary/"
 };
 
-const archivedStatuses = ["successful", "archived", "live", "failed", "-"];
+const archivedStatuses = ["successful", "archived", "live", "idea", "failed", "-"];
 const isArchived = status => archivedStatuses.includes(status);
 
 function renderStatus(item) {
