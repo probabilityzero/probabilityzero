@@ -1,141 +1,255 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prime — Profile</title>
+<title>PRIME :: WORKSTATION</title>
 
 <style>
-/* --- Global --- */
-body {
-  margin: 0;
-  background: #0b0f14;
-  color: #d6e3ff;
-  font-family: "Courier New", monospace;
-  image-rendering: pixelated;
+/* ===== GLOBAL ===== */
+body{
+  margin:0;
+  background:radial-gradient(circle at 50% 20%, #0e1c2f, #05080c 70%);
+  color:#d9ecff;
+  font-family:Tahoma, Verdana, sans-serif;
 }
 
-/* --- Center frame --- */
-.frame {
-  width: 760px;
-  margin: 40px auto;
-  background: #0f1620;
-  border: 3px solid #3aa0ff;
-  box-shadow: 0 0 0 3px #001a33 inset;
+/* subtle moving scanlines */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0,0,0,.15) 3px
+  );
+  animation:scan 8s linear infinite;
+  opacity:.35;
 }
 
-/* --- Title bar --- */
-.titlebar {
-  background: linear-gradient(#0b3a6b, #082748);
-  color: #eaf6ff;
-  padding: 8px 12px;
-  font-weight: bold;
-  border-bottom: 2px solid #3aa0ff;
-  letter-spacing: 1px;
+@keyframes scan{
+  from{transform:translateY(0)}
+  to{transform:translateY(6px)}
 }
 
-/* --- Content --- */
-.content {
-  padding: 18px;
-  line-height: 1.55;
+/* ===== MAIN FRAME ===== */
+.frame{
+  width:900px;
+  margin:48px auto;
+  background:#0b1622;
+  border:3px solid #3aa0ff;
+  box-shadow:
+    0 0 0 3px #001a33 inset,
+    0 0 40px #3aa0ff40;
+  position:relative;
 }
 
-/* --- Pixel avatar --- */
-.avatar {
-  width: 96px;
-  height: 96px;
-  background: #3aa0ff;
-  border: 3px solid #001a33;
-  margin-right: 16px;
-  display: inline-block;
-  vertical-align: top;
+/* ===== TITLE BAR ===== */
+.titlebar{
+  background:linear-gradient(#0b3a6b,#082748);
+  color:#eaf6ff;
+  padding:10px 14px;
+  font-weight:bold;
+  letter-spacing:1px;
+  border-bottom:2px solid #3aa0ff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* --- Info block --- */
-.info {
-  display: inline-block;
-  max-width: 600px;
-  vertical-align: top;
+.led{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#19ff8a;
+  box-shadow:0 0 8px #19ff8a;
+  margin-left:8px;
 }
 
-/* --- Links panel --- */
-.panel {
-  margin-top: 18px;
-  border: 2px solid #3aa0ff;
-  background: #08121c;
+/* ===== CONTENT ===== */
+.content{
+  padding:22px;
 }
 
-.panel-title {
-  background: #10263d;
-  padding: 6px 10px;
-  border-bottom: 2px solid #3aa0ff;
-  font-weight: bold;
+/* ===== PROFILE HEADER ===== */
+.profile{
+  display:flex;
+  gap:22px;
+  margin-bottom:22px;
 }
 
-.panel-body {
-  padding: 12px;
+/* video avatar */
+.avatar video{
+  width:130px;
+  height:130px;
+  object-fit:cover;
+  border:3px solid #3aa0ff;
+  background:#000;
+  box-shadow:0 0 12px #3aa0ff80;
 }
 
-/* --- Pixel buttons --- */
-a.button {
-  display: inline-block;
-  margin: 6px 8px 0 0;
-  padding: 6px 12px;
-  background: #3aa0ff;
-  color: #001a33;
-  text-decoration: none;
-  border: 2px solid #001a33;
-  font-weight: bold;
+/* info block */
+.info{
+  flex:1;
+  line-height:1.7;
 }
 
-a.button:hover {
-  background: #6fc0ff;
+.info b{
+  color:#9cd4ff;
 }
 
-/* --- Footer --- */
-.footer {
-  text-align: center;
-  padding: 10px;
-  font-size: 12px;
-  color: #7aa9d6;
-  border-top: 2px solid #3aa0ff;
+/* ===== QUICK BUTTON GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+/* workstation buttons */
+.button{
+  display:block;
+  padding:14px 12px;
+  background:linear-gradient(#1d6fd1,#104b8c);
+  color:#eaf6ff;
+  text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+  border:2px solid #001a33;
+  box-shadow:
+    0 2px 0 #001a33,
+    0 0 10px #3aa0ff40 inset;
+  transition:.15s;
+}
+
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 4px 0 #001a33,
+    0 0 16px #3aa0ff80 inset;
+}
+
+/* special variants */
+.button.secondary{
+  background:linear-gradient(#3aa0ff,#1d6fd1);
+}
+
+.button.warn{
+  background:linear-gradient(#0b3a6b,#082748);
+}
+
+/* ===== PANEL ===== */
+.panel{
+  margin-top:24px;
+  border:2px solid #3aa0ff;
+  background:#08121c;
+}
+
+.panel-title{
+  background:#10263d;
+  padding:8px 10px;
+  border-bottom:2px solid #3aa0ff;
+  font-weight:bold;
+}
+
+.panel-body{
+  padding:14px;
+  font-size:14px;
+  color:#c6dbff;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  padding:12px;
+  font-size:12px;
+  color:#7aa9d6;
+  border-top:2px solid #3aa0ff;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="frame">
 
-  <div class="titlebar">PRIME :: PERSONAL TERMINAL</div>
+  <div class="titlebar">
+    PRIME :: WORKSTATION
+    <div class="led"></div>
+  </div>
 
   <div class="content">
 
-    <div class="avatar"></div>
+```
+<div class="profile">
 
-    <div class="info">
-      <div><b>Handle:</b> Prime</div>
-      <div><b>Domain:</b> Systems • Tools • Experiments</div>
-      <div><b>Status:</b> Active</div>
-      <div><b>Location:</b> Cyberspace</div>
-    </div>
+  <div class="avatar">
+    <video src="https://github.com/probabilityzero/probabilityzero/blob/main/profile.mp4?raw=true"
+           autoplay muted loop playsinline></video>
+  </div>
 
-    <p>
-      Independent builder of software artifacts, utilities, and interactive systems.
-      This node serves as an entry point to ongoing work and archived constructs.
-    </p>
+  <div class="info">
+    <div><b>Handle:</b> probabilityzero</div>
+    <div><b>Role:</b> Systems • Tools • Experiments</div>
+    <div><b>Status:</b> ONLINE</div>
+    <div><b>Location:</b> Network Edge</div>
+  </div>
 
-    <div class="panel">
-      <div class="panel-title">Access Points</div>
-      <div class="panel-body">
-        <a class="button" href="/projects">PROJECTS</a>
-        <a class="button" href="https://github.com/probabilityzero/" target="_blank">GITHUB</a>
-      </div>
-    </div>
+</div>
+
+<div class="grid">
+
+  <a class="button" href="/probabilityzero/projects">
+    PROJECT REGISTRY
+  </a>
+
+  <a class="button secondary"
+     href="https://github.com/probabilityzero/"
+     target="_blank">
+    GITHUB NODE
+  </a>
+
+  <a class="button"
+     href="https://t.me/probabilityzero"
+     target="_blank">
+    TELEGRAM LINK
+  </a>
+
+  <a class="button secondary"
+     href="https://codeforces.com/profile/probabilityzero"
+     target="_blank">
+    CODEFORCES
+  </a>
+
+  <a class="button warn" href="/probabilityzero">
+    MAIN INDEX
+  </a>
+
+  <a class="button"
+     href="mailto:contact@probabilityzero.dev">
+    SIGNAL
+  </a>
+
+</div>
+
+<div class="panel">
+  <div class="panel-title">SYSTEM SUMMARY</div>
+  <div class="panel-body">
+    Independent workstation focused on software construction,
+    experimental interfaces, and infrastructure tooling.
+    This node aggregates active modules and archived artifacts.
+  </div>
+</div>
+```
 
   </div>
 
   <div class="footer">
-    PRIME NETWORK • EST. 20XX • ALL SIGNALS NOMINAL
+    PRIME NETWORK • CONTROL INTERFACE • READY
   </div>
 
 </div>
