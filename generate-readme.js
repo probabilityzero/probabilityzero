@@ -162,7 +162,7 @@ body::after{
   content:"";
   position:fixed; inset:0; pointer-events:none;
   background:repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(0,0,0,.18) 3px);
-  opacity:.35;
+  opacity:.50;
 }
 
 /* ===== TITLE BAR ===== */
@@ -172,15 +172,16 @@ body::after{
   padding:10px 14px;
   font-weight:bold;
   border-bottom:2px solid #3aa0ff;
-  letter-spacing:1px;
+  font-family:Tahoma, Verdana, sans-serif;
   display:flex; align-items:center; justify-content:space-between;
   box-shadow:0 2px 0 #001a33;
+  padding:8px 12px;
 }
 
 /* ===== FRAME ===== */
 .wrap{
   max-width:980px;
-  margin:28px 8px 16px;
+  margin:28px 8px 8px;
   padding:16px;
   background:#0b1622;
   border:3px solid #3aa0ff;
@@ -293,12 +294,12 @@ td a:hover{ text-decoration:underline; }
     <input id="search" class="search" placeholder="SEARCH PROJECTS">
     
     <p>SORT BY<p>
-    <button id="sortName" class="btn secondary">SORT NAME</button>
-    <button id="sortType" class="btn secondary">SORT TYPE</button>
-
-    <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
+    <button id="sortName" class="btn secondary">NAME</button>
+    <button id="sortType" class="btn secondary">TYPE</button>
     
     <span id="counter" class="counter"></span>
+    <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
+
   </div>
 
   <table>
@@ -316,7 +317,7 @@ td a:hover{ text-decoration:underline; }
   </table>
 
   <div class="statusbar">
-    <span>NODE: PRIME</span>
+    <span>NODE: PRIME EDGE</span>
     <span id="visibleCount"></span>
   </div>
 
