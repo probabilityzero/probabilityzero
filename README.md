@@ -7,7 +7,6 @@
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) | active |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) | idea |
-| Tools | [endbox](https://github.com/probabilityzero/endbox) | active |
 | Tutorship | [da](https://github.com/probabilityzero/da) | active |
 |  | [ds](https://github.com/probabilityzero/ds) | active |
 |  | [nma](https://github.com/probabilityzero/nma) | early |
@@ -59,6 +58,7 @@
 |  | [whatawonderfulworld](https://github.com/probabilityzero/whatawonderfulworld) | - |
 | Themes | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 | Tools | [codeview](https://github.com/probabilityzero/codeview) | - |
+|  | [endbox](https://github.com/probabilityzero/endbox) | - |
 |  | [metaview](https://github.com/probabilityzero/metaview) | - |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
