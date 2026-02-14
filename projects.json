@@ -10,7 +10,6 @@
     "Games": [
       { "name": "games", "status": "active", "live": "https://quiz.tarique.me" },
       { "name": "games.py", "status": "active" },
-      { "name": "nma", "status": "early" },
       { "name": "moonview", "status": "-" },
       { "name": "hunch", "status": "failed" },
       { "name": "echecs", "status": "-" },
@@ -80,6 +79,7 @@
 
     "Tutorship": [
       { "name": "ds", "status": "active" },
+      { "name": "nma", "status": "early" },
       { "name": "da", "status": "active" }
     ],
 
