@@ -6,7 +6,6 @@
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) | active |
-| Software | [aristocrat](https://github.com/probabilityzero/aristocrat) | idea |
 | Tutorship | [da](https://github.com/probabilityzero/da) | active |
 |  | [ds](https://github.com/probabilityzero/ds) | active |
 |  | [nma](https://github.com/probabilityzero/nma) | early |
@@ -45,6 +44,7 @@
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | live |
 |  | [tariqueportfolio](https://github.com/probabilityzero/tariqueportfolio) | live |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
+| Software | [aristocrat](https://github.com/probabilityzero/aristocrat) | idea |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [cloudstorage](https://github.com/probabilityzero/cloudstorage) | - |
 |  | [jupyterkernels](https://github.com/probabilityzero/jupyterkernels) | - |
