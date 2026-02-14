@@ -12,7 +12,7 @@ data.sort((a, b) => {
   return a.type.localeCompare(b.type);
 });
 
-const archivedStatuses = ["successful", "failed", "-"];
+const archivedStatuses = ["successful", "archived", "failed", "-"];
 const isArchived = (status) => archivedStatuses.includes(status);
 
 const myProjects = data.filter(p => p.owner === "prime");
@@ -48,14 +48,14 @@ function generateTable(items) {
 
 let output = "";
 
-output += `### My Projects\n\n`;
+output += `### My projects\n\n`;
 output += generateTable(myActive);
 
-output += `### Han's Projects [↗](${bases.han})\n\n`;
+output += `### Han's projects [↗](${bases.han})\n\n`;
 output += generateTable(hanActive);
 
 if (myArchived.length > 0) {
-  output += `<details>\n<summary>Archived Projects</summary>\n\n`;
+  output += `<details>\n<summary>Archived projects</summary>\n\n`;
   output += generateTable(myArchived);
   output += `\n</details>\n\n`;
 }
