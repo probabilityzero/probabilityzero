@@ -160,8 +160,7 @@ search.addEventListener('input', e => {
 
 </body>
 </html>`;
-
-fs.mkdirSync("projects", { recursive: true });
+ 
 fs.writeFileSync("projects/index.html", html);
 
 console.log("README and interactive index generated.");
