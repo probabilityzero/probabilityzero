@@ -20,9 +20,7 @@ function collectProjects(portfolio, archivedFlag) {
   Object.entries(portfolio).forEach(([type, items]) => {
     items.forEach(item => {
       const archived = isArchived(item.status);
-      if (archivedFlag === archived) {
-        result.push({ ...item, type });
-      }
+      if (archivedFlag === archived) result.push({ ...item, type });
     });
   });
 
@@ -67,23 +65,103 @@ function generateTable(items, owner) {
   return table;
 }
 
-let output = "";
+function htmlTable(items, owner, title) {
+  let rows = "";
+  let i = 1;
+
+  items.forEach(item => {
+    const repo = bases[owner] + item.name;
+    const live = item.live ? `<a class="live" href="${item.live}" target="_blank">Live</a>` : "";
+    rows += `
+      <tr>
+        <td>${i++}</td>
+        <td>${item.type}</td>
+        <td><a href="${repo}" target="_blank">${item.name}</a></td>
+        <td>${item.status}</td>
+        <td>${live}</td>
+      </tr>`;
+  });
+
+  return `
+  <section>
+    <h2>${title}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Type</th>
+          <th>Project</th>
+          <th>Status</th>
+          <th>Live</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </section>`;
+}
 
 const primeActive = collectProjects(data.prime, false);
 const primeArchived = collectProjects(data.prime, true);
 const hanActive = collectAll(data.han);
 
-output += generateTable(primeActive, "prime");
+let readme = "";
 
-output += `#### [Han's ↗](${bases.han})\n\n`;
-output += generateTable(hanActive, "han");
+readme += generateTable(primeActive, "prime");
+readme += `#### [Han's ↗](${bases.han})\n\n`;
+readme += generateTable(hanActive, "han");
 
 if (primeArchived.length > 0) {
-  output += `<details>\n<summary>Archived</summary>\n\n`;
-  output += generateTable(primeArchived, "prime");
-  output += `\n</details>\n\n`;
+  readme += `<details>\n<summary>Archived</summary>\n\n`;
+  readme += generateTable(primeArchived, "prime");
+  readme += `\n</details>\n\n`;
 }
 
-fs.writeFileSync("README.md", output);
+fs.writeFileSync("README.md", readme);
 
-console.log("README generated.");
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects Index</title>
+<style>
+body{font-family:system-ui;background:#0b0c10;color:#e6e6e6;margin:0;padding:24px}
+h1{margin-bottom:8px}
+h2{margin-top:32px}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{padding:10px;border-bottom:1px solid #222;text-align:left}
+th{position:sticky;top:0;background:#111}
+a{color:#7dd3fc;text-decoration:none}
+.live{background:#065f46;color:#a7f3d0;padding:4px 8px;border-radius:6px}
+input{width:100%;padding:10px;margin:16px 0;background:#111;border:1px solid #333;color:#eee;border-radius:8px}
+</style>
+</head>
+<body>
+
+<h1>Projects</h1>
+<input id="search" placeholder="Search projects…" />
+
+${htmlTable(primeActive, "prime", "My Projects")}
+${htmlTable(hanActive, "han", "Han's Projects")}
+
+<details>
+  <summary>Archived</summary>
+  ${htmlTable(primeArchived, "prime", "Archived Projects")}
+</details>
+
+<script>
+const search = document.getElementById('search');
+search.addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('tbody tr').forEach(tr => {
+    tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>`;
+
+fs.mkdirSync("projects", { recursive: true });
+fs.writeFileSync("projects/index.html", html);
+
+console.log("README and interactive index generated.");
