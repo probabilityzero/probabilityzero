@@ -6,6 +6,7 @@
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) | active |
+| Tools | [studyview](https://github.com/probabilityzero/studyview) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) | active |
 |  | [ds](https://github.com/probabilityzero/ds) | active |
 |  | [nma](https://github.com/probabilityzero/nma) | early |
@@ -23,7 +24,7 @@
 | Chatbots | [simtube](https://github.com/probabilityzero/simtube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) | - |
-| Games | [echecs](https://github.com/probabilityzero/echecs) | - |
+| Games | [echecs](https://github.com/probabilityzero/echecs) | failed |
 |  | [hunch](https://github.com/probabilityzero/hunch) | failed |
 |  | [moonview](https://github.com/probabilityzero/moonview) | - |
 |  | [tictactoe](https://github.com/probabilityzero/tictactoe) | - |
@@ -35,16 +36,16 @@
 | Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | - |
 |  | [hanslabswebsite](https://github.com/probabilityzero/hanslabswebsite) | - |
 |  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | [live](https://hanslibrary.online) |
-|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
 |  | [K](https://github.com/probabilityzero/K) | - |
 |  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) | successful |
 |  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | successful |
-|  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | - |
+|  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) | [live](https://bash.tarique.me) |
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) | live |
 |  | [tariqueportfolio](https://github.com/probabilityzero/tariqueportfolio) | live |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) | idea |
+|  | [designstandards](https://github.com/probabilityzero/designstandards) | idea |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [cloudstorage](https://github.com/probabilityzero/cloudstorage) | - |
 |  | [jupyterkernels](https://github.com/probabilityzero/jupyterkernels) | - |
@@ -55,6 +56,7 @@
 |  | [windowsicons](https://github.com/probabilityzero/windowsicons) | - |
 |  | [windowsstartmenu](https://github.com/probabilityzero/windowsstartmenu) | - |
 | Templates | [geminichatbot](https://github.com/probabilityzero/geminichatbot) | - |
+|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
 |  | [whatawonderfulworld](https://github.com/probabilityzero/whatawonderfulworld) | - |
 | Themes | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 | Tools | [codeview](https://github.com/probabilityzero/codeview) | - |
@@ -62,8 +64,7 @@
 |  | [metaview](https://github.com/probabilityzero/metaview) | - |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
-| Tutorials | [emxkernel](https://github.com/probabilityzero/emxkernel) | - |
-|  | [exam.net](https://github.com/probabilityzero/exam.net) | - |
+| Tutorials | [exam.net](https://github.com/probabilityzero/exam.net) | - |
 |  | [friendsacrossglobe](https://github.com/probabilityzero/friendsacrossglobe) | - |
 |  | [gameoflife](https://github.com/probabilityzero/gameoflife) | - |
 |  | [myasp.net](https://github.com/probabilityzero/myasp.net) | - |
