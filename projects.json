@@ -49,8 +49,8 @@
 
     "Templates": [
       { "name": "whatawonderfulworld", "status": "-" },
-      { "name": "geminichatbot", "status": "-" }
-      { "name": "infinitegallery", "status": "-" },
+      { "name": "geminichatbot", "status": "-" },
+      { "name": "infinitegallery", "status": "-" }
     ],
 
     "Tutorship": [
@@ -63,7 +63,7 @@
       { "name": "sandbox", "status": "-" },
       { "name": "endbox", "status": "-" },
       { "name": "codeview", "status": "-" },
-      { "name": "wordview", "status": "-" },,
+      { "name": "wordview", "status": "-" },
       { "name": "studyview", "status": "early" },
       { "name": "metaview", "status": "-" }
     ],
@@ -80,6 +80,7 @@
       { "name": "myasp.net", "status": "-" },
       { "name": "roguelike", "status": "-" },
       { "name": "todolist", "status": "-" },
+      { "name": "whiteboard", "status": "-" },
       { "name": "reminder", "status": "-" }
     ],
 
