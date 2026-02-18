@@ -12,7 +12,7 @@
       { "name": "games.py", "status": "active" },
       { "name": "moonview", "status": "-" },
       { "name": "hunch", "status": "failed" },
-      { "name": "echecs", "status": "-" },
+      { "name": "echecs", "status": "failed" },
       { "name": "tictactoe", "status": "-" },
       { "name": "wordle", "status": "-" }
     ],
@@ -26,10 +26,9 @@
       { "name": "hanslabswebsite", "status": "-" },
       { "name": "K", "status": "-" },
       { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
-      { "name": "infinitegallery", "status": "-" },
       { "name": "elsoreilgallery", "status": "-" },
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
-      { "name": "probabilityzero", "status": "-" }
+      { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/" }
     ],
 
     "Interactive": [
@@ -51,6 +50,7 @@
     "Templates": [
       { "name": "whatawonderfulworld", "status": "-" },
       { "name": "geminichatbot", "status": "-" }
+      { "name": "infinitegallery", "status": "-" },
     ],
 
     "Tutorship": [
@@ -63,18 +63,18 @@
       { "name": "sandbox", "status": "-" },
       { "name": "endbox", "status": "-" },
       { "name": "codeview", "status": "-" },
-      { "name": "wordview", "status": "-" },
+      { "name": "wordview", "status": "-" },,
+      { "name": "studyview", "status": "early" },
       { "name": "metaview", "status": "-" }
     ],
 
     "Software": [ 
-      { "name": "aristocrat", "status": "idea" }
+      { "name": "aristocrat", "status": "idea" },
+      { "name": "designstandards", "status": "idea" }
     ],
     
     "Tutorials": [
       { "name": "gameoflife", "status": "-" },
-      { "name": "whiteboard", "status": "-" },
-      { "name": "emxkernel", "status": "-" },
       { "name": "exam.net", "status": "-" },
       { "name": "friendsacrossglobe", "status": "-" },
       { "name": "myasp.net", "status": "-" },
