@@ -181,7 +181,7 @@ body::after{
 /* ===== FRAME ===== */
 .wrap{
   max-width:980px;
-  margin:28px 8px 8px;
+  margin:28px auto 8px;
   padding:16px;
   background:#0b1622;
   border:3px solid #3aa0ff;
