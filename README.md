@@ -6,7 +6,7 @@
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) | active |
-| Tools | [studyview](https://github.com/probabilityzero/studyview) | early |
+| Tools | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) | active |
 |  | [ds](https://github.com/probabilityzero/ds) | active |
 |  | [nma](https://github.com/probabilityzero/nma) | early |
@@ -29,6 +29,7 @@
 |  | [moonview](https://github.com/probabilityzero/moonview) | - |
 |  | [tictactoe](https://github.com/probabilityzero/tictactoe) | - |
 |  | [wordle](https://github.com/probabilityzero/wordle) | - |
+| Hackathons | [anasiagent](https://github.com/probabilityzero/anasiagent) | - |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) | successful |
 | Lifebook | [sol](https://github.com/probabilityzero/sol) | successful |
