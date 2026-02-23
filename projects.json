@@ -64,7 +64,7 @@
       { "name": "endbox", "status": "-" },
       { "name": "codeview", "status": "-" },
       { "name": "wordview", "status": "-" },
-      { "name": "studyview", "status": "early" },
+      { "name": "studyverse", "status": "early" },
       { "name": "metaview", "status": "-" }
     ],
 
@@ -86,6 +86,10 @@
 
     "Themes": [
       { "name": "jadevinetheme", "status": "-" }
+    ],
+    
+    "Hackathons": [
+      { "name": "anasiagent", "status": "-" }
     ],
     
     "Storage": [
