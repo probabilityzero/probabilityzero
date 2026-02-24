@@ -353,7 +353,7 @@
 <!-- ========== SECTION 7: LAYERS ========== -->
 <section id="layers">
   <div class="layer-bg"></div>
-  <h2>// SYSTEM LAYERS</h2>
+  <h2>SYSTEM LAYERS //</h2>
 
   <div class="layer-cards">
     <div class="layer-card">
@@ -457,7 +457,7 @@
 
 <!-- ========== SECTION 9: DIARY ========== -->
 <section id="diary">
-  <h2>// LOG ENTRIES</h2>
+  <h2>LOG ENTRIES //</h2>
 
   <div class="log-entries">
 
@@ -1195,23 +1195,6 @@
   hex.innerHTML=out;
 })();
 
-/* ===== DEEP TIME COUNTER ===== */
-(function(){
-  const el=document.getElementById('dtc');
-  if(!el)return;
-  const start=new Date('1998-01-01T00:00:00');
-  function update(){
-    const diff=Date.now()-start.getTime();
-    const d=Math.floor(diff/86400000);
-    const h=Math.floor((diff%86400000)/3600000);
-    const m=Math.floor((diff%3600000)/60000);
-    const s=Math.floor((diff%60000)/1000);
-    el.textContent=String(d).padStart(4,'0')+':'+String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
-  }
-  update();
-  setInterval(update,1000);
-})();
-
 /* ===== TRANSMIT ===== */
 function transmitMsg(){
   const input=document.getElementById('txInput');
@@ -1341,5 +1324,7 @@ setInterval(()=>{
   }
 },3000);
 </script>
+<script src="../assets/js/timer.js"></script>
+<script src="../assets/js/timer.js"></script>
 </body>
 </html>

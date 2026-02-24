@@ -521,7 +521,7 @@
 <body>
 
 <div class="boot" id="boot">
-  <p>NODE_001 :: PRIME EDGE<br>Boot sequence initialized…<br>Establishing connection to THE WIRED…<br>Welcome to Command Workstation.</p>
+  <p>NODE_002 :: PRIME EDGE<br>Boot sequence initialized…<br>Establishing connection to THE WIRED…<br>Welcome to Command Workstation.</p>
 </div>
 
 <div class="shell">
@@ -530,7 +530,10 @@
   <div class="panel left">
     <div class="titlebar glitch" data-text="SYSTEM">SYSTEM<div class="led"></div></div>
     <div class="stat">
-      <div class="clock" id="clock"></div>
+
+      <!-- <div class="clock" id="clock"></div> -->
+
+      <div class="dt-counter" id="dtc">0000:00:00:00</div>
 
       <div class="metric">
         <span class="metric-label">CORE STATUS:</span>
@@ -603,7 +606,7 @@
 </div>
 
 <div class="summary">
-  NODE_001 :: PRIME EDGE :: Interface operational — awaiting directives.
+  NODE_002 :: PRIME EDGE :: Interface operational — awaiting directives.
 </div>
 
 <div class="terminal" id="terminal">
@@ -677,9 +680,7 @@ updateClock();
 /* ===== RANDOM GIF ===== */
 const gifs = [
   "https://i.pinimg.com/originals/80/31/12/803112952a7108f000906544d545256e.gif",
-  "https://i.pinimg.com/originals/d2/96/74/d296744858b6f4059d016874ef7561b2.gif",
-  "https://64.media.tumblr.com/f6c2d8c9fadbd011b92894e02e96e093/tumblr_inline_osqqxaQSgp1sucbkg_250.gifv",
-  "https://64.media.tumblr.com/362b7796b760ff64a2b27ba526226a8e/tumblr_inline_osqqx0YC2h1sucbkg_250.gifv"
+  "https://i.pinimg.com/originals/d2/96/74/d296744858b6f4059d016874ef7561b2.gif"
 ];
 const gifElement = document.getElementById("randgif");
 if (gifElement) {
@@ -838,6 +839,7 @@ function randomGlitch() {
 }
 setInterval(randomGlitch, 3000);
 </script>
+<script src="assets/js/timer.js"></script>
 
 </body>
 </html>

@@ -1188,17 +1188,6 @@ section {
   z-index:1;
 }
 
-.dt-counter {
-  font-family:'VT323',monospace;
-  font-size:clamp(30px,5vw,60px);
-  color:var(--glitch-blue);
-  margin:30px 0;
-  letter-spacing:5px;
-  text-shadow:0 0 20px var(--glitch-blue);
-  position:relative;
-  z-index:1;
-}
-
 /* ========== SECTION 19: CONSCIOUSNESS GRID ========== */
 #consciousness {
   background:#000;
@@ -1538,19 +1527,6 @@ section {
   .enc-ts { min-width:100px; font-size:11px; }
   .enc-id { min-width:60px; }
   .diag-connector { width:20px; }
-}
-
-/* ========== CURSOR TRAIL HINT ========== */
-.cursor-trail {
-  position:fixed;
-  width:8px;height:8px;
-  border-radius:50%;
-  background:var(--glitch-blue);
-  pointer-events:none;
-  z-index:10000;
-  opacity:0;
-  box-shadow:0 0 6px var(--glitch-blue);
-  transition:opacity 0.1s;
 }
 
 /* ADDITIONAL DECORATIVE ELEMENTS */
