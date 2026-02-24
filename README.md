@@ -48,13 +48,9 @@
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) | idea |
 |  | [designstandards](https://github.com/probabilityzero/designstandards) | idea |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
-|  | [cloudstorage](https://github.com/probabilityzero/cloudstorage) | - |
-|  | [jupyterkernels](https://github.com/probabilityzero/jupyterkernels) | - |
-|  | [macoscursor](https://github.com/probabilityzero/macoscursor) | - |
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) | - |
 |  | [powershellprofile](https://github.com/probabilityzero/powershellprofile) | - |
-|  | [windowsicons](https://github.com/probabilityzero/windowsicons) | - |
-|  | [windowsstartmenu](https://github.com/probabilityzero/windowsstartmenu) | - |
+|  | [windowsconfigs](https://github.com/probabilityzero/windowsconfigs) | - |
 | Templates | [friendsacrossglobe](https://github.com/probabilityzero/friendsacrossglobe) | - |
 |  | [geminichatbot](https://github.com/probabilityzero/geminichatbot) | - |
 |  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
@@ -62,7 +58,6 @@
 |  | [whatawonderfulworld](https://github.com/probabilityzero/whatawonderfulworld) | - |
 | Themes | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 | Tools | [codeview](https://github.com/probabilityzero/codeview) | - |
-|  | [metaview](https://github.com/probabilityzero/metaview) | - |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
