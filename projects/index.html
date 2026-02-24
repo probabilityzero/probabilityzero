@@ -1,10 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
 <meta charset="UTF-8">
 <title>Projects</title>
 
-  <link rel="stylesheet" href="styles.css">
+<style>
+/* ===== GLOBAL ===== */
+body{
+  margin:0;
+  background:radial-gradient(circle at 50% 10%, #0f1f33, #05080c 70%);
+  color:#e6f2ff;
+  font-family:Consolas, "Courier New", monospace;
+  image-rendering:pixelated;
+}
+
+/* subtle scanlines */
+body::after{
+  content:"";
+  position:fixed; inset:0; pointer-events:none;
+  background:repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(0,0,0,.18) 3px);
+  opacity:.50;
+}
+
+/* ===== TITLE BAR ===== */
+.titlebar{
+  background:linear-gradient(#0b3a6b,#082748);
+  color:#eaf6ff;
+  padding:10px 14px;
+  font-weight:bold;
+  border-bottom:2px solid #3aa0ff;
+  font-family:Tahoma, Verdana, sans-serif;
+  display:flex; align-items:center; justify-content:space-between;
+  box-shadow:0 2px 0 #001a33;
+  padding:8px 12px;
+}
+
+/* ===== FRAME ===== */
+.wrap{
+  max-width:980px;
+  margin:28px auto 8px;
+  padding:16px;
+  background:#0b1622;
+  border:3px solid #3aa0ff;
+  box-shadow:0 0 0 3px #001a33 inset, 0 0 32px #3aa0ff40;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar{
+  display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+  margin-bottom:12px;
+}
+
+.counter{
+  margin-left:auto;
+  font-size:12px;
+  color:#9ecbff;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+  background:linear-gradient(#1d6fd1,#104b8c);
+  border:2px solid #001a33;
+  color:#eaf6ff;
+  padding:6px 12px;
+  text-decoration:none;
+  font-size:13px;
+  cursor:pointer;
+  box-shadow:0 2px 0 #001a33, 0 0 8px #3aa0ff40 inset;
+}
+.btn:hover{ transform:translateY(-1px); }
+.btn.secondary{ background:linear-gradient(#3aa0ff,#1d6fd1); }
+
+/* small LIVE pill */
+.live{
+  display:inline-block;
+  margin-left:6px;
+  padding:1px 6px;
+  font-size:11px;
+  background:#063f2e;
+  border:1px solid #2cffb2;
+  color:#baffea;
+  text-decoration:none;
+}
+
+/* ===== SEARCH ===== */
+.search{
+  flex:1 1 220px;
+  padding:7px 9px;
+  background:#06080c;
+  border:2px solid #3aa0ff;
+  color:#eaf6ff;
+  font-family:inherit;
+}
+
+/* ===== TABLE ===== */
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#06080c;
+  border:2px solid #3aa0ff;
+}
+
+th,td{
+  padding:9px 10px;
+  border-bottom:1px solid #1a2638;
+  text-align:left;
+}
+
+th{
+  background:#082748;
+  position:sticky; top:0;
+  cursor:pointer;
+}
+
+/* zebra + hover */
+tbody tr:nth-child(even){ background:#07101a; }
+tbody tr:hover{ background:#0e2238; }
+
+/* archived dim */
+tr[data-archived="true"]{ opacity:.5; }
+
+/* bright repo links */
+td a{
+  color:#7dd3ff;
+  font-weight:bold;
+  text-decoration:none;
+}
+td a:hover{ text-decoration:underline; }
+
+/* footer strip */
+.statusbar{
+  margin-top:10px;
+  font-size:12px;
+  color:#9ecbff;
+  display:flex; justify-content:space-between;
+}
+</style>
 </head>
 
 <body>
@@ -544,6 +675,7 @@
   </div>
 
 </div>
+
 <script>
 const rows = [...document.querySelectorAll("tbody tr")];
 const toggle = document.getElementById("toggleArchive");
