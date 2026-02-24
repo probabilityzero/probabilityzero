@@ -6,8 +6,71 @@
 <title>∴ the wired ∴ you are always connected ∴</title>
   <link rel="stylesheet" href="../assets/styles/global.css">  
   <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    /* Audio Control Styling */
+    .audio-control {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 12, 24, 0.8);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      opacity: 0.3;
+    }
+    
+    .audio-control:hover {
+      opacity: 1 !important;
+      border-color: rgba(0, 212, 255, 0.6);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+      transform: scale(1.05);
+    }
+    
+    .audio-control span {
+      font-size: 16px;
+      filter: grayscale(0.3);
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .audio-control {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+      }
+      
+      .audio-control span {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+<!-- BACKGROUND AUDIO -->
+<audio id="bgAudio" preload="none" loop>
+  <source src="../assets/1.618.mp3" type="audio/mpeg">
+</audio>
+
+<!-- AUDIO CONTROL (subtle) -->
+<div id="audioControl" class="audio-control">
+  <span id="audioIcon">🔊</span>
+</div>
 
 <!-- CURSOR TRAIL -->
 <div class="cursor-trail" id="cur"></div>
@@ -1181,6 +1244,92 @@ function transmitMsg(){
 document.getElementById('txInput')&&document.getElementById('txInput').addEventListener('keydown',e=>{
   if(e.key==='Enter')transmitMsg();
 });
+
+/* ===== BACKGROUND AUDIO STREAMING ===== */
+(function(){
+  const audio = document.getElementById('bgAudio');
+  const control = document.getElementById('audioControl');
+  const icon = document.getElementById('audioIcon');
+  
+  if (!audio) return;
+  
+  let isPlaying = false;
+  let hasTriedAutoplay = false;
+
+  // Try to start audio streaming and playback
+  function startAudio() {
+    if (hasTriedAutoplay) return;
+    hasTriedAutoplay = true;
+    
+    // Start loading the audio immediately
+    audio.load();
+    
+    // Try autoplay
+    const playPromise = audio.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        isPlaying = true;
+        icon.textContent = '🔊';
+        control.style.opacity = '0.3';
+      }).catch(() => {
+        // Autoplay blocked - show control
+        isPlaying = false;
+        icon.textContent = '🔇';
+        control.style.opacity = '0.7';
+        control.style.animation = 'pulse 2s infinite';
+      });
+    }
+  }
+
+  // Handle audio control click
+  control.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      icon.textContent = '🔇';
+      control.style.opacity = '0.7';
+    } else {
+      audio.play().then(() => {
+        isPlaying = true;
+        icon.textContent = '🔊';
+        control.style.opacity = '0.3';
+        control.style.animation = 'none';
+      });
+    }
+  });
+
+  // Handle audio events
+  audio.addEventListener('loadstart', () => {
+    console.log('Audio: Stream loading started');
+  });
+
+  audio.addEventListener('canplay', () => {
+    console.log('Audio: Ready to play');
+    if (!hasTriedAutoplay) {
+      startAudio();
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    // Should not happen due to loop attribute, but just in case
+    if (isPlaying) {
+      audio.play();
+    }
+  });
+
+  // Start immediately when DOM is ready
+  if (audio.readyState >= 3) {
+    startAudio();
+  } else {
+    audio.addEventListener('canplay', startAudio, { once: true });
+  }
+
+  // Also try on first user interaction
+  document.addEventListener('click', startAudio, { once: true });
+  document.addEventListener('keydown', startAudio, { once: true });
+  document.addEventListener('touchstart', startAudio, { once: true });
+})();
 
 /* ===== RANDOM GLITCH ON CELLS ===== */
 setInterval(()=>{
