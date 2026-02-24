@@ -146,6 +146,7 @@ const html = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <title>Projects</title>
+<link rel="stylesheet" href="../assets/styles/global.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -160,14 +161,10 @@ const html = `<!DOCTYPE html>
 
   <div class="toolbar">
     <input id="search" class="search" placeholder="SEARCH PROJECTS">
-    
     <p>SORT BY<p>
     <button id="sortName" class="btn secondary">NAME</button>
     <button id="sortType" class="btn secondary">TYPE</button>
-    
-    <span id="counter" class="counter"></span>
     <button id="toggleArchive" class="btn">SHOW ARCHIVED</button>
-
   </div>
 
   <table>
@@ -186,6 +183,7 @@ const html = `<!DOCTYPE html>
 
   <div class="statusbar">
     <span>NODE: PRIME EDGE</span>
+    <span id="counter" class="counter"></span>
     <span id="visibleCount"></span>
   </div>
 
