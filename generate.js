@@ -176,23 +176,22 @@ const html = `<!DOCTYPE html>
       <tr>
         <th>#</th>
         <th>TYPE</th>
-        <script src="main.js" defer></script>
-search.oninput = applyFilters;
+        <th>REPOSITORY</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${buildRows(allRows)}
+    </tbody>
+  </table>
 
-/* simple sort helpers */
-function sortBy(col){
-  const tbody = document.querySelector("tbody");
-  const sorted = rows.sort((a,b)=>
-    a.children[col].innerText.localeCompare(b.children[col].innerText)
-  );
-  sorted.forEach(r=>tbody.appendChild(r));
-}
+  <div class="statusbar">
+    <span>NODE: PRIME EDGE</span>
+    <span id="visibleCount"></span>
+  </div>
 
-document.getElementById("sortName").onclick = ()=>sortBy(2);
-document.getElementById("sortType").onclick = ()=>sortBy(1);
-
-applyFilters();
-</script>
+</div>
+<script src="main.js" defer></script>
 
 </body>
 </html>`;

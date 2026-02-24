@@ -34,7 +34,7 @@ search.oninput = applyFilters;
 /* simple sort helpers */
 function sortBy(col){
   const tbody = document.querySelector("tbody");
-  const sorted = rows.sort((a,b)=
+  const sorted = rows.sort((a,b)=>
     a.children[col].innerText.localeCompare(b.children[col].innerText)
   );
   sorted.forEach(r=>tbody.appendChild(r));
