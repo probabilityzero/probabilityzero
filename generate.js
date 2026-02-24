@@ -7,7 +7,7 @@ const bases = {
   han: "https://github.com/hanslibrary/"
 };
 
-const archivedStatuses = ["successful", "archived", "live", "idea", "failed", "-"];
+const archivedStatuses = ["successful", "archived", "live", "idea", "merged", "failed", "-"];
 const isArchived = status => archivedStatuses.includes(status);
 
 function renderStatus(item) {
@@ -107,12 +107,14 @@ const hanActive = collectAll(data.han);
 let readme = "";
 
 readme += generateTable(primeActive, "prime");
-readme += `#### [Han's ↗](${bases.han})\n\n`;
+readme += `#### [Han's](${bases.han})\n\n`;
 readme += generateTable(hanActive, "han");
 
 if (primeArchived.length > 0) {
   readme += `<details>\n<summary>Archived</summary>\n\n`;
   readme += generateTable(primeArchived, "prime");
+  readme += `\n\n\n`;
+  readme += `Learn more about me: [localhost://0002](https://probabilityzero.github.io/probabilityzero/)`;
   readme += `\n</details>\n\n`;
 }
 

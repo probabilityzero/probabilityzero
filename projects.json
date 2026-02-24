@@ -4,15 +4,15 @@
       { "name": "lifebook", "status": "active" },
       { "name": "taskforce", "status": "archived" },
       { "name": "healthline", "status": "early" },
-      { "name": "sol", "status": "successful" }
+      { "name": "sol", "status": "merged" }
     ],
 
     "Games": [
       { "name": "games", "status": "active", "live": "https://quiz.tarique.me" },
       { "name": "games.py", "status": "active" },
-      { "name": "moonview", "status": "-" },
-      { "name": "hunch", "status": "failed" },
+      { "name": "hunch", "status": "merged" },
       { "name": "echecs", "status": "failed" },
+      { "name": "games.rs", "status": "-" },
       { "name": "tictactoe", "status": "-" },
       { "name": "wordle", "status": "-" }
     ],
@@ -28,11 +28,12 @@
       { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
       { "name": "elsoreilgallery", "status": "-" },
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
-      { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/" }
+      { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
 
     "Interactive": [
       { "name": "mash3d", "status": "successful" },
+      { "name": "moonview", "status": "-" },
       { "name": "astronomy", "status": "successful" }
     ],
 
@@ -43,12 +44,13 @@
     "Chatbots": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "simtube", "status": "failed" },
-      { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" },
-      { "name": "nextlangchain", "status": "experimental" }
+      { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" }
     ],
 
     "Templates": [
       { "name": "whatawonderfulworld", "status": "-" },
+      { "name": "friendsacrossglobe", "status": "-" },
+      { "name": "nextlangchain", "status": "-" },
       { "name": "geminichatbot", "status": "-" },
       { "name": "infinitegallery", "status": "-" }
     ],
@@ -61,10 +63,10 @@
 
     "Tools": [
       { "name": "sandbox", "status": "-" },
-      { "name": "endbox", "status": "-" },
+      { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
-      { "name": "wordview", "status": "-" },
       { "name": "studyverse", "status": "early" },
+      { "name": "wordview", "status": "-" },
       { "name": "metaview", "status": "-" }
     ],
 
@@ -74,11 +76,8 @@
     ],
     
     "Tutorials": [
-      { "name": "gameoflife", "status": "-" },
-      { "name": "exam.net", "status": "-" },
-      { "name": "friendsacrossglobe", "status": "-" },
-      { "name": "myasp.net", "status": "-" },
-      { "name": "roguelike", "status": "-" },
+      { "name": "visualizers.rs", "status": "-" },
+      { "name": "grants.net", "status": "-" },
       { "name": "todolist", "status": "-" },
       { "name": "whiteboard", "status": "-" },
       { "name": "reminder", "status": "-" }
@@ -98,7 +97,6 @@
       { "name": "ascensionquests", "status": "-" },
       { "name": "macoscursor", "status": "-" },
       { "name": "powershellprofile", "status": "-" },
-      { "name": "udlsimonprince", "status": "-" },
       { "name": "windowsstartmenu", "status": "-" },
       { "name": "obsidianplugins", "status": "-" },
       { "name": "windowsicons", "status": "-" }
