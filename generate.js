@@ -68,7 +68,7 @@ function collectAll(portfolio) {
 }
 
 function generateTable(items, owner) {
-  const lockPath = "assets/icons/lock.svg";
+  const lockPath = "assets/icons/lock.png";
   let table =
     `| Projects | Repositories | Status |\n` +
     `|--------|---------|--------|\n`;
