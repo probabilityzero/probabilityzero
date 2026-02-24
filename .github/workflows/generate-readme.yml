@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20
 
-      - run: node generate-readme.js
+      - run: node _scripts/generate-readme.js
 
       - name: Commit changes
         run: |
