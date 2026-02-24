@@ -14,7 +14,7 @@
 | Projects | Repositories | Status |
 |--------|---------|--------|
 | Cosmosys | [cosmosys](https://github.com/hanslibrary/cosmosys) | early |
-| The Medium House | [thetraveler](https://github.com/hanslibrary/thetraveler) | early |
+| Medium | [thetraveler](https://github.com/hanslibrary/thetraveler) | early |
 <details>
 <summary>Archived</summary>
 
