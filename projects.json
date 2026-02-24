@@ -66,8 +66,7 @@
       { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
       { "name": "studyverse", "status": "early" },
-      { "name": "wordview", "status": "-" },
-      { "name": "metaview", "status": "-" }
+      { "name": "wordview", "status": "-" }
     ],
 
     "Software": [ 
@@ -92,14 +91,10 @@
     ],
     
     "Storage": [
-      { "name": "jupyterkernels", "status": "-" },
-      { "name": "cloudstorage", "status": "-" },
+      { "name": "windowsconfigs", "status": "-" },
       { "name": "ascensionquests", "status": "-" },
-      { "name": "macoscursor", "status": "-" },
       { "name": "powershellprofile", "status": "-" },
-      { "name": "windowsstartmenu", "status": "-" },
-      { "name": "obsidianplugins", "status": "-" },
-      { "name": "windowsicons", "status": "-" }
+      { "name": "obsidianplugins", "status": "-" }
     ]
   },
 
