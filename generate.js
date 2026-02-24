@@ -2,6 +2,28 @@ const fs = require("fs");
 
 const data = JSON.parse(fs.readFileSync("projects.json", "utf8"));
 
+const visibilityMap = {};
+try {
+  const csvText = fs.readFileSync("projects.csv", "utf8");
+  if (csvText) {
+    const lines = csvText.split(/\r?\n/).filter(Boolean);
+    const headerRaw = lines.shift();
+    const headerCols = headerRaw.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/).map(s => s.replace(/^"|"$/g, "").trim());
+    const nameIdx = headerCols.indexOf("name");
+    const visIdx = headerCols.indexOf("visibility");
+
+    lines.forEach(line => {
+      const cols = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/).map(s => s.replace(/^"|"$/g, ""));
+      while (cols.length < headerCols.length) cols.push("");
+      const name = (cols[nameIdx] || "").toLowerCase().trim();
+      const vis = (cols[visIdx] || "").trim();
+      if (name) visibilityMap[name] = vis;
+    });
+  }
+} catch (e) {
+  console.warn("Could not read projects.csv for visibility:", e.message);
+}
+
 const bases = {
   prime: "https://github.com/probabilityzero/",
   han: "https://github.com/hanslibrary/"
@@ -46,22 +68,19 @@ function collectAll(portfolio) {
 }
 
 function generateTable(items, owner) {
+  const lockPath = "assets/icons/lock.svg";
   let table =
-    `| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |\n`;
-
-  table += `|--------|---------|--------|\n`;
-
+    `| Projects | Repositories | Status |\n` +
+    `|--------|---------|--------|\n`;
   let lastType = "";
-
   items.forEach(item => {
     const type = item.type === lastType ? "" : item.type;
     lastType = item.type;
-
     const base = bases[owner];
-
-    table += `| ${type} | [${item.name}](${base}${item.name}) | ${renderStatus(item)} |\n`;
+    const vis = (visibilityMap[item.name.toLowerCase()] || item.visibility || "").toUpperCase();
+    const lockHtml = vis && vis !== "PUBLIC" ? ` <img src="${lockPath}" alt="private" width="14" />` : "";
+    table += `| ${type} | [${item.name}](${base}${item.name})${lockHtml} | ${renderStatus(item)} |\n`;
   });
-
   return table;
 }
 
@@ -143,6 +162,7 @@ function buildRows(rows) {
       </tr>`;
   }).join("");
 }
+
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
