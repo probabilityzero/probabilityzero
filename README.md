@@ -61,9 +61,10 @@
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
-| Tutorials | [grants.net](https://github.com/probabilityzero/grants.net) | - |
+| Tutorials | [mxkernel](https://github.com/probabilityzero/mxkernel) | - |
 |  | [reminder](https://github.com/probabilityzero/reminder) | - |
 |  | [todolist](https://github.com/probabilityzero/todolist) | - |
+|  | [universities.net](https://github.com/probabilityzero/universities.net) | - |
 |  | [visualizers.rs](https://github.com/probabilityzero/visualizers.rs) | - |
 |  | [whiteboard](https://github.com/probabilityzero/whiteboard) | - |
 
