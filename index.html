@@ -121,11 +121,30 @@
   .shell{
     grid-template-columns:1fr;
     grid-template-rows:auto auto auto;
-    overflow:auto;
+    height: auto;
+    max-height: none;
+    overflow: auto;
+    padding: 12px;
   }
   .left{order:1}
   .center{order:2}
   .right{order:3}
+
+  .panel{
+    max-height: none;
+    overflow: visible;
+  }
+
+  .terminal{
+    height: auto;
+    max-height: 40vh;
+    overflow: auto;
+  }
+
+  .avatar video{
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* ===== PANELS ===== */
@@ -521,7 +540,7 @@
 <body>
 
 <div class="boot" id="boot">
-  <p>NODE_002 :: PRIME EDGE<br>Boot sequence initialized…<br>Establishing connection to THE WIRED…<br>Welcome to Command Workstation.</p>
+  <p>NODE_002 :: PRIME EDGE<br>Boot sequence initialized…<br>Establishing connection to THE WIRED…<br>ENTERING PRIME WORKSTATION</p>
 </div>
 
 <div class="shell">
@@ -591,7 +610,7 @@
   </div>
 
   <div class="info">
-    <div><b>User:</b> probabilityzero</div>
+    <div><b>User:</b> χαν</div>
     <div><b>Node:</b> PRIME EDGE</div>
     <div><b>Layer:</b> 07_PSYCHE_NET</div>
     <div><b>Status:</b> <span style="color: #19ff8a;">CONNECTED</span></div>
@@ -602,11 +621,10 @@
 <div class="grid">
   <a class="button" href="/probabilityzero/projects">PROJECT REGISTRY</a>
   <a class="button" href="/probabilityzero/wired">ENTER THE WIRED</a>
-  <a class="button" href="/probabilityzero/repositories">DATA VAULT</a>
 </div>
 
 <div class="summary">
-  NODE_002 :: PRIME EDGE :: Interface operational — awaiting directives.
+  NODE_002 :: Interface operational — awaiting directives.
 </div>
 
 <div class="terminal" id="terminal">
