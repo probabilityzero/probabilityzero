@@ -41,10 +41,6 @@
       { "name": "sparklineo", "status": "-" }
     ],
 
-    "Index": [
-      { "name": "openindex", "status": "early" }
-    ],
-
     "AI/ML": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "simtube", "status": "failed" },
@@ -70,7 +66,8 @@
       { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
       { "name": "studyverse", "status": "early" },
-      { "name": "wordview", "status": "-" }
+      { "name": "wordview", "status": "-" },
+      { "name": "openindex", "status": "early" }
     ],
 
     "Software": [ 
