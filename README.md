@@ -1,8 +1,9 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
-| Chatbots | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
+| AI/ML | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Games | [games](https://github.com/probabilityzero/games) | [active](https://quiz.tarique.me) |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
+| Index | [openindex](https://github.com/probabilityzero/openindex) | early |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | Tools | [studyverse](https://github.com/probabilityzero/studyverse) | early |
@@ -20,7 +21,7 @@
 
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
-| Chatbots | [simtube](https://github.com/probabilityzero/simtube) | failed |
+| AI/ML | [simtube](https://github.com/probabilityzero/simtube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 | Games | [echecs](https://github.com/probabilityzero/echecs) | failed |
