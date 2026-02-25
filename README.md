@@ -3,10 +3,10 @@
 | AI/ML | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Games | [games](https://github.com/probabilityzero/games) | [active](https://quiz.tarique.me) |
 |  | [games.py](https://github.com/probabilityzero/games.py) | active |
-| Index | [openindex](https://github.com/probabilityzero/openindex) | early |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
-| Tools | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+| Tools | [openindex](https://github.com/probabilityzero/openindex) | early |
+|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [nma](https://github.com/probabilityzero/nma) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
