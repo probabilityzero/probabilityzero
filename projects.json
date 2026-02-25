@@ -41,7 +41,11 @@
       { "name": "sparklineo", "status": "-" }
     ],
 
-    "Chatbots": [
+    "Index": [
+      { "name": "openindex", "status": "early" }
+    ],
+
+    "AI/ML": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "simtube", "status": "failed" },
       { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" }
