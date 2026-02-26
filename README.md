@@ -1,8 +1,8 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | AI/ML | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
-| Games | [games](https://github.com/probabilityzero/games) | [active](https://quiz.tarique.me) |
-|  | [games.py](https://github.com/probabilityzero/games.py) | active |
+| Games | [games.py](https://github.com/probabilityzero/games.py) | active |
+|  | [games.ts](https://github.com/probabilityzero/games.ts) | [active](https://quiz.tarique.me) |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | Tools | [openindex](https://github.com/probabilityzero/openindex) | early |
@@ -26,8 +26,6 @@
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 | Games | [echecs](https://github.com/probabilityzero/echecs) | failed |
 |  | [games.rs](https://github.com/probabilityzero/games.rs) | - |
-|  | [hunch](https://github.com/probabilityzero/hunch) | merged |
-|  | [tictactoe](https://github.com/probabilityzero/tictactoe) | - |
 |  | [wordle](https://github.com/probabilityzero/wordle) | - |
 | Hackathons | [anasiagent](https://github.com/probabilityzero/anasiagent) | - |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
