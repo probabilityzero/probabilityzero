@@ -6,7 +6,8 @@
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Platforms | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+| Software | [designstandards](https://github.com/probabilityzero/designstandards) | early |
+|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 #### [Han's](https://github.com/hanslibrary/)
@@ -44,7 +45,6 @@
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [designstandards](https://github.com/probabilityzero/designstandards) | idea |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
