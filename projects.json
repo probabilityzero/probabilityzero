@@ -23,8 +23,8 @@
       { "name": "tariqueportfolio", "status": "live" },
       { "name": "tariquenotes", "status": "live" },
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "portfolioforelenasili", "status": "successful" },
       { "name": "portfolioforitsas", "status": "successful" },
+      { "name": "elsoreilgallery", "status": "successful" },
       { "name": "hanslabs", "status": "-" },
       { "name": "K", "status": "-" },
       { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
@@ -75,7 +75,7 @@
     ],
     
     "Tutorials": [
-      { "name": "mxkernel", "status": "-" },
+      { "name": "newkernel.rs", "status": "-" },
       { "name": "visualizers.rs", "status": "-" },
       { "name": "universities.net", "status": "-" },
       { "name": "todolist", "status": "-" },
