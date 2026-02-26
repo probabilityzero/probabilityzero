@@ -6,7 +6,7 @@
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Platforms | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Tools | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 #### [Han's](https://github.com/hanslibrary/)
@@ -32,18 +32,22 @@
 |  | [taskforce](https://github.com/probabilityzero/taskforce) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [simtube](https://github.com/probabilityzero/simtube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | successful |
+| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | live |
 |  | [hanslabs](https://github.com/probabilityzero/hanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | - |
-|  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | successful |
+|  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | live |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [tariqueportfolio](https://github.com/probabilityzero/tariqueportfolio) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
+|  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [designstandards](https://github.com/probabilityzero/designstandards) | idea |
+|  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
+|  | [stackbox](https://github.com/probabilityzero/stackbox) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+|  | [wordview](https://github.com/probabilityzero/wordview) | - |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [powershellprofile](https://github.com/probabilityzero/powershellprofile) | - |
@@ -51,13 +55,7 @@
 | Templates | [friendsacrossglobe](https://github.com/probabilityzero/friendsacrossglobe) | - |
 |  | [geminichatbot](https://github.com/probabilityzero/geminichatbot) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
-|  | [nextlangchain](https://github.com/probabilityzero/nextlangchain) | - |
-|  | [whatawonderfulworld](https://github.com/probabilityzero/whatawonderfulworld) | - |
 | Themes | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
-| Tools | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
-|  | [stackbox](https://github.com/probabilityzero/stackbox) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [wordview](https://github.com/probabilityzero/wordview) | - |
 | Tutorials | [newkernel.rs](https://github.com/probabilityzero/newkernel.rs) | - |
 |  | [reminder](https://github.com/probabilityzero/reminder) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [todolist](https://github.com/probabilityzero/todolist) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
