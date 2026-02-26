@@ -1,10 +1,10 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
-| AI/ML | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Games | [games.py](https://github.com/probabilityzero/games.py) | active |
 |  | [games.ts](https://github.com/probabilityzero/games.ts) | [active](https://quiz.tarique.me) |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
+| LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Tools | [openindex](https://github.com/probabilityzero/openindex) | early |
 |  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
@@ -21,11 +21,9 @@
 
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
-| AI/ML | [simtube](https://github.com/probabilityzero/simtube) | failed |
-|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 | Games | [echecs](https://github.com/probabilityzero/echecs) | failed |
-|  | [games.rs](https://github.com/probabilityzero/games.rs) | - |
+|  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
 |  | [wordle](https://github.com/probabilityzero/wordle) | - |
 | Hackathons | [anasiagent](https://github.com/probabilityzero/anasiagent) | - |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
@@ -33,8 +31,9 @@
 |  | [moonview](https://github.com/probabilityzero/moonview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 | Lifebook | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
 |  | [taskforce](https://github.com/probabilityzero/taskforce) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | - |
-|  | [hanslabswebsite](https://github.com/probabilityzero/hanslabswebsite) | - |
+| LLM | [simtube](https://github.com/probabilityzero/simtube) | failed |
+|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
+| Portfolio | [hanslabs](https://github.com/probabilityzero/hanslabs) | - |
 |  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | - |
 |  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
