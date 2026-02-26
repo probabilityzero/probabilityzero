@@ -32,10 +32,10 @@
 |  | [taskforce](https://github.com/probabilityzero/taskforce) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [simtube](https://github.com/probabilityzero/simtube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [hanslabs](https://github.com/probabilityzero/hanslabs) | - |
+| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | successful |
+|  | [hanslabs](https://github.com/probabilityzero/hanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | - |
-|  | [portfolioforelenasili](https://github.com/probabilityzero/portfolioforelenasili) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
 |  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | successful |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
@@ -58,7 +58,7 @@
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
-| Tutorials | [mxkernel](https://github.com/probabilityzero/mxkernel) | - |
+| Tutorials | [newkernel.rs](https://github.com/probabilityzero/newkernel.rs) | - |
 |  | [reminder](https://github.com/probabilityzero/reminder) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [todolist](https://github.com/probabilityzero/todolist) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [universities.net](https://github.com/probabilityzero/universities.net) | - |
