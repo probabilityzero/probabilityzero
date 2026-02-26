@@ -23,8 +23,8 @@
       { "name": "tariqueportfolio", "status": "live" },
       { "name": "tariquenotes", "status": "live" },
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "portfolioforitsas", "status": "successful" },
-      { "name": "elsoreilgallery", "status": "successful" },
+      { "name": "portfolioforitsas", "status": "live" },
+      { "name": "elsoreilgallery", "status": "live" },
       { "name": "hanslabs", "status": "-" },
       { "name": "K", "status": "-" },
       { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
@@ -45,9 +45,7 @@
     ],
 
     "Templates": [
-      { "name": "whatawonderfulworld", "status": "-" },
       { "name": "friendsacrossglobe", "status": "-" },
-      { "name": "nextlangchain", "status": "-" },
       { "name": "geminichatbot", "status": "-" },
       { "name": "infinitegallery", "status": "-" }
     ],
@@ -57,21 +55,18 @@
       { "name": "da", "status": "active" }
     ],
 
-    "Tools": [
-      { "name": "sandbox", "status": "-" },
-      { "name": "stackbox", "status": "-" },
-      { "name": "codeview", "status": "-" },
-      { "name": "studyverse", "status": "early" },
-      { "name": "wordview", "status": "-" }
-    ],
-
     "Platforms": [
       { "name": "openindex", "status": "early" }
     ],
 
     "Software": [ 
       { "name": "aristocrat", "status": "idea" },
-      { "name": "designstandards", "status": "idea" }
+      { "name": "designstandards", "status": "idea" },
+      { "name": "sandbox", "status": "-" },
+      { "name": "stackbox", "status": "-" },
+      { "name": "codeview", "status": "-" },
+      { "name": "studyverse", "status": "early" },
+      { "name": "wordview", "status": "-" }
     ],
     
     "Tutorials": [
