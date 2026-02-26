@@ -7,6 +7,10 @@
       { "name": "sol", "status": "merged" }
     ],
 
+    "Data": [
+      { "name": "sparklineo", "status": "-" }
+    ],
+
     "Games": [
       { "name": "games.ts", "status": "active", "live": "https://quiz.tarique.me" },
       { "name": "games.py", "status": "active" },
@@ -34,10 +38,6 @@
       { "name": "astronomy", "status": "successful" }
     ],
 
-    "Data": [
-      { "name": "sparklineo", "status": "-" }
-    ],
-
     "LLM": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "simtube", "status": "failed" },
@@ -63,7 +63,10 @@
       { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
       { "name": "studyverse", "status": "early" },
-      { "name": "wordview", "status": "-" },
+      { "name": "wordview", "status": "-" }
+    ],
+
+    "Platforms": [
       { "name": "openindex", "status": "early" }
     ],
 
