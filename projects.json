@@ -61,7 +61,7 @@
 
     "Software": [ 
       { "name": "aristocrat", "status": "idea" },
-      { "name": "designstandards", "status": "idea" },
+      { "name": "designstandards", "status": "early" },
       { "name": "sandbox", "status": "-" },
       { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
