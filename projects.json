@@ -10,8 +10,8 @@
     "Games": [
       { "name": "games.ts", "status": "active", "live": "https://quiz.tarique.me" },
       { "name": "games.py", "status": "active" },
+      { "name": "games.rs", "status": "archived" },
       { "name": "echecs", "status": "failed" },
-      { "name": "games.rs", "status": "-" },
       { "name": "wordle", "status": "-" }
     ],
 
@@ -21,10 +21,9 @@
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
       { "name": "portfolioforelenasili", "status": "successful" },
       { "name": "portfolioforitsas", "status": "successful" },
-      { "name": "hanslabswebsite", "status": "-" },
+      { "name": "hanslabs", "status": "-" },
       { "name": "K", "status": "-" },
       { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
-      { "name": "elsoreilgallery", "status": "-" },
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
@@ -39,7 +38,7 @@
       { "name": "sparklineo", "status": "-" }
     ],
 
-    "AI/ML": [
+    "LLM": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "simtube", "status": "failed" },
       { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" }
