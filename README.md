@@ -28,15 +28,14 @@
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) | successful |
 |  | [moonview](https://github.com/probabilityzero/moonview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+|  | [todolist](https://github.com/probabilityzero/todolist) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 | Lifebook | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
 |  | [taskforce](https://github.com/probabilityzero/taskforce) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [simtube](https://github.com/probabilityzero/simtube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [elsoreilgallery](https://github.com/probabilityzero/elsoreilgallery) | live |
-|  | [hanslabs](https://github.com/probabilityzero/hanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+| Portfolio | [hanslabs](https://github.com/probabilityzero/hanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [hanslibrary](https://github.com/probabilityzero/hanslibrary) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | - |
-|  | [portfolioforitsas](https://github.com/probabilityzero/portfolioforitsas) | live |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
@@ -44,6 +43,7 @@
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+|  | [reminder](https://github.com/probabilityzero/reminder) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [wordview](https://github.com/probabilityzero/wordview) | - |
@@ -52,9 +52,7 @@
 |  | [powershellprofile](https://github.com/probabilityzero/powershellprofile) | - |
 |  | [windowsconfigs](https://github.com/probabilityzero/windowsconfigs) | - |
 | Themes | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
-| Tutorials | [newkernel.rs](https://github.com/probabilityzero/newkernel.rs) | - |
-|  | [reminder](https://github.com/probabilityzero/reminder) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [todolist](https://github.com/probabilityzero/todolist) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+| Tutorials | [kernel.rs](https://github.com/probabilityzero/kernel.rs) | - |
 |  | [universities.net](https://github.com/probabilityzero/universities.net) | - |
 |  | [visualizers.rs](https://github.com/probabilityzero/visualizers.rs) | - |
 |  | [whiteboard](https://github.com/probabilityzero/whiteboard) | - |
