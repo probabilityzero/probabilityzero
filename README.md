@@ -51,9 +51,6 @@
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [powershellprofile](https://github.com/probabilityzero/powershellprofile) | - |
 |  | [windowsconfigs](https://github.com/probabilityzero/windowsconfigs) | - |
-| Templates | [friendsacrossglobe](https://github.com/probabilityzero/friendsacrossglobe) | - |
-|  | [geminichatbot](https://github.com/probabilityzero/geminichatbot) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [infinitegallery](https://github.com/probabilityzero/infinitegallery) | - |
 | Themes | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 | Tutorials | [newkernel.rs](https://github.com/probabilityzero/newkernel.rs) | - |
 |  | [reminder](https://github.com/probabilityzero/reminder) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
