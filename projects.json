@@ -23,8 +23,6 @@
       { "name": "tariqueportfolio", "status": "live" },
       { "name": "tariquenotes", "status": "live" },
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "portfolioforitsas", "status": "live" },
-      { "name": "elsoreilgallery", "status": "live" },
       { "name": "hanslabs", "status": "-" },
       { "name": "K", "status": "-" },
       { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
@@ -35,6 +33,7 @@
     "Interactive": [
       { "name": "mash3d", "status": "successful" },
       { "name": "moonview", "status": "-" },
+      { "name": "todolist", "status": "-" },
       { "name": "astronomy", "status": "successful" }
     ],
 
@@ -60,16 +59,15 @@
       { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
       { "name": "studyverse", "status": "early" },
-      { "name": "wordview", "status": "-" }
+      { "name": "wordview", "status": "-" },
+      { "name": "reminder", "status": "-" }
     ],
     
     "Tutorials": [
-      { "name": "newkernel.rs", "status": "-" },
+      { "name": "kernel.rs", "status": "-" },
       { "name": "visualizers.rs", "status": "-" },
       { "name": "universities.net", "status": "-" },
-      { "name": "todolist", "status": "-" },
-      { "name": "whiteboard", "status": "-" },
-      { "name": "reminder", "status": "-" }
+      { "name": "whiteboard", "status": "-" }
     ],
 
     "Themes": [
