@@ -25,7 +25,6 @@
 | Games | [echecs](https://github.com/probabilityzero/echecs) | failed |
 |  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
 |  | [wordle](https://github.com/probabilityzero/wordle) | - |
-| Hackathons | [anasiagent](https://github.com/probabilityzero/anasiagent) | - |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) | successful |
 |  | [moonview](https://github.com/probabilityzero/moonview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
