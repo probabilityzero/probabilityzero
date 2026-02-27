@@ -44,12 +44,6 @@
       { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" }
     ],
 
-    "Templates": [
-      { "name": "friendsacrossglobe", "status": "-" },
-      { "name": "geminichatbot", "status": "-" },
-      { "name": "infinitegallery", "status": "-" }
-    ],
-
     "Tutorship": [
       { "name": "ds", "status": "active" },
       { "name": "da", "status": "active" }
