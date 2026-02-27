@@ -38,8 +38,8 @@
 |  | [K](https://github.com/probabilityzero/K) | - |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
-|  | [tariquenotes](https://github.com/probabilityzero/tariquenotes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
-|  | [tariqueportfolio](https://github.com/probabilityzero/tariqueportfolio) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
+|  | [tarique.notes](https://github.com/probabilityzero/tarique.notes) | live |
+|  | [tarique.portfolio](https://github.com/probabilityzero/tarique.portfolio) | live |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
