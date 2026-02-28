@@ -23,7 +23,7 @@
       { "name": "tarique.notes", "status": "live" },
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
       { "name": "websitehanslabs", "status": "archived" },
-      { "name": "K", "status": "-" },
+      { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
       { "name": "H", "status": "live", "live":"https://hanslibrary.online" }, 
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
@@ -31,7 +31,7 @@
 
     "Interactive": [
       { "name": "mash3d", "status": "successful" },
-      { "name": "moon3d", "status": "-" },
+      { "name": "moon3d", "status": "archived" },
       { "name": "astronomy", "status": "successful" }
     ],
 
