@@ -22,18 +22,18 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-| Games | [echess](https://github.com/probabilityzero/echess) | failed |
+| Games | [echess](https://github.com/probabilityzero/echess) <img src="assets/icons/lock.png" alt="private" width="14" /> | failed |
 |  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
 |  | [wordle](https://github.com/probabilityzero/wordle) | archived |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
-|  | [mash3d](https://github.com/probabilityzero/mash3d) | successful |
-|  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+|  | [mash3d](https://github.com/probabilityzero/mash3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
+|  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Lifebook | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
 |  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Portfolio | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
-|  | [K](https://github.com/probabilityzero/K) | - |
+|  | [K](https://github.com/probabilityzero/K) | [live](https://k.hanslibrary.online) |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [tarique.notes](https://github.com/probabilityzero/tarique.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
