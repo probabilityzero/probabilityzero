@@ -8,7 +8,7 @@
     ],
 
     "Data": [
-      { "name": "sparklineo", "status": "-" }
+      { "name": "sparklineo", "status": "archived" }
     ],
 
     "Games": [
@@ -16,13 +16,13 @@
       { "name": "games.py", "status": "active" },
       { "name": "games.rs", "status": "archived" },
       { "name": "echess", "status": "failed" },
-      { "name": "wordle", "status": "-" }
+      { "name": "wordle", "status": "archived" }
     ],
 
     "Portfolio": [
       { "name": "tarique.notes", "status": "live" },
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "websitehanslabs", "status": "-" },
+      { "name": "websitehanslabs", "status": "archived" },
       { "name": "K", "status": "-" },
       { "name": "H", "status": "live", "live":"https://hanslibrary.online" }, 
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
@@ -52,12 +52,12 @@
 
     "Software": [ 
       { "name": "aristocrat", "status": "idea" },
-      { "name": "designs", "status": "idea" },
-      { "name": "sandbox", "status": "-" },
-      { "name": "stackbox", "status": "-" },
-      { "name": "codeview", "status": "-" },
+      { "name": "designs", "status": "early" },
+      { "name": "sandbox", "status": "archived" },
+      { "name": "stackbox", "status": "archived" },
+      { "name": "codeview", "status": "archived" },
       { "name": "studyverse", "status": "early" },
-      { "name": "charview", "status": "-" }
+      { "name": "charview", "status": "archived" }
     ],
     
     "Tutorials": [

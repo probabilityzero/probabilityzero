@@ -6,7 +6,8 @@
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Platforms | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+| Software | [designs](https://github.com/probabilityzero/designs) | early |
+|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 #### [Han's](https://github.com/hanslibrary/)
@@ -20,10 +21,10 @@
 
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
-| Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
+| Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Games | [echess](https://github.com/probabilityzero/echess) | failed |
 |  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
-|  | [wordle](https://github.com/probabilityzero/wordle) | - |
+|  | [wordle](https://github.com/probabilityzero/wordle) | archived |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) | successful |
 |  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
@@ -36,14 +37,13 @@
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [tarique.notes](https://github.com/probabilityzero/tarique.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
-|  | [websitehanslabs](https://github.com/probabilityzero/websitehanslabs) | - |
+|  | [websitehanslabs](https://github.com/probabilityzero/websitehanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
-|  | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
-|  | [designs](https://github.com/probabilityzero/designs) | idea |
-|  | [sandbox](https://github.com/probabilityzero/sandbox) | - |
-|  | [stackbox](https://github.com/probabilityzero/stackbox) | - |
+|  | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+|  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+|  | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
+|  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
