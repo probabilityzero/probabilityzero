@@ -2,8 +2,8 @@
   "prime": {
     "Lifebook": [
       { "name": "lifebook", "status": "active" },
-      { "name": "taskforce", "status": "archived" },
       { "name": "healthline", "status": "early" },
+      { "name": "tfm", "status": "archived" },
       { "name": "sol", "status": "merged" }
     ],
 
@@ -15,17 +15,16 @@
       { "name": "games.ts", "status": "active", "live": "https://quiz.tarique.me" },
       { "name": "games.py", "status": "active" },
       { "name": "games.rs", "status": "archived" },
-      { "name": "echecs", "status": "failed" },
+      { "name": "echess", "status": "failed" },
       { "name": "wordle", "status": "-" }
     ],
 
     "Portfolio": [
-      { "name": "tarique.portfolio", "status": "live" },
       { "name": "tarique.notes", "status": "live" },
       { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
       { "name": "hanslabs", "status": "-" },
       { "name": "K", "status": "-" },
-      { "name": "hanslibrary", "status": "live", "live":"https://hanslibrary.online" }, 
+      { "name": "H", "status": "live", "live":"https://hanslibrary.online" }, 
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
@@ -58,7 +57,7 @@
       { "name": "stackbox", "status": "-" },
       { "name": "codeview", "status": "-" },
       { "name": "studyverse", "status": "early" },
-      { "name": "wordview", "status": "-" }
+      { "name": "charview", "status": "-" }
     ],
     
     "Tutorials": [
