@@ -48,7 +48,8 @@
     ],
 
     "Platforms": [
-      { "name": "openindex", "status": "early" }
+      { "name": "openindex", "status": "early" },
+      { "name": "watchtower", "status": "early" }
     ],
 
     "Software": [ 
@@ -59,14 +60,13 @@
       { "name": "framedb", "status": "idea" },
       { "name": "sandbox", "status": "archived" },
       { "name": "stackbox", "status": "archived" },
-      { "name": "studyverse", "status": "early" },
-      { "name": "watchtower", "status": "early" }
+      { "name": "studyverse", "status": "early" }
     ],
     
     "Tutorials": [
       { "name": "kernel.rs", "status": "-" },
       { "name": "boards.rs", "status": "-" },
-      { "name": "grants.net", "status": "-" },
+      { "name": "grants.net", "status": "-"},
       { "name": "reminder", "status": "-" },
       { "name": "todolist", "status": "-" },
       { "name": "whiteboard", "status": "-" }
