@@ -20,8 +20,9 @@
     ],
 
     "Portfolio": [
-      { "name": "tarique.notes", "status": "live" },
-      { "name": "tarique.bash", "status": "live", "live":"https://bash.tarique.me" },
+      { "name": ".me", "status": "live" },
+      { "name": ".notes", "status": "live" },
+      { "name": ".bash", "status": "live", "live":"https://bash.tarique.me" },
       { "name": "websitehanslabs", "status": "archived" },
       { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
       { "name": "H", "status": "live", "live":"https://hanslibrary.online" }, 
