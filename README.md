@@ -6,8 +6,8 @@
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Platforms | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 |  | [watchtower](https://github.com/probabilityzero/watchtower) | early |
+| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 #### [Han's](https://github.com/hanslibrary/)
@@ -32,7 +32,7 @@
 |  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [.info](https://github.com/probabilityzero/.info) | live |
+| Portfolio | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
