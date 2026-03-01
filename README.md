@@ -32,11 +32,12 @@
 |  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
+| Portfolio | [.bash](https://github.com/probabilityzero/.bash) | [live](https://bash.tarique.me) |
+|  | [.me](https://github.com/probabilityzero/.me) | live |
+|  | [.notes](https://github.com/probabilityzero/.notes) | live |
+|  | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | [live](https://k.hanslibrary.online) |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
-|  | [tarique.bash](https://github.com/probabilityzero/tarique.bash) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
-|  | [tarique.notes](https://github.com/probabilityzero/tarique.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [websitehanslabs](https://github.com/probabilityzero/websitehanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
