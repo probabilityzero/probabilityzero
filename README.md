@@ -6,8 +6,8 @@
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 | Platforms | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Software | [designs](https://github.com/probabilityzero/designs) | early |
-|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+|  | [watchtower](https://github.com/probabilityzero/watchtower) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 #### [Han's](https://github.com/hanslibrary/)
@@ -22,7 +22,7 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-| Games | [echess](https://github.com/probabilityzero/echess) <img src="assets/icons/lock.png" alt="private" width="14" /> | failed |
+| Games | [echess](https://github.com/probabilityzero/echess) | failed |
 |  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
 |  | [wordle](https://github.com/probabilityzero/wordle) | archived |
 | Interactive | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
@@ -32,9 +32,9 @@
 |  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | LLM | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [.bash](https://github.com/probabilityzero/.bash) | [live](https://bash.tarique.me) |
-|  | [.me](https://github.com/probabilityzero/.me) | live |
-|  | [.notes](https://github.com/probabilityzero/.notes) | live |
+| Portfolio | [.info](https://github.com/probabilityzero/.info) | live |
+|  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
+|  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | [live](https://k.hanslibrary.online) |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
@@ -43,6 +43,8 @@
 | Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
 |  | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+|  | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
+|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
