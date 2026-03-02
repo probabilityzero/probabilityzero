@@ -176,6 +176,9 @@ const html = `<!DOCTYPE html>
 
 <div class="cursor-trail" id="cur"></div>
 
+<canvas id="bgGlobe"></canvas>
+<div class="glitch-scan"></div>
+
 <div class="titlebar glitch">  
   <a class="btn" href="/probabilityzero">BACK</a>
   <h3 data-text="PROJECT REGISTRY" class="glitch">PROJECT REGISTRY</h3>
@@ -262,7 +265,7 @@ document.getElementById("sortType").onclick = ()=>sortBy(1);
 
 applyFilters();
 </script>
-
+<script src="globe.js"></script>
 </body>
 </html>`;
 
