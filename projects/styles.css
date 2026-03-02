@@ -12,7 +12,7 @@
 @keyframes glitch-before { 0%,88%,100% { opacity:0; } 89% { opacity:1; transform: translate(-4px,-2px); } 92% { opacity:1; transform: translate(4px,2px); } 95% { opacity:0; } }
 @keyframes glitch-after { 0%,88%,100% { opacity:0; } 90% { opacity:1; transform: translate(4px,2px); } 93% { opacity:1; transform: translate(-4px,-2px); } 96% { opacity:0; } }
 
-.wrap { max-width: 980px; margin: 20px auto 8px; padding: 0px; background: linear-gradient(135deg, var(--panel-bg) 0%, #0d1a28 50%, var(--panel-bg) 100%); border: 2px solid var(--primary-blue); box-shadow: 0 0 16px rgba(58, 160, 255, 0.12) inset, 0 0 24px rgba(58, 160, 255, 0.08); overflow: hidden; width: calc(100% - 8px); }
+.wrap { max-width: 980px; margin: 20px auto 8px; padding: 0px; background: linear-gradient(135deg, var(--panel-bg) 0%, #0d1a28 50%, var(--panel-bg) 100%); border: 2px solid var(--primary-blue); box-shadow: 0 0 16px rgba(58, 160, 255, 0.12) inset, 0 0 24px rgba(58, 160, 255, 0.08); overflow: hidden; width: calc(100% - 8px); position: relative; z-index: 1; }
 .wrap > .toolbar, .wrap > table, .wrap > .statusbar { padding:16px; }
 .wrap::before { content: ''; position: absolute; pointer-events: none; }
 
