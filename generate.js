@@ -174,9 +174,12 @@ const html = `<!DOCTYPE html>
 
 <body>
 
-<div class="titlebar">
-  <span>PROJECT REGISTRY</span>
+<div class="cursor-trail" id="cur"></div>
+
+<div class="titlebar glitch">  
   <a class="btn" href="/probabilityzero">BACK</a>
+  <h3 data-text="PROJECT REGISTRY" class="glitch">PROJECT REGISTRY</h3>
+  <div class="led"></div>
 </div>
 
 <div class="wrap">

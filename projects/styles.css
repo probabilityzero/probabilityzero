@@ -1,114 +1,27 @@
-/* ===== TITLE BAR ===== */
-.titlebar{
-  background:linear-gradient(#0b3a6b,#082748);
-  color:#eaf6ff;
-  padding:10px 14px;
-  font-weight:bold;
-  border-bottom:2px solid #3aa0ff;
-  font-family:Tahoma, Verdana, sans-serif;
-  display:flex; align-items:center; justify-content:space-between;
-  box-shadow:0 2px 0 #001a33;
-  padding:8px 12px;
-}
+:root { --primary-blue: #3aa0ff; --secondary-blue: #9cd4ff; --accent-green: #19ff8a; --panel-bg: #0b1622; }
 
-/* ===== FRAME ===== */
-.wrap{
-  max-width:980px;
-  margin:28px auto 8px;
-  padding:16px;
-  background:#0b1622;
-  border:3px solid #3aa0ff;
-  box-shadow:0 0 0 3px #001a33 inset, 0 0 32px #3aa0ff40;
-}
+.wrap { max-width: 980px; margin: 20px auto 8px; padding: 0px; background: linear-gradient(135deg, var(--panel-bg) 0%, #0d1a28 50%, var(--panel-bg) 100%); border: 2px solid var(--primary-blue); box-shadow: 0 0 16px rgba(58, 160, 255, 0.12) inset, 0 0 24px rgba(58, 160, 255, 0.08); overflow: hidden; width: calc(100% - 8px); }
+.wrap > .toolbar, .wrap > table, .wrap > .statusbar { padding:16px; }
+.wrap::before { content: ''; position: absolute; pointer-events: none; }
 
-/* ===== TOOLBAR ===== */
-.toolbar{
-  display:flex; flex-wrap:wrap; gap:10px; align-items:center;
-  margin-bottom:12px;
-}
+.toolbar{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
 
-.counter{
-  margin-left:auto;
-  font-size:12px;
-  color:#9ecbff;
-}
+.counter{ margin-left:auto; font-size:12px; color:var(--secondary-blue); }
 
-/* ===== BUTTONS ===== */
-.btn{
-  background:linear-gradient(#1d6fd1,#104b8c);
-  border:2px solid #001a33;
-  color:#eaf6ff;
-  padding:6px 12px;
-  text-decoration:none;
-  font-size:13px;
-  cursor:pointer;
-  box-shadow:0 2px 0 #001a33, 0 0 8px #3aa0ff40 inset;
-}
+.btn{ background:linear-gradient(135deg,#1d6fd1 0%, #104b8c 100%); border:2px solid #001a33; color:#eaf6ff; padding:8px 12px; text-decoration:none; font-size:13px; cursor:pointer; box-shadow:0 2px 0 #001a33, 0 0 8px rgba(58,160,255,0.18) inset; border-radius:3px; }
 .btn:hover{ transform:translateY(-1px); }
-.btn.secondary{ background:linear-gradient(#3aa0ff,#1d6fd1); }
+.btn.secondary{ background:linear-gradient(135deg,var(--primary-blue) 0%, #1d6fd1 100%); }
 
-/* small LIVE pill */
-.live{
-  display:inline-block;
-  margin-left:6px;
-  padding:1px 6px;
-  font-size:11px;
-  background:#063f2e;
-  border:1px solid #2cffb2;
-  color:#baffea;
-  text-decoration:none;
-}
+.live{ display:inline-block; margin-left:6px; padding:2px 8px; font-size:11px; background:#063f2e; border:1px solid var(--accent-green); color:var(--accent-green); text-decoration:none; border-radius:2px; }
 
-/* ===== SEARCH ===== */
-.search{
-  flex:1 1 220px;
-  padding:7px 9px;
-  background:#06080c;
-  border:2px solid #3aa0ff;
-  color:#eaf6ff;
-  font-family:inherit;
-}
+.search{ flex:1 1 220px; padding:8px 10px; background:#06080c; border:2px solid var(--primary-blue); color:#eaf6ff; font-family:inherit; border-radius:2px; }
 
-/* ===== TABLE ===== */
-table{
-  width:100%;
-  border-collapse:collapse;
-  background:#06080c;
-  border:2px solid #3aa0ff;
-}
+table{ width:100%; border-collapse:collapse; background:transparent; border:0; }
+th, td{ padding:12px 14px; border-bottom:1px solid rgba(58,160,255,0.06); text-align:left; }
+th{ background:rgba(8,39,72,0.6); position:sticky; top:0; cursor:pointer; }
+tbody tr:nth-child(even){ background: rgba(5,12,20,0.6); } tbody tr:hover{ background: rgba(6,34,56,0.6); }
+tr[data-archived="true"]{ opacity:.55; }
+td a{ color:var(--primary-blue); font-weight:bold; text-decoration:none; }
+td a:hover{ text-decoration:underline; color:var(--secondary-blue); }
 
-th,td{
-  padding:9px 10px;
-  border-bottom:1px solid #1a2638;
-  text-align:left;
-}
-
-th{
-  background:#082748;
-  position:sticky; top:0;
-  cursor:pointer;
-}
-
-/* zebra + hover */
-tbody tr:nth-child(even){ background:#07101a; }
-tbody tr:hover{ background:#0e2238; }
-
-/* archived dim */
-tr[data-archived="true"]{ opacity:.5; }
-
-/* bright repo links */
-td a{
-  color:#7dd3ff;
-  font-weight:bold;
-  text-decoration:none;
-}
-td a:hover{ text-decoration:underline; }
-
-/* footer strip */
-.statusbar{
-  margin-top:10px;
-  font-size:12px;
-  color:#9ecbff;
-  display:flex; justify-content:space-between;
-  gap: 10px;
-}
+.statusbar{ margin-top:10px; font-size:12px; color:var(--secondary-blue); display:flex; justify-content:space-between; gap: 10px; padding:12px 16px; background: linear-gradient(135deg, rgba(11,20,34,0.2), rgba(9,17,28,0.2)); }
