@@ -9,6 +9,13 @@
 --noise-purple: #8800ff;
 --amber: #ffaa00;
 --ghost-white: rgba(220,230,255,0.85);
+--primary-blue: #3aa0ff;
+--secondary-blue: #9cd4ff;
+--accent-green: #19ff8a;
+--glitch-pink: #ff0080;
+--terminal-green: #baffea;
+--bg-dark: #02060b;
+--panel-bg: #0b1622;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
