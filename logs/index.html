@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../wired/styles.css">
   <style>
     /* diary-specific styles */
-    .wrap { max-width:980px; margin:28px auto; padding:20px; }
+    .wrap { max-width:980px; margin:0px auto; padding:10px; }
     #diary h2 { font-weight:700; letter-spacing:2px; color:var(--secondary-blue); }
     .log-entries { display:flex; flex-direction:column; gap:14px; margin-top:12px; }
     .log-entry { border-left:4px solid rgba(58,160,255,0.15); padding:12px 14px; background:linear-gradient(135deg, rgba(6,12,20,0.4), rgba(8,16,28,0.4)); }
@@ -15,20 +15,21 @@
     .log-text { color:rgba(234,246,255,0.92); line-height:1.5; }
     .log-sig { text-align:right; margin-top:8px; color:var(--accent-green); font-weight:600; }
     .controls { margin-top:18px; display:flex; gap:8px; align-items:center; }
-    .controls input, .controls textarea { background:#02040a; color:var(--secondary-blue); border:1px solid rgba(58,160,255,0.08); padding:8px; border-radius:4px; }
+    .controls input, .controls textarea { background: #02040a; color: var(--secondary-blue); border: 1px solid rgba(58, 160, 255, 0.08); padding: 8px; }
+    .controls input:focus, .controls textarea:focus { outline: none; box-shadow: none; }
     .controls textarea { min-height:80px; width:100%; resize:vertical; }
-    .controls .col { flex:1; }
+    .controls .col { width: 100%; max-width: 748px; padding: 16px; margin: 0px auto; }
     .muted { color:rgba(186,255,234,0.35); font-size:13px; }
   </style>
 </head>
 <body>
 
-<div class="wrap">
+<header class="titlebar glitch" data-text="LOGS // PRIME EDGE">
+  <h3 class="glitch" data-text="LOGS // PRIME EDGE">LOGS // PRIME EDGE</h3>
+  <div class="led"></div>
+</header>
 
-  <header class="titlebar glitch" data-text="LOGS // PRIME EDGE">
-    LOGS // PRIME EDGE
-    <div class="led"></div>
-  </header>
+<div class="wrap">
 
   <section id="diary">
     <h2>LOG ENTRIES //</h2>
@@ -37,18 +38,16 @@
       <!-- entries injected here -->
     </div>
 
+  </section>
     <div class="controls">
       <div class="col">
-        <input id="sig" placeholder="signature (— node_7)" />
-        <textarea id="text" placeholder="Write your entry here..."></textarea>
-        <div style="display:flex; gap:8px; margin-top:8px;">
+        <textarea id="text" placeholder="Start a new entry..."></textarea>
+        <div style="display:flex; justify-content:space-between; gap:8px; margin-top:8px;">
+          <input id="sig" placeholder="Signature" />
           <button id="addBtn" class="btn">ADD ENTRY</button>
-          <button id="downloadBtn" class="btn secondary">DOWNLOAD JSON</button>
-          <div class="muted">Entries stored in-memory; download to save file locally.</div>
         </div>
       </div>
     </div>
-  </section>
 
 </div>
 
