@@ -42,3 +42,7 @@ body::after { content: ''; position: fixed; top: -50%; left: -50%; width: 200%; 
 @keyframes glitch-main { 0%,90%,100% { transform: none; } 91% { transform: skewX(-2deg); } 93% { transform: skewX(2deg) translateX(-3px); } 95% { transform: none; } 97% { transform: skewX(1deg) translateX(2px); } }
 @keyframes glitch-before { 0%,88%,100% { opacity:0; } 89% { opacity:1; transform: translate(-4px,-2px); } 92% { opacity:1; transform: translate(4px,2px); } 95% { opacity:0; } }
 @keyframes glitch-after { 0%,88%,100% { opacity:0; } 90% { opacity:1; transform: translate(4px,2px); } 93% { opacity:1; transform: translate(-4px,-2px); } 96% { opacity:0; } }
+
+.btn{ background:linear-gradient(135deg,#1d6fd1 0%, #104b8c 100%); border:2px solid #001a33; color:#eaf6ff; padding:8px 12px; text-decoration:none; font-size:13px; cursor:pointer; box-shadow:0 2px 0 #001a33, 0 0 8px rgba(58,160,255,0.18) inset; border-radius:3px; }
+.btn:hover{ transform:translateY(-1px); }
+.btn.secondary{ background:linear-gradient(135deg,var(--primary-blue) 0%, #1d6fd1 100%); }

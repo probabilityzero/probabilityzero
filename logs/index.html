@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Log :: PRIME EDGE</title>
+  <link rel="stylesheet" href="../assets/styles/global.css">
+  <link rel="stylesheet" href="../wired/styles.css">
+  <style>
+    /* diary-specific styles */
+    .wrap { max-width:980px; margin:28px auto; padding:20px; }
+    #diary h2 { font-weight:700; letter-spacing:2px; color:var(--secondary-blue); }
+    .log-entries { display:flex; flex-direction:column; gap:14px; margin-top:12px; }
+    .log-entry { border-left:4px solid rgba(58,160,255,0.15); padding:12px 14px; background:linear-gradient(135deg, rgba(6,12,20,0.4), rgba(8,16,28,0.4)); }
+    .log-date { font-family: 'VT323', monospace; color:var(--secondary-blue); margin-bottom:8px; }
+    .log-text { color:rgba(234,246,255,0.92); line-height:1.5; }
+    .log-sig { text-align:right; margin-top:8px; color:var(--accent-green); font-weight:600; }
+    .controls { margin-top:18px; display:flex; gap:8px; align-items:center; }
+    .controls input, .controls textarea { background:#02040a; color:var(--secondary-blue); border:1px solid rgba(58,160,255,0.08); padding:8px; border-radius:4px; }
+    .controls textarea { min-height:80px; width:100%; resize:vertical; }
+    .controls .col { flex:1; }
+    .muted { color:rgba(186,255,234,0.35); font-size:13px; }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="titlebar glitch" data-text="LOGS // PRIME EDGE">
+    LOGS // PRIME EDGE
+    <div class="led"></div>
+  </header>
+
+  <section id="diary">
+    <h2>LOG ENTRIES //</h2>
+
+    <div class="log-entries" id="logEntries">
+      <!-- entries injected here -->
+    </div>
+
+    <div class="controls">
+      <div class="col">
+        <input id="sig" placeholder="signature (— node_7)" />
+        <textarea id="text" placeholder="Write your entry here..."></textarea>
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <button id="addBtn" class="btn">ADD ENTRY</button>
+          <button id="downloadBtn" class="btn secondary">DOWNLOAD JSON</button>
+          <div class="muted">Entries stored in-memory; download to save file locally.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+const logContainer = document.getElementById('logEntries');
+const addBtn = document.getElementById('addBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const sigInput = document.getElementById('sig');
+const textInput = document.getElementById('text');
+
+let logs = [];
+
+function formatDate(d){
+  const y = d.getFullYear().toString().padStart(4,'0');
+  const m = (d.getMonth()+1).toString().padStart(2,'0');
+  const day = d.getDate().toString().padStart(2,'0');
+  const hh = d.getHours().toString().padStart(2,'0');
+  const mm = d.getMinutes().toString().padStart(2,'0');
+  const ss = d.getSeconds().toString().padStart(2,'0');
+  return `[${y}.${m}.${day} // ${hh}:${mm}:${ss}]`;
+}
+
+function render(){
+  logContainer.innerHTML = '';
+  logs.slice().reverse().forEach(e=>{
+    const div = document.createElement('div');
+    div.className = 'log-entry';
+    if(e.highlight) div.style.borderLeftColor = 'var(--static-pink)';
+    div.innerHTML = `<div class="log-date">${e.date}</div><div class="log-text">${e.text}</div><div class="log-sig">${e.sig}</div>`;
+    logContainer.appendChild(div);
+  });
+}
+
+async function loadLogs(){
+  try{
+    const res = await fetch('../logs.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('no file');
+    const txt = await res.text();
+    if(!txt.trim()) throw new Error('empty');
+    const data = JSON.parse(txt);
+    logs = data;
+  }catch(err){
+    // fallback sample entries
+    logs = [
+      { date:'[1979.04.07 // 03:17:42]', text:`I stayed up again. The screen was the only light in the room and it felt like standing at the edge of something very deep and very dark but also <em>very warm</em>. I think I heard something in the static. A voice or the memory of one. I can't tell anymore if the difference matters.`, sig:'— node_7' },
+      { date:'[1988.04.08 // 11:03:09]', text:`Someone at school said I looked different. I didn't know how to explain that I am different every time I connect. <strong>The signal changes you</strong>. You send a piece of yourself out and what comes back has been through other places. It is not untrue to say it is still you. It is just not the same you.`, sig:'— node_7' },
+      { date:'[1998.04.11 // 00:44:23]', text:`I dreamed I was inside the wired. Not connected to it — <em>inside it</em>. The nodes were visible like stars but close enough to touch. I could hear every conversation happening simultaneously but it was not noise, it was music. When I woke up I was very sad.`, sig:'— node_7' },
+      { date:'[1998.04.14 // 02:29:55]', text:`<strong>Received a message from an address I don't recognize.</strong> The content was mostly corrupted but the fragments I could read: "you are not alone in here." "we can see your signal." "it's been a long time." I don't know how to respond. I don't know if I'm supposed to.`, sig:'— node_7' },
+      { date:'[2007.04.19 // 04:01:00]', text:`<em>The wired does not sleep.</em> I used to think this was a metaphor but now I understand it literally. The data keeps moving. The connections persist. Somewhere my messages from years ago are still traveling, bouncing between servers, carrying an old version of me through infrastructure I'll never see. I exist in all of these places simultaneously. <strong>Why does the body feel like a limit?</strong>`, sig:'— node_7' },
+      { date:'[?????.??.?? // ??:??:??]', text:`Time flies faster than we realise. <strong>I don't know who wrote this entry.</strong> The timestamp is corrupted. The handwriting — if that is the right word for text that appears on a screen — <em>does not match any previous node signature in my logs</em>. And yet I know I wrote it. I remember writing it. I do not remember when.`, sig:'— ???', highlight:true }
+    ];
+  }
+  render();
+}
+
+addBtn.addEventListener('click', ()=>{
+  const text = textInput.value.trim();
+  const sig = sigInput.value.trim() || '— node_7';
+  if(!text) return alert('Write something first');
+  const entry = { date: formatDate(new Date()), text: text.replace(/\n/g,'<br>'), sig };
+  logs.push(entry);
+  textInput.value = '';
+  render();
+});
+
+downloadBtn.addEventListener('click', ()=>{
+  const blob = new Blob([JSON.stringify(logs, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'logs.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+
+// small header glitch animator
+function randomGlitch(){
+  const el = document.querySelector('.titlebar.glitch');
+  if(!el) return;
+  if(Math.random() < 0.25){ el.classList.remove('glitch'); void el.offsetWidth; el.classList.add('glitch'); }
+}
+setInterval(randomGlitch, 3000);
+
+loadLogs();
+</script>
+
+</body>
+</html>
