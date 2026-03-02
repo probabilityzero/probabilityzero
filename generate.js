@@ -180,8 +180,8 @@ const html = `<!DOCTYPE html>
 <div class="glitch-scan"></div>
 
 <div class="titlebar glitch">  
-  <a class="btn" href="/probabilityzero">BACK</a>
-  <h3 data-text="PROJECT REGISTRY" class="glitch">PROJECT REGISTRY</h3>
+  <a class="btn" href="/probabilityzero">Esc</a>
+  <h3 data-text="PROJECT REGISTRY=" class="glitch">PROJECT REGISTRY_</h3>
   <div class="led"></div>
 </div>
 

@@ -11,8 +11,8 @@
     c.width = Math.max(1, Math.floor(W * dpr)); c.height = Math.max(1, Math.floor(H * dpr));
     ctx.setTransform(dpr,0,0,dpr,0,0);
     radius = Math.min(W, H) * 0.36;
-    cx = W/2;
-    cy = H - 0.8 * radius;
+    cx = W/2 + W * 0.3; // shift globe a bit to the right
+    cy = H - 0.7 * radius;
   }
   window.addEventListener('resize', resize);
   resize();
@@ -50,7 +50,7 @@
         const z1 = y * Math.sin(ax) + z * Math.cos(ax);
         const xr = x1 * Math.cos(ay) - z1 * Math.sin(ay);
         const zr = x1 * Math.sin(ay) + z1 * Math.cos(ay);
-        const p = project(xr,y,zr);
+        const p = project(xr,y1,zr);
         let px = p.x, py = p.y;
         if(glitchTimer>0 && Math.random()<0.06) px += (Math.random()-0.5) * 40;
         if(lonI===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
@@ -74,7 +74,7 @@
         const z1 = y * Math.sin(ax) + z * Math.cos(ax);
         const xr = x1 * Math.cos(ay) - z1 * Math.sin(ay);
         const zr = x1 * Math.sin(ay) + z1 * Math.cos(ay);
-        const p = project(xr,y,zr);
+        const p = project(xr,y1,zr);
         let px = p.x, py = p.y;
         if(glitchTimer>0 && Math.random()<0.05) px += (Math.random()-0.5) * 50;
         if(latI===-latSteps) ctx.moveTo(px,py); else ctx.lineTo(px,py);
@@ -90,9 +90,14 @@
         const x = radius * Math.cos(lat) * Math.cos(lon);
         const y = radius * Math.sin(lat);
         const z = radius * Math.cos(lat) * Math.sin(lon);
-        const xr = x * Math.cos(angle) - z * Math.sin(angle);
-        const zr = x * Math.sin(angle) + z * Math.cos(angle);
-        const p = project(xr,y,zr);
+        const ax = angleX;
+        const ay = angleY;
+        const x1 = x;
+        const y1 = y * Math.cos(ax) - z * Math.sin(ax);
+        const z1 = y * Math.sin(ax) + z * Math.cos(ax);
+        const xr = x1 * Math.cos(ay) - z1 * Math.sin(ay);
+        const zr = x1 * Math.sin(ay) + z1 * Math.cos(ay);
+        const p = project(xr,y1,zr);
         if(lonI===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y);
       }
       ctx.strokeStyle = 'rgba(58,200,255,0.35)'; ctx.lineWidth = 1.2; ctx.stroke();
