@@ -44,7 +44,8 @@
 
     "Tutorship": [
       { "name": "ds", "status": "active" },
-      { "name": "da", "status": "active" }
+      { "name": "da", "status": "active" },
+      { "name": "nma", "status": "active" }
     ],
 
     "Platforms": [
