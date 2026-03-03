@@ -50,7 +50,8 @@
     ],
 
     "Networks": [
-      { "name": "openindex", "status": "early" }
+      { "name": "openindex", "status": "early" },
+      { "name": "openarms", "status": "early"}
     ],
 
 
