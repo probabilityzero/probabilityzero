@@ -36,7 +36,7 @@
       { "name": "astronomy", "status": "successful" }
     ],
 
-    "LLM": [
+    "Intelligence": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "lessontube", "status": "failed" },
       { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" },
