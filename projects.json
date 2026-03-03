@@ -30,7 +30,7 @@
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
 
-    "Interactive": [
+    "Simulations": [
       { "name": "mash3d", "status": "successful" },
       { "name": "moon3d", "status": "archived" },
       { "name": "astronomy", "status": "successful" }
@@ -39,7 +39,8 @@
     "LLM": [
       { "name": "llmcolony", "status": "experimental" },
       { "name": "lessontube", "status": "failed" },
-      { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" }
+      { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" },
+      { "name": "observer", "status": "early" }
     ],
 
     "Tutorship": [
@@ -48,20 +49,24 @@
       { "name": "nma", "status": "active" }
     ],
 
-    "Platforms": [
-      { "name": "openindex", "status": "early" },
-      { "name": "watchtower", "status": "early" }
+    "Networks": [
+      { "name": "openindex", "status": "early" }
+    ],
+
+
+    "Tools": [ 
+      { "name": "charview", "status": "archived" },
+      { "name": "codeview", "status": "archived" },
+      { "name": "sandbox", "status": "archived" },
+      { "name": "stackbox", "status": "archived" }
     ],
 
     "Software": [ 
       { "name": "aristocrat", "status": "idea" },
-      { "name": "charview", "status": "archived" },
-      { "name": "codeview", "status": "archived" },
       { "name": "designs", "status": "idea" },
       { "name": "framedb", "status": "idea" },
-      { "name": "sandbox", "status": "archived" },
-      { "name": "stackbox", "status": "archived" },
-      { "name": "studyverse", "status": "early" }
+      { "name": "studyverse", "status": "early" },
+      { "name": "watchtower", "status": "early" }
     ],
     
     "Tutorials": [
@@ -81,7 +86,6 @@
       { "name": "jadevinetheme", "status": "-" }
     ]
   },
-
   "han": {
     "Cosmosys": [
       { "name": "cosmosys", "status": "early" }
