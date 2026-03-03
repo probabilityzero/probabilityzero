@@ -2,10 +2,10 @@
 |--------|---------|--------|
 | Games | [games.py](https://github.com/probabilityzero/games.py) | active |
 |  | [games.ts](https://github.com/probabilityzero/games.ts) | [active](https://quiz.tarique.me) |
+| Intelligence | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
+|  | [observer](https://github.com/probabilityzero/observer) | early |
 | Lifebook | [healthline](https://github.com/probabilityzero/healthline) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
-| LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
-|  | [observer](https://github.com/probabilityzero/observer) | early |
 | Networks | [openarms](https://github.com/probabilityzero/openarms) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [openindex](https://github.com/probabilityzero/openindex) | early |
 | Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
@@ -28,10 +28,10 @@
 | Games | [echess](https://github.com/probabilityzero/echess) | failed |
 |  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
 |  | [wordle](https://github.com/probabilityzero/wordle) | archived |
+| Intelligence | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
+|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Lifebook | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
 |  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-| LLM | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
-|  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Portfolio | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
