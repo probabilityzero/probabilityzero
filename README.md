@@ -6,7 +6,8 @@
 |  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | LLM | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 |  | [observer](https://github.com/probabilityzero/observer) | early |
-| Networks | [openindex](https://github.com/probabilityzero/openindex) | early |
+| Networks | [openarms](https://github.com/probabilityzero/openarms) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
+|  | [openindex](https://github.com/probabilityzero/openindex) | early |
 | Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 |  | [watchtower](https://github.com/probabilityzero/watchtower) | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
