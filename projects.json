@@ -1,6 +1,13 @@
 {
   "prime": {
 
+    "Applications": [ 
+      { "name": "tfm", "status": "archived" },
+      { "name": "sol", "status": "merged" },
+      { "name": "studyverse", "status": "early" },
+      { "name": "lifebook", "status": "active" }
+    ],
+
     "Data": [
       { "name": "sparklineo", "status": "archived" }
     ],
@@ -8,7 +15,6 @@
     "Games": [
       { "name": "games.ts", "status": "active", "live": "https://quiz.tarique.me" },
       { "name": "games.py", "status": "active" },
-      { "name": "games.rs", "status": "archived" },
       { "name": "echess", "status": "failed" },
       { "name": "wordle", "status": "archived" }
     ],
@@ -17,11 +23,14 @@
       { "name": ".info", "status": "live" },
       { "name": ".notes", "status": "live" },
       { "name": ".terminal", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
-      { "name": "H", "status": "live", "live":"https://hanslibrary.online" }, 
       { "name": "websitehanslabs", "status": "archived" },
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
+    ],
+
+    "作品": [
+      { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
+      { "name": "H", "status": "live", "live":"https://hanslibrary.online" }
     ],
 
     "Simulations": [
@@ -31,7 +40,8 @@
     ],
 
     "Intelligence": [
-      { "name": "llmcolony", "status": "experimental" },
+      { "name": "llmcolony", "status": "archived" },
+      { "name": "watchtower", "status": "early" },
       { "name": "lessontube", "status": "failed" },
       { "name": "telegramllmbot", "status": "successful", "live": "https://t.me/hansuserbot" },
       { "name": "observer", "status": "early" }
@@ -48,23 +58,16 @@
       { "name": "openarms", "status": "early"}
     ],
 
-
-    "Tools": [ 
-      { "name": "charview", "status": "archived" },
-      { "name": "codeview", "status": "archived" },
+    "Software tools": [
       { "name": "sandbox", "status": "archived" },
       { "name": "stackbox", "status": "archived" },
-      { "name": "stf", "status": "archived" },
-      { "name": "sol", "status": "merged" }
+      { "name": "designs", "status": "idea" },
+      { "name": "framedb", "status": "archived" }
     ],
 
     "Software": [ 
-      { "name": "aristocrat", "status": "idea" },
-      { "name": "designs", "status": "idea" },
-      { "name": "framedb", "status": "idea" },
-      { "name": "studyverse", "status": "early" },
-      { "name": "watchtower", "status": "early" },
-      { "name": "lifebook", "status": "active" }
+      { "name": "charview", "status": "archived" },
+      { "name": "codeview", "status": "archived" }
     ],
     
     "Tutorials": [
@@ -81,6 +84,7 @@
       { "name": "ascensionquests", "status": "-" },
       { "name": "powershellprofile", "status": "-" },
       { "name": "obsidianplugins", "status": "-" },
+      { "name": "skillissues", "status": "-" },
       { "name": "jadevinetheme", "status": "-" }
     ]
   },
@@ -88,7 +92,7 @@
     "Cosmo": [
       { "name": "cosmolabs", "status": "early" }
     ],
-    "NSS": [
+    "Lifebook": [
       { "name": "healthline", "status": "early" }
     ],
     "Medium": [

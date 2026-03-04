@@ -130,10 +130,10 @@ readme += `#### [Han's](${bases.han})\n\n`;
 readme += generateTable(hanActive, "han");
 
 if (primeArchived.length > 0) {
-  readme += `<details>\n<summary>Archived</summary>\n\n`;
+  readme += `<details>\n<summary>More</summary>\n\n`;
   readme += generateTable(primeArchived, "prime");
-  readme += `\n\n\n`;
-  readme += `Learn more about me: [localhost://0002](https://probabilityzero.github.io/probabilityzero/)`;
+  readme += `\n\n`;
+  readme += `About me: [http://localhost:3000/](https://probabilityzero.github.io/probabilityzero/)`;
   readme += `\n</details>\n\n`;
 }
 

@@ -1,14 +1,13 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
+| Applications | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
+|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
 | Games | [games.py](https://github.com/probabilityzero/games.py) | active |
 |  | [games.ts](https://github.com/probabilityzero/games.ts) | [active](https://quiz.tarique.me) |
-| Intelligence | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
-|  | [observer](https://github.com/probabilityzero/observer) | early |
+| Intelligence | [observer](https://github.com/probabilityzero/observer) | early |
+|  | [watchtower](https://github.com/probabilityzero/watchtower) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 | Networks | [openarms](https://github.com/probabilityzero/openarms) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Software | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
-|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
-|  | [watchtower](https://github.com/probabilityzero/watchtower) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [nma](https://github.com/probabilityzero/nma) | active |
@@ -17,53 +16,52 @@
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | Cosmo | [cosmolabs](https://github.com/hanslibrary/cosmolabs) | early |
+| Lifebook | [healthline](https://github.com/hanslibrary/healthline) | early |
 | Medium | [thetraveler](https://github.com/hanslibrary/thetraveler) | early |
-| NSS | [healthline](https://github.com/hanslibrary/healthline) | early |
 <details>
-<summary>Archived</summary>
+<summary>More</summary>
 
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
+| Applications | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
+|  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Data | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Games | [echess](https://github.com/probabilityzero/echess) | failed |
-|  | [games.rs](https://github.com/probabilityzero/games.rs) | archived |
 |  | [wordle](https://github.com/probabilityzero/wordle) | archived |
 | Intelligence | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
+|  | [llmcolony](https://github.com/probabilityzero/llmcolony) | archived |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Portfolio | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
-|  | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
-|  | [K](https://github.com/probabilityzero/K) | [live](https://k.hanslibrary.online) |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
 |  | [websitehanslabs](https://github.com/probabilityzero/websitehanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Simulations | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
 |  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-| Software | [aristocrat](https://github.com/probabilityzero/aristocrat) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
-|  | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
-|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
+| Software | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+|  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+| Software tools | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
+|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+|  | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
+|  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [powershellprofile](https://github.com/probabilityzero/powershellprofile) | - |
+|  | [skillissues](https://github.com/probabilityzero/skillissues) | - |
 |  | [windowsconfigs](https://github.com/probabilityzero/windowsconfigs) | - |
-| Tools | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-|  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-|  | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
-|  | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
-|  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
-|  | [stf](https://github.com/probabilityzero/stf) | archived |
 | Tutorials | [boards.rs](https://github.com/probabilityzero/boards.rs) | - |
 |  | [grants.net](https://github.com/probabilityzero/grants.net) | - |
 |  | [kernel.rs](https://github.com/probabilityzero/kernel.rs) | - |
 |  | [reminder](https://github.com/probabilityzero/reminder) | - |
 |  | [todolist](https://github.com/probabilityzero/todolist) | - |
 |  | [whiteboard](https://github.com/probabilityzero/whiteboard) | - |
+| 作品 | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
+|  | [K](https://github.com/probabilityzero/K) | [live](https://k.hanslibrary.online) |
 
 
-
-Learn more about me: [localhost://0002](https://probabilityzero.github.io/probabilityzero/)
+About me: [http://localhost:3000/](https://probabilityzero.github.io/probabilityzero/)
 </details>
 
