@@ -4,12 +4,11 @@
 |  | [games.ts](https://github.com/probabilityzero/games.ts) | [active](https://quiz.tarique.me) |
 | Intelligence | [llmcolony](https://github.com/probabilityzero/llmcolony) | experimental |
 |  | [observer](https://github.com/probabilityzero/observer) | early |
-| Lifebook | [healthline](https://github.com/probabilityzero/healthline) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
-|  | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 | Networks | [openarms](https://github.com/probabilityzero/openarms) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 |  | [openindex](https://github.com/probabilityzero/openindex) | early |
-| Software | [studyverse](https://github.com/probabilityzero/studyverse) | early |
-|  | [watchtower](https://github.com/probabilityzero/watchtower) | early |
+| Software | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
+|  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
+|  | [watchtower](https://github.com/probabilityzero/watchtower) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 | Tutorship | [da](https://github.com/probabilityzero/da) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [ds](https://github.com/probabilityzero/ds) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [nma](https://github.com/probabilityzero/nma) | active |
@@ -17,8 +16,9 @@
 
 | Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
-| Cosmosys | [cosmosys](https://github.com/hanslibrary/cosmosys) | early |
+| Cosmo | [cosmolabs](https://github.com/hanslibrary/cosmolabs) | early |
 | Medium | [thetraveler](https://github.com/hanslibrary/thetraveler) | early |
+| NSS | [healthline](https://github.com/hanslibrary/healthline) | early |
 <details>
 <summary>Archived</summary>
 
@@ -30,8 +30,6 @@
 |  | [wordle](https://github.com/probabilityzero/wordle) | archived |
 | Intelligence | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Lifebook | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
-|  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Portfolio | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
@@ -54,7 +52,9 @@
 | Tools | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
+|  | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
+|  | [stf](https://github.com/probabilityzero/stf) | archived |
 | Tutorials | [boards.rs](https://github.com/probabilityzero/boards.rs) | - |
 |  | [grants.net](https://github.com/probabilityzero/grants.net) | - |
 |  | [kernel.rs](https://github.com/probabilityzero/kernel.rs) | - |

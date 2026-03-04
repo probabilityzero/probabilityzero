@@ -1,11 +1,5 @@
 {
   "prime": {
-    "Lifebook": [
-      { "name": "lifebook", "status": "active" },
-      { "name": "healthline", "status": "early" },
-      { "name": "tfm", "status": "archived" },
-      { "name": "sol", "status": "merged" }
-    ],
 
     "Data": [
       { "name": "sparklineo", "status": "archived" }
@@ -23,9 +17,9 @@
       { "name": ".info", "status": "live" },
       { "name": ".notes", "status": "live" },
       { "name": ".terminal", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "websitehanslabs", "status": "archived" },
       { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
       { "name": "H", "status": "live", "live":"https://hanslibrary.online" }, 
+      { "name": "websitehanslabs", "status": "archived" },
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
@@ -59,7 +53,9 @@
       { "name": "charview", "status": "archived" },
       { "name": "codeview", "status": "archived" },
       { "name": "sandbox", "status": "archived" },
-      { "name": "stackbox", "status": "archived" }
+      { "name": "stackbox", "status": "archived" },
+      { "name": "stf", "status": "archived" },
+      { "name": "sol", "status": "merged" }
     ],
 
     "Software": [ 
@@ -67,7 +63,8 @@
       { "name": "designs", "status": "idea" },
       { "name": "framedb", "status": "idea" },
       { "name": "studyverse", "status": "early" },
-      { "name": "watchtower", "status": "early" }
+      { "name": "watchtower", "status": "early" },
+      { "name": "lifebook", "status": "active" }
     ],
     
     "Tutorials": [
@@ -88,8 +85,11 @@
     ]
   },
   "han": {
-    "Cosmosys": [
-      { "name": "cosmosys", "status": "early" }
+    "Cosmo": [
+      { "name": "cosmolabs", "status": "early" }
+    ],
+    "NSS": [
+      { "name": "healthline", "status": "early" }
     ],
     "Medium": [
       { "name": "thetraveler", "status": "early" }
