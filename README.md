@@ -1,4 +1,4 @@
-| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | Applications | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
@@ -13,7 +13,7 @@
 |  | [nma](https://github.com/probabilityzero/nma) | active |
 #### [Han's](https://github.com/hanslibrary/)
 
-| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | Cosmo | [cosmolabs](https://github.com/hanslibrary/cosmolabs) | early |
 | Lifebook | [healthline](https://github.com/hanslibrary/healthline) | early |
@@ -21,7 +21,7 @@
 <details>
 <summary>More</summary>
 
-| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Repositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------|---------|--------|
 | Applications | [sol](https://github.com/probabilityzero/sol) <img src="assets/icons/lock.png" alt="private" width="14" /> | merged |
 |  | [tfm](https://github.com/probabilityzero/tfm) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
@@ -42,10 +42,10 @@
 |  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Software | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
-| Software tools | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
-|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
+| Software tooling | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
+|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |

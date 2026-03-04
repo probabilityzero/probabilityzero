@@ -58,16 +58,16 @@
       { "name": "openarms", "status": "early"}
     ],
 
-    "Software tools": [
-      { "name": "sandbox", "status": "archived" },
-      { "name": "stackbox", "status": "archived" },
+    "Software tooling": [
       { "name": "designs", "status": "idea" },
       { "name": "framedb", "status": "archived" }
     ],
 
     "Software": [ 
       { "name": "charview", "status": "archived" },
-      { "name": "codeview", "status": "archived" }
+      { "name": "codeview", "status": "archived" },
+      { "name": "sandbox", "status": "archived" },
+      { "name": "stackbox", "status": "archived" }
     ],
     
     "Tutorials": [
