@@ -2,8 +2,6 @@
 |--------|---------|--------|
 | Applications | [lifebook](https://github.com/probabilityzero/lifebook) <img src="assets/icons/lock.png" alt="private" width="14" /> | active |
 |  | [studyverse](https://github.com/probabilityzero/studyverse) | early |
-| Games | [games.py](https://github.com/probabilityzero/games.py) | active |
-|  | [games.ts](https://github.com/probabilityzero/games.ts) | [active](https://quiz.tarique.me) |
 | Intelligence | [observer](https://github.com/probabilityzero/observer) | early |
 |  | [watchtower](https://github.com/probabilityzero/watchtower) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
 | Networks | [openarms](https://github.com/probabilityzero/openarms) <img src="assets/icons/lock.png" alt="private" width="14" /> | early |
@@ -31,7 +29,8 @@
 | Intelligence | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [llmcolony](https://github.com/probabilityzero/llmcolony) | archived |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Portfolio | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
+| Portfolio | [.games](https://github.com/probabilityzero/.games) | [live](https://quiz.tarique.me) |
+|  | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
@@ -53,6 +52,7 @@
 |  | [skillissues](https://github.com/probabilityzero/skillissues) | - |
 |  | [windowsconfigs](https://github.com/probabilityzero/windowsconfigs) | - |
 | Tutorials | [boards.rs](https://github.com/probabilityzero/boards.rs) | - |
+|  | [games.py](https://github.com/probabilityzero/games.py) | - |
 |  | [grants.net](https://github.com/probabilityzero/grants.net) | - |
 |  | [kernel.rs](https://github.com/probabilityzero/kernel.rs) | - |
 |  | [reminder](https://github.com/probabilityzero/reminder) | - |

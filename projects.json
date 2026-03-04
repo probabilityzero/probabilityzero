@@ -13,14 +13,13 @@
     ],
 
     "Games": [
-      { "name": "games.ts", "status": "active", "live": "https://quiz.tarique.me" },
-      { "name": "games.py", "status": "active" },
       { "name": "echess", "status": "failed" },
       { "name": "wordle", "status": "archived" }
     ],
 
     "Portfolio": [
       { "name": ".info", "status": "live" },
+      { "name": ".games", "status": "live", "live": "https://quiz.tarique.me" },
       { "name": ".notes", "status": "live" },
       { "name": ".terminal", "status": "live", "live":"https://bash.tarique.me" },
       { "name": "websitehanslabs", "status": "archived" },
@@ -72,6 +71,7 @@
     
     "Tutorials": [
       { "name": "kernel.rs", "status": "-" },
+      { "name": "games.py", "status": "-" },
       { "name": "boards.rs", "status": "-" },
       { "name": "grants.net", "status": "-"},
       { "name": "reminder", "status": "-" },
