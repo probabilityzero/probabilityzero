@@ -55,7 +55,7 @@
       { "name": "openarms", "status": "early"}
     ],
 
-    "Programming tools": [
+    "Software tooling": [
       { "name": "designs", "status": "idea" },
       { "name": "framedb", "status": "archived" }
     ],
@@ -87,7 +87,7 @@
       { "name": "obsidianplugins", "status": "-" },
       { "name": "skillissues", "status": "-" },
       { "name": "jadevinetheme", "status": "-" },
-      { "name": "sparklineo", "status": "archived" }
+      { "name": "sparklineo", "status": "-" }
     ]
   },
   "han": {
