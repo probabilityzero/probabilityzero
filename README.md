@@ -41,19 +41,19 @@
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
 | Modeling | [arsenal](https://github.com/probabilityzero/arsenal) | idea |
 |  | [shisaku](https://github.com/probabilityzero/shisaku) | idea |
-| Programming tools | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
-|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Simulations | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
 |  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Software | [sandbox](https://github.com/probabilityzero/sandbox) | archived |
 |  | [stackbox](https://github.com/probabilityzero/stackbox) | archived |
+| Software tooling | [designs](https://github.com/probabilityzero/designs) <img src="assets/icons/lock.png" alt="private" width="14" /> | idea |
+|  | [framedb](https://github.com/probabilityzero/framedb) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | Storage | [ascensionquests](https://github.com/probabilityzero/ascensionquests) | - |
 |  | [jadevinetheme](https://github.com/probabilityzero/jadevinetheme) | - |
 |  | [obsidianplugins](https://github.com/probabilityzero/obsidianplugins) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [powershellprofile](https://github.com/probabilityzero/powershellprofile) | - |
 |  | [skillissues](https://github.com/probabilityzero/skillissues) | - |
-|  | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
+|  | [sparklineo](https://github.com/probabilityzero/sparklineo) <img src="assets/icons/lock.png" alt="private" width="14" /> | - |
 |  | [windowsconfigs](https://github.com/probabilityzero/windowsconfigs) | - |
 | Tutorials | [boards.rs](https://github.com/probabilityzero/boards.rs) | - |
 |  | [games.py](https://github.com/probabilityzero/games.py) | - |
