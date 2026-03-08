@@ -4,20 +4,18 @@
     "Applications": [ 
       { "name": "tfm", "status": "archived" },
       { "name": "sol", "status": "merged" },
+      { "name": "charview", "status": "archived" },
+      { "name": "codeview", "status": "archived" },
       { "name": "studyverse", "status": "early" },
-      { "name": "lifebook", "status": "active" }
-    ],
-
-    "Data": [
-      { "name": "sparklineo", "status": "archived" }
-    ],
-
-    "Games": [
+      { "name": "lifebook", "status": "active" },
       { "name": "echess", "status": "failed" },
       { "name": "wordle", "status": "archived" }
     ],
 
-    "Portfolio": [
+    "Data": [
+    ],
+
+    "*Personal": [
       { "name": ".info", "status": "live" },
       { "name": ".games", "status": "live", "live": "https://quiz.tarique.me" },
       { "name": ".notes", "status": "live" },
@@ -27,7 +25,7 @@
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
 
-    "作品": [
+    "*A作品": [
       { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
       { "name": "H", "status": "live", "live":"https://hanslibrary.online" }
     ],
@@ -47,24 +45,27 @@
     ],
 
     "Tutorship": [
-      { "name": "ds", "status": "active" },
+      { "name": "ds", "status": "early" },
       { "name": "da", "status": "active" },
       { "name": "nma", "status": "active" }
     ],
 
-    "Networks": [
+    "Information": [
       { "name": "openindex", "status": "early" },
       { "name": "openarms", "status": "early"}
     ],
 
-    "Software tooling": [
+    "Programming tools": [
       { "name": "designs", "status": "idea" },
       { "name": "framedb", "status": "archived" }
     ],
 
+    "Modeling": [
+      { "name": "arsenal", "status": "idea" },
+      { "name": "shisaku", "status": "idea" }
+    ],
+
     "Software": [ 
-      { "name": "charview", "status": "archived" },
-      { "name": "codeview", "status": "archived" },
       { "name": "sandbox", "status": "archived" },
       { "name": "stackbox", "status": "archived" }
     ],
@@ -85,7 +86,8 @@
       { "name": "powershellprofile", "status": "-" },
       { "name": "obsidianplugins", "status": "-" },
       { "name": "skillissues", "status": "-" },
-      { "name": "jadevinetheme", "status": "-" }
+      { "name": "jadevinetheme", "status": "-" },
+      { "name": "sparklineo", "status": "archived" }
     ]
   },
   "han": {
