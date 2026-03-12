@@ -47,6 +47,8 @@
     .toggle-group .btn{border-radius:0;border:none;border-right:1px solid var(--border);background:transparent;color:var(--text-muted);padding: 6px 12px;font-weight:500;height: 20px;}
     .toggle-group .btn:last-child{border-right:none;}
     .toggle-group .btn.active{background:var(--accent);color:#fff;}
+    .file-type-wrapper{margin-right:8px;display:flex;align-items:center;}
+    .file-type-wrapper select.btn{appearance:none;background:transparent;border:1px solid var(--border);color:var(--text-muted);padding:6px 10px;border-radius:10px;height:22px;font-family:var(--font-mono);cursor:pointer;}
     #lang-badge{font-size:.72rem;background:#7c6af722;color:var(--accent);border:1px solid #7c6af744;padding:4px 10px;border-radius:12px;font-family:var(--font-mono);text-transform:uppercase;}
     #workspace{flex:1;display:flex;overflow:hidden;}
     #editor-panel{display:flex;flex-direction:column;flex:1;overflow:hidden;border-right:1px solid var(--border);}
@@ -101,7 +103,6 @@
 <body>
 <div id="topbar">
   <div id="tabbar" aria-label="Tabs">
-    <div class="tab active" data-index="0" id="tab-0">untitled-1<span class="close" data-index="0" title="Close tab">×</span></div>
     <div class="tab-actions">
       <button id="btn-new" class="btn" title="New (Ctrl+N)">New</button>
       <button id="btn-open" class="btn" title="Open (Ctrl+O)">Open</button>
@@ -110,6 +111,21 @@
 
   <div class="sep"></div>
    
+  <div class="file-type-wrapper">
+    <select id="file-type-select" class="btn" title="Set file type">
+      <option value="">Auto</option>
+      <option value="markdown">Markdown</option>
+      <option value="html">HTML</option>
+      <option value="csv">CSV</option>
+      <option value="json">JSON</option>
+      <option value="xml">XML</option>
+      <option value="yaml">YAML</option>
+      <option value="toml">TOML</option>
+      <option value="code">Code</option>
+      <option value="text">Text</option>
+    </select>
+  </div>
+    
   <div class="toggle-group" id="mode-toggle">
     <button class="btn active" id="btn-code" onclick="setMode('code')" title="Code (Ctrl+1)">Code</button>
     <button class="btn" id="btn-split" onclick="setMode('split')" title="Split (Ctrl+2)">Split</button>
@@ -145,8 +161,8 @@
 </div>
 
 <div id="statusbar" role="status" aria-label="Status">
-  <!-- <span id="file-badge" class="file-badge">No file loaded</span> -->
-  <!-- <span id="lang-badge">—</span> -->
+  <span id="file-badge" class="file-badge">No file loaded</span>
+  <span id="lang-badge">—</span>
   <div class="item">Lines: <b id="stat-lines">0</b></div>
   <div class="item">Chars: <b id="stat-chars">0</b></div>
   <div class="item">Type: <b id="stat-type">—</b></div>
@@ -167,17 +183,17 @@
   let activeTab = 0;
   let untitledCounter = 1;
 
-  function createTab(name = `untitled-${++untitledCounter}`, content = '') {
+  function createTab(name = `untitled-${untitledCounter}`, content = '') {
     const index = tabs.length;
     tabs.push({ name, content, file: null, type: 'text' });
     renderTabs();
     selectTab(index);
+    untitledCounter++;
     return index;
   }
 
   function renderTabs() {
     const tabbar = document.getElementById('tabbar');
-    // remove all existing tab nodes except actions (last child)
     const actions = tabbar.querySelector('.tab-actions');
     tabbar.querySelectorAll('.tab').forEach(n => n.remove());
     tabs.forEach((t, i) => {
@@ -189,24 +205,27 @@
       d.addEventListener('click', () => selectTab(i));
       tabbar.insertBefore(d, actions);
     });
-    // update file-badge
     const active = tabs[activeTab];
-    document.getElementById('file-badge').textContent = active && active.file ? active.file.name : 'No file loaded';
-    document.getElementById('lang-badge').textContent = (active && active.type) ? labelForType(active.type) : '—';
+    if (active) {
+      document.getElementById('file-badge').textContent = active.file ? active.name : 'No file loaded';
+      document.getElementById('lang-badge').textContent = labelForType(active.type);
+    }
   }
 
   function selectTab(i) {
     if (i < 0 || i >= tabs.length) return;
     activeTab = i;
     const t = tabs[i];
-    editor.setValue(t.content || '');
+    if (editor && t.content !== editor.getValue()) {
+        editor.setValue(t.content || '');
+    }
     currentFileName = t.file ? t.file.name : '';
     currentType = t.type || 'text';
     document.getElementById('stat-type').textContent = labelForType(currentType);
     renderTabs();
     updateStats();
     if (currentMode !== 'code') renderPreview();
-    editor.focus();
+    if(editor) editor.focus();
   }
 
   function closeTab(i) {
@@ -220,38 +239,10 @@
     selectTab(activeTab);
   }
 
-  function newTab() {
-    const idx = createTab(`untitled-${untitledCounter+1}`, '');
-    selectTab(idx);
-  }
-
   function labelForType(t) {
     for (const e in typeMap) if (typeMap[e].type === t) return typeMap[e].label || t;
     return t;
   }
-
-  editor = CodeMirror.fromTextArea(document.getElementById('raw-editor'), {
-    theme: 'dracula',
-    lineNumbers: true,
-    lineWrapping: true,
-    tabSize: 2,
-    indentWithTabs: false,
-    autofocus: true,
-    extraKeys: { "Ctrl-Enter": () => renderPreview() }
-  });
-  editor.setSize('100%', '100%');
-
-  editor.on('change', () => {
-    updateStats();
-    tabs[activeTab].content = editor.getValue();
-    clearTimeout(previewDebounce);
-    previewDebounce = setTimeout(() => {
-      if (currentMode !== 'code') {
-        autoDetectTypeIfNeeded();
-        renderPreview();
-      }
-    }, 350);
-  });
 
   const typeMap = {
     md:       { type: 'markdown', cm: 'markdown',   label: 'Markdown' },
@@ -297,7 +288,6 @@
   function autoDetectTypeIfNeeded() {
     const content = editor.getValue();
     const detected = autoDetectTypeFromContent(content);
-    // only auto-assign when tab.type is 'text' or unknown
     if (!tabs[activeTab].type || tabs[activeTab].type === 'text') {
       tabs[activeTab].type = detected;
       currentType = detected;
@@ -313,7 +303,6 @@
   document.getElementById('file-input').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (!file) return;
-    // open as new tab
     const idx = createTab(file.name, '');
     loadFile(file, idx);
     this.value = '';
@@ -376,7 +365,7 @@
     } else if (mode === 'preview') {
       ep.classList.add('hidden');
       pp.classList.remove('hidden');
-    } else { // split
+    } else {
       ep.classList.remove('hidden');
       pp.classList.remove('hidden');
     }
@@ -581,6 +570,7 @@
     tab.content = '';
     tab.file = null;
     tab.type = 'text';
+    tab.name = `untitled-${untitledCounter}`;
     currentFileName = '';
     document.getElementById('file-badge').textContent = 'No file loaded';
     document.getElementById('lang-badge').textContent = '—';
@@ -592,14 +582,13 @@
     toast('Cleared');
   }
 
-  // keyboard shortcuts
   window.addEventListener('keydown', (e) => {
     if (e.ctrlKey && !e.shiftKey && !e.altKey) {
       switch (e.key.toLowerCase()) {
         case '1': e.preventDefault(); setMode('code'); break;
         case '2': e.preventDefault(); setMode('split'); break;
         case '3': e.preventDefault(); setMode('preview'); break;
-        case 'n': e.preventDefault(); newTab(); break;
+        case 'n': e.preventDefault(); createTab(); break;
         case 'o': e.preventDefault(); document.getElementById('file-input').click(); break;
         case 's': e.preventDefault(); downloadFile(); break;
         case 'w': e.preventDefault(); closeTab(activeTab); break;
@@ -613,15 +602,12 @@
     if (e.key === 'F5') { e.preventDefault(); renderPreview(); }
   });
 
-  // UI button wiring
-  document.getElementById('btn-new').addEventListener('click', newTab);
+  document.getElementById('btn-new').addEventListener('click', () => createTab());
   document.getElementById('btn-open').addEventListener('click', () => document.getElementById('file-input').click());
   document.getElementById('btn-copy').addEventListener('click', copyContent);
   document.getElementById('btn-save').addEventListener('click', downloadFile);
   document.getElementById('btn-clear').addEventListener('click', clearAll);
-  document.getElementById('btn-close-tab').addEventListener('click', () => closeTab(activeTab));
 
-  // delegate close clicks on tabs
   document.getElementById('tabbar').addEventListener('click', (e) => {
     const cl = e.target;
     if (cl.classList.contains('close')) {
@@ -630,10 +616,43 @@
     }
   });
 
-  mermaid.initialize({startOnLoad:false,theme:'dark'});
+  document.getElementById('file-type-select').addEventListener('change', (e) => {
+    const type = e.target.value;
+    if (type) {
+      tabs[activeTab].type = type;
+      currentType = type;
+      document.getElementById('stat-type').textContent = labelForType(type);
+      const modeInfo = Object.values(typeMap).find(m => m.type === type);
+      if (modeInfo && modeInfo.cm) editor.setOption('mode', modeInfo.cm);
+      if (currentMode !== 'code') renderPreview();
+    }
+  });
 
-  // initialize one tab and UI
-  createTab('untitled-1', '');
+  editor = CodeMirror.fromTextArea(document.getElementById('raw-editor'), {
+    theme: 'dracula',
+    lineNumbers: true,
+    lineWrapping: true,
+    tabSize: 2,
+    indentWithTabs: false,
+    autofocus: true,
+    extraKeys: { "Ctrl-Enter": () => renderPreview() }
+  });
+  editor.setSize('100%', '100%');
+
+  editor.on('change', () => {
+    updateStats();
+    tabs[activeTab].content = editor.getValue();
+    clearTimeout(previewDebounce);
+    previewDebounce = setTimeout(() => {
+      if (currentMode !== 'code') {
+        autoDetectTypeIfNeeded();
+        renderPreview();
+      }
+    }, 350);
+  });
+
+  mermaid.initialize({startOnLoad:false,theme:'dark'});
+  createTab();
   setMode('code');
   updateStats();
   renderTabs();
