@@ -23,12 +23,12 @@
 |--------|---------|--------|
 | *A作品 | [H](https://github.com/probabilityzero/H) | [live](https://hanslibrary.online) |
 |  | [K](https://github.com/probabilityzero/K) | [live](https://k.hanslibrary.online) |
+|  | [W](https://github.com/probabilityzero/W) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 | *Personal | [.games](https://github.com/probabilityzero/.games) | [live](https://quiz.tarique.me) |
 |  | [.info](https://github.com/probabilityzero/.info) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.notes](https://github.com/probabilityzero/.notes) <img src="assets/icons/lock.png" alt="private" width="14" /> | live |
 |  | [.terminal](https://github.com/probabilityzero/.terminal) <img src="assets/icons/lock.png" alt="private" width="14" /> | [live](https://bash.tarique.me) |
 |  | [probabilityzero](https://github.com/probabilityzero/probabilityzero) | [live](https://probabilityzero.github.io/probabilityzero/projects) |
-|  | [websitehanslabs](https://github.com/probabilityzero/websitehanslabs) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [yearofthesnake](https://github.com/probabilityzero/yearofthesnake) | [live](https://snakecollection.vercel.app/) |
 | Applications | [charview](https://github.com/probabilityzero/charview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
 |  | [codeview](https://github.com/probabilityzero/codeview) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
@@ -39,8 +39,8 @@
 | Intelligence | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [llmcolony](https://github.com/probabilityzero/llmcolony) | archived |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Modeling | [arsenal](https://github.com/probabilityzero/arsenal) | idea |
-|  | [shisaku](https://github.com/probabilityzero/shisaku) | idea |
+| Modeling | [shisaku](https://github.com/probabilityzero/shisaku) | idea |
+|  | [solace](https://github.com/probabilityzero/solace) | idea |
 | Simulations | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
 |  | [moon3d](https://github.com/probabilityzero/moon3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | archived |
