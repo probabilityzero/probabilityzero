@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>File Viewer</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/markdown/markdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/yaml/yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/toml/toml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/sql/sql.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/dracula.min.css"/>
+
+  <style>
+    :root { --bg:#0f0f0f;--surface:#1a1a1a;--surface2:#242424;--border:#333;--accent:#7c6af7;--accent2:#5eead4;--text:#e2e8f0;--text-muted:#94a3b8;--danger:#f87171;--success:#4ade80;--radius:8px;--font-mono:'Cascadia Code','Fira Code','Consolas',monospace;--status-width:220px;--status-height:20px; }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden;padding-bottom:var(--status-height);}
+    #topbar{background:var(--surface);padding:0px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;box-shadow:0 1px 0 rgba(255,255,255,0.02);z-index:5;}
+    #tabbar{display:flex;gap:6px;align-items:center;flex:1;overflow:auto;padding-right:8px;}
+    .tab{padding:8px 12px;border-radius:0px;background:var(--surface2);border:1px solid var(--border);font-family:var(--font-mono);font-size:.86rem;color:var(--text-muted);cursor:pointer;display:inline-flex;gap:8px;align-items:center;}
+    .tab.active{background:var(--border);color:#fff;border-color:transparent;}
+    .tab .close{opacity:.6;margin-left:6px;cursor:pointer;font-weight:700;}
+    .tab-actions{display:flex;gap:6px;align-items:center;margin-left:6px;}
+    .file-badge{background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:.78rem;padding:3px 10px;border-radius:16px;font-family:var(--font-mono);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:6px 10px; height: 22px;border-radius:10px;font-size:.8rem;font-weight:600;cursor:pointer;border:1px solid transparent;transition:all .12s;white-space:nowrap;background:transparent;color:var(--text-muted);}
+    .btn svg{width:16px;height:16px;fill:currentColor;}
+    .btn-primary{background:var(--accent);color:#fff;}
+    .btn-primary:hover{background:#6657e0;}
+    .btn-ghost{background:transparent;color:var(--text-muted);border-color:var(--border);}
+    .btn-ghost:hover{background:var(--surface2);color:var(--text);}
+    .toggle-group{display:flex;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--surface2);}
+    .toggle-group .btn{border-radius:0;border:none;border-right:1px solid var(--border);background:transparent;color:var(--text-muted);padding: 6px 12px;font-weight:500;height: 20px;}
+    .toggle-group .btn:last-child{border-right:none;}
+    .toggle-group .btn.active{background:var(--accent);color:#fff;}
+    #lang-badge{font-size:.72rem;background:#7c6af722;color:var(--accent);border:1px solid #7c6af744;padding:4px 10px;border-radius:12px;font-family:var(--font-mono);text-transform:uppercase;}
+    #workspace{flex:1;display:flex;overflow:hidden;}
+    #editor-panel{display:flex;flex-direction:column;flex:1;overflow:hidden;border-right:1px solid var(--border);}
+    #editor-panel.hidden{display:none;}
+    .CodeMirror{flex:1;height:100% !important;font-family:var(--font-mono) !important;font-size:14px !important;background:#0f0f0f !important;border-radius:0;margin:0;}
+    .CodeMirror-scroll{height:100%;}
+    #cm-wrapper{flex:1;overflow:hidden;display:flex;flex-direction:column;}
+    #preview-panel{flex:1;overflow-y:auto;background:var(--bg);padding:24px 40px;display:flex;flex-direction:column;}
+    #preview-panel.hidden{display:none;}
+    #workspace.split #editor-panel,#workspace.split #preview-panel{flex:1;display:flex;}
+    #workspace.split #preview-panel{border-left:1px solid var(--border);}
+    .md-body{max-width:820px;margin:0 auto;line-height:1.6;color:var(--text);}
+    .md-body h1,.md-body h2,.md-body h3,.md-body h4,.md-body h5,.md-body h6{color:#fff;margin:1.2em 0 .4em;font-weight:700;line-height:1.25;}
+    .md-body p{margin:.6em 0;color:var(--text-muted);}
+    .md-body code{font-family:var(--font-mono);background:#111827;color:#7dd3fc;padding:2px 6px;border-radius:4px;font-size:.88em;}
+    .md-body pre{background:#0b1220;border:1px solid var(--border);border-radius:8px;overflow-x:auto;padding:12px;margin:12px 0;}
+    .md-body table{width:100%;border-collapse:collapse;margin:1em 0;font-size:.92em;}
+    .csv-wrapper{overflow:auto;width:100%;}
+    .csv-table{border-collapse:collapse;font-size:.85rem;font-family:var(--font-mono);width:100%;min-width:max-content;}
+    .csv-table th{background:var(--accent);color:#fff;padding:8px 14px;text-align:left;position:sticky;top:0;white-space:nowrap;}
+    .csv-table td{border:1px solid var(--border);padding:6px 12px;white-space:nowrap;color:var(--text-muted);}
+    .csv-row-num{color:#4b5563;user-select:none;font-size:.75rem;padding-right:10px!important;}
+    .csv-stats{color:var(--text-muted);font-size:.8rem;margin-bottom:10px;font-family:var(--font-mono);}
+    #html-frame{width:100%;height:100%;border:none;background:white;border-radius:8px;}
+    .plain-body{font-family:var(--font-mono);font-size:.87rem;color:var(--text-muted);white-space:pre-wrap;word-break:break-word;line-height:1.6;}
+    .json-body{font-family:var(--font-mono);font-size:.85rem;line-height:1.6;}
+    .json-key{color:#7dd3fc;}
+    .json-str{color:#86efac;}
+    .json-num{color:#fbbf24;}
+    .json-bool{color:#f472b6;}
+    .json-null{color:#94a3b8;}
+    #empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:14px;color:var(--text-muted);width:100%;}
+    #empty-state h2{font-size:1.05rem;font-weight:600;color:var(--text);}
+    #empty-state p{font-size:.88rem;text-align:center;max-width:420px;line-height:1.4;color:var(--text-muted);}
+    .drop-zone{border:2px dashed var(--border);border-radius:12px;padding:24px 30px;text-align:center;cursor:pointer;transition:border-color .12s;background:transparent;}
+    .drop-zone:hover{border-color:var(--accent);}
+    #toolbar{display:flex;gap:8px;align-items:center;padding:10px;border-top:1px solid var(--border);}
+    #statusbar{position:fixed;left:0;right:0;bottom:0;height:var(--status-height);background:transparent;border-top:1px solid var(--border);padding:4px 12px;display:flex;flex-direction:row;gap:8px;justify-content:flex-end;align-items:center;font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);border-radius:0;}
+    #statusbar .item{display:flex;justify-content:flex-end;align-items:center;padding:0 6px;height:var(--status-height);border-radius:6px;background:transparent;border:1px solid transparent;font-size:inherit;}
+    #statusbar .item b{color:var(--accent2);}
+    ::-webkit-scrollbar{width:8px;height:8px;}
+    ::-webkit-scrollbar-track{background:var(--surface);}
+    ::-webkit-scrollbar-thumb{background:#333;border-radius:4px;}
+    ::-webkit-scrollbar-thumb:hover{background:#444;}
+    #file-input{display:none;}
+    #toast{position:fixed;bottom:40px;right:calc(var(--status-width) + 24px);background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 18px;border-radius:10px;font-size:.83rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:99;}
+    #toast.show{opacity:1;}
+    @media (max-width:900px){ body{padding-bottom:12px;} #statusbar{position:static;height:auto;width:100%;border-top:1px solid var(--border);flex-direction:row;justify-content:flex-end;padding:4px 10px;} }
+    #workspace.split #preview-panel #empty-state{align-items:center;justify-content:center;padding:0;}
+  </style>
+</head>
+<body>
+<div id="topbar">
+  <div id="tabbar" aria-label="Tabs">
+    <div class="tab active" data-index="0" id="tab-0">untitled-1<span class="close" data-index="0" title="Close tab">×</span></div>
+    <div class="tab-actions">
+      <button id="btn-new" class="btn" title="New (Ctrl+N)">New</button>
+      <button id="btn-open" class="btn" title="Open (Ctrl+O)">Open</button>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+   
+  <div class="toggle-group" id="mode-toggle">
+    <button class="btn active" id="btn-code" onclick="setMode('code')" title="Code (Ctrl+1)">Code</button>
+    <button class="btn" id="btn-split" onclick="setMode('split')" title="Split (Ctrl+2)">Split</button>
+    <button class="btn" id="btn-preview" onclick="setMode('preview')" title="Preview (Ctrl+3)">Preview</button>
+  </div>
+  <button class="btn btn-ghost" id="btn-copy" title="Copy raw content (Ctrl+C)">Copy</button>
+  <button class="btn btn-ghost" id="btn-save" title="Save (Ctrl+S)">Save</button>
+  <button class="btn btn-ghost" id="btn-clear" title="Clear">Clear</button>
+
+  <input type="file" id="file-input" accept="*/*" style="display:none"/>
+
+</div>
+
+
+<div id="workspace">
+  <div id="editor-panel">
+    <div id="cm-wrapper">
+      <textarea id="raw-editor"></textarea>
+    </div>
+  </div>
+
+  <div id="preview-panel">
+    <div id="empty-state">
+      <h2>Universal File Viewer</h2>
+      <p>Open a file or start typing in the editor. Supports MD, HTML, CSV, JSON, YAML, TOML, SQL, TXT, XML, and more.</p>
+      <div class="drop-zone" onclick="document.getElementById('file-input').click()">
+        <div style="margin-top:8px;font-size:.88rem;color:var(--text-muted)">Click or drop a file here</div>
+      </div>
+    </div>
+    <div id="preview-content" style="display:none;"></div>
+    <iframe id="html-frame" style="display:none;" contenteditable="true" sandbox="allow-same-origin allow-scripts" title="Editable HTML Preview"></iframe>
+  </div>
+</div>
+
+<div id="statusbar" role="status" aria-label="Status">
+  <!-- <span id="file-badge" class="file-badge">No file loaded</span> -->
+  <!-- <span id="lang-badge">—</span> -->
+  <div class="item">Lines: <b id="stat-lines">0</b></div>
+  <div class="item">Chars: <b id="stat-chars">0</b></div>
+  <div class="item">Type: <b id="stat-type">—</b></div>
+  <div class="item">Mode: <b id="stat-mode">Code</b></div>
+  <div id="stat-csv-info" class="item" style="display:none;">Rows: <b id="stat-rows">0</b> · Cols: <b id="stat-cols">0</b></div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+  let currentMode = 'code';
+  let currentType = 'text';
+  let currentFileName = '';
+  let editor;
+  let previewDebounce;
+
+  const tabs = [];
+  let activeTab = 0;
+  let untitledCounter = 1;
+
+  function createTab(name = `untitled-${++untitledCounter}`, content = '') {
+    const index = tabs.length;
+    tabs.push({ name, content, file: null, type: 'text' });
+    renderTabs();
+    selectTab(index);
+    return index;
+  }
+
+  function renderTabs() {
+    const tabbar = document.getElementById('tabbar');
+    // remove all existing tab nodes except actions (last child)
+    const actions = tabbar.querySelector('.tab-actions');
+    tabbar.querySelectorAll('.tab').forEach(n => n.remove());
+    tabs.forEach((t, i) => {
+      const d = document.createElement('div');
+      d.className = 'tab' + (i === activeTab ? ' active' : '');
+      d.dataset.index = i;
+      d.id = `tab-${i}`;
+      d.innerHTML = `${t.name}<span class="close" data-index="${i}" title="Close tab">×</span>`;
+      d.addEventListener('click', () => selectTab(i));
+      tabbar.insertBefore(d, actions);
+    });
+    // update file-badge
+    const active = tabs[activeTab];
+    document.getElementById('file-badge').textContent = active && active.file ? active.file.name : 'No file loaded';
+    document.getElementById('lang-badge').textContent = (active && active.type) ? labelForType(active.type) : '—';
+  }
+
+  function selectTab(i) {
+    if (i < 0 || i >= tabs.length) return;
+    activeTab = i;
+    const t = tabs[i];
+    editor.setValue(t.content || '');
+    currentFileName = t.file ? t.file.name : '';
+    currentType = t.type || 'text';
+    document.getElementById('stat-type').textContent = labelForType(currentType);
+    renderTabs();
+    updateStats();
+    if (currentMode !== 'code') renderPreview();
+    editor.focus();
+  }
+
+  function closeTab(i) {
+    if (tabs.length <= 1) {
+      clearAll();
+      return;
+    }
+    tabs.splice(i,1);
+    if (activeTab >= tabs.length) activeTab = tabs.length - 1;
+    renderTabs();
+    selectTab(activeTab);
+  }
+
+  function newTab() {
+    const idx = createTab(`untitled-${untitledCounter+1}`, '');
+    selectTab(idx);
+  }
+
+  function labelForType(t) {
+    for (const e in typeMap) if (typeMap[e].type === t) return typeMap[e].label || t;
+    return t;
+  }
+
+  editor = CodeMirror.fromTextArea(document.getElementById('raw-editor'), {
+    theme: 'dracula',
+    lineNumbers: true,
+    lineWrapping: true,
+    tabSize: 2,
+    indentWithTabs: false,
+    autofocus: true,
+    extraKeys: { "Ctrl-Enter": () => renderPreview() }
+  });
+  editor.setSize('100%', '100%');
+
+  editor.on('change', () => {
+    updateStats();
+    tabs[activeTab].content = editor.getValue();
+    clearTimeout(previewDebounce);
+    previewDebounce = setTimeout(() => {
+      if (currentMode !== 'code') {
+        autoDetectTypeIfNeeded();
+        renderPreview();
+      }
+    }, 350);
+  });
+
+  const typeMap = {
+    md:       { type: 'markdown', cm: 'markdown',   label: 'Markdown' },
+    markdown: { type: 'markdown', cm: 'markdown',   label: 'Markdown' },
+    html:     { type: 'html',     cm: 'htmlmixed',  label: 'HTML'     },
+    htm:      { type: 'html',     cm: 'htmlmixed',  label: 'HTML'     },
+    xml:      { type: 'xml',      cm: 'xml',        label: 'XML'      },
+    svg:      { type: 'html',     cm: 'xml',        label: 'SVG'      },
+    csv:      { type: 'csv',      cm: 'null',       label: 'CSV'      },
+    tsv:      { type: 'csv',      cm: 'null',       label: 'TSV'      },
+    json:     { type: 'json',     cm: 'javascript', label: 'JSON'     },
+    js:       { type: 'code',     cm: 'javascript', label: 'JS'       },
+    ts:       { type: 'code',     cm: 'javascript', label: 'TS'       },
+    css:      { type: 'code',     cm: 'css',        label: 'CSS'      },
+    py:       { type: 'code',     cm: 'python',     label: 'Python'   },
+    yaml:     { type: 'yaml',     cm: 'yaml',       label: 'YAML'     },
+    yml:      { type: 'yaml',     cm: 'yaml',       label: 'YAML'     },
+    toml:     { type: 'toml',     cm: 'toml',       label: 'TOML'     },
+    sql:      { type: 'code',     cm: 'sql',        label: 'SQL'      },
+    txt:      { type: 'text',     cm: 'null',       label: 'Text'     },
+    log:      { type: 'text',     cm: 'null',       label: 'Log'      },
+  };
+
+  function detectType(filename) {
+    const ext = filename.split('.').pop().toLowerCase();
+    return typeMap[ext] || { type: 'text', cm: 'null', label: ext.toUpperCase() || 'Text' };
+  }
+
+  function autoDetectTypeFromContent(content) {
+    const s = content.trim();
+    if (!s) return 'text';
+    if (/^\s*[{[]/.test(s) && /["'\w]+:/.test(s)) return 'json';
+    if (/^\s*<!doctype html/i.test(s) || /<html[\s>]/i.test(s) || /<body[\s>]/i.test(s)) return 'html';
+    if (/^---\s*[\s\S]+?\n/.test(s) || /^\s*-\s+\w+/.test(s) || /:\s/.test(s) && /[\n\r]/.test(s)) return 'yaml';
+    if (/^\s*\[.*\]\s*$/.test(s) && /=/.test(s)) return 'toml';
+    if (s.indexOf('\n') !== -1 && s.split('\n')[0].split(',').length > 1 && /,/.test(s)) return 'csv';
+    if (/^<\?xml/.test(s) || /^<\w+/.test(s)) return 'xml';
+    if (/^#{1,6}\s+/.test(s) || /\*\*.+\*\*/.test(s) || /\[.*\]\(.+\)/.test(s)) return 'markdown';
+    if (/\bselect\b|\binsert\b|\bupdate\b|\bdelete\b/i.test(s) && /;/.test(s)) return 'code';
+    return 'text';
+  }
+
+  function autoDetectTypeIfNeeded() {
+    const content = editor.getValue();
+    const detected = autoDetectTypeFromContent(content);
+    // only auto-assign when tab.type is 'text' or unknown
+    if (!tabs[activeTab].type || tabs[activeTab].type === 'text') {
+      tabs[activeTab].type = detected;
+      currentType = detected;
+      document.getElementById('stat-type').textContent = labelForType(detected);
+      const mode = (function getModeForType(type){
+        for (const e in typeMap) if (typeMap[e].type === type && typeMap[e].cm && typeMap[e].cm !== 'null') return typeMap[e].cm;
+        return 'text/plain';
+      })(currentType);
+      editor.setOption('mode', mode);
+    }
+  }
+
+  document.getElementById('file-input').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    // open as new tab
+    const idx = createTab(file.name, '');
+    loadFile(file, idx);
+    this.value = '';
+  });
+
+  window.addEventListener('dragover', e => { e.preventDefault(); });
+  window.addEventListener('drop', e => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      const idx = createTab(file.name, '');
+      loadFile(file, idx);
+    }
+  });
+
+  function loadFile(file, tabIndex = activeTab) {
+    const info = detectType(file.name);
+    tabs[tabIndex].file = file;
+    tabs[tabIndex].name = file.name;
+    tabs[tabIndex].type = info.type;
+    if (tabIndex === activeTab) {
+      currentType = info.type;
+      document.getElementById('stat-type').textContent = info.label;
+      document.getElementById('lang-badge').textContent = info.label;
+      document.getElementById('file-badge').textContent = file.name;
+      if (info.cm && info.cm !== 'null') editor.setOption('mode', info.cm);
+      else editor.setOption('mode', 'text/plain');
+    }
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      tabs[tabIndex].content = ev.target.result;
+      if (tabIndex === activeTab) {
+        editor.setValue(ev.target.result);
+        editor.clearHistory();
+        updateStats();
+        hideEmptyState();
+        if (currentMode !== 'code') renderPreview();
+        toast(`Loaded: ${file.name}`);
+      }
+      renderTabs();
+    };
+    reader.readAsText(file);
+  }
+
+  function setMode(mode) {
+    currentMode = mode;
+    const ep = document.getElementById('editor-panel');
+    const pp = document.getElementById('preview-panel');
+    const ws = document.getElementById('workspace');
+
+    document.getElementById('btn-code').classList.toggle('active',    mode === 'code');
+    document.getElementById('btn-split').classList.toggle('active',   mode === 'split');
+    document.getElementById('btn-preview').classList.toggle('active', mode === 'preview');
+
+    ws.className = mode === 'split' ? 'split' : '';
+
+    if (mode === 'code') {
+      ep.classList.remove('hidden');
+      pp.classList.add('hidden');
+    } else if (mode === 'preview') {
+      ep.classList.add('hidden');
+      pp.classList.remove('hidden');
+    } else { // split
+      ep.classList.remove('hidden');
+      pp.classList.remove('hidden');
+    }
+
+    document.getElementById('stat-mode').textContent =
+      mode.charAt(0).toUpperCase() + mode.slice(1);
+
+    if (mode !== 'code') {
+      autoDetectTypeIfNeeded();
+      renderPreview();
+    }
+    editor.refresh();
+  }
+
+  function renderPreview() {
+    const content   = editor.getValue();
+    const previewEl = document.getElementById('preview-content');
+    const frameEl   = document.getElementById('html-frame');
+
+    previewEl.style.display = 'none';
+    frameEl.style.display   = 'none';
+    hideEmptyState();
+
+    if (!content.trim()) { showEmptyState(); return; }
+
+    switch (tabs[activeTab].type || currentType) {
+      case 'markdown': renderMarkdown(content, previewEl); break;
+      case 'html':     renderHTML(content, frameEl);       break;
+      case 'csv':      renderCSV(content, previewEl);      break;
+      case 'json':     renderJSON(content, previewEl);     break;
+      case 'xml':      renderXML(content, previewEl);      break;
+      case 'yaml':
+      case 'toml':
+      case 'code':
+      case 'text':
+      default:         renderText(content, previewEl);     break;
+    }
+  }
+
+  function renderMarkdown(content, el) {
+    marked.setOptions({
+      gfm: true,
+      breaks: true,
+      highlight: function(code, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          return hljs.highlight(code, { language: lang }).value;
+        }
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
+    let html = marked.parse(content);
+    html = html.replace(/<li>\[(x| )\]/g, (m, c) =>
+      `<li><input type="checkbox" ${c==='x'?'checked':''} disabled>`
+    );
+
+    el.innerHTML = `<div class="md-body">${html}</div>`;
+    el.style.display = 'block';
+
+    el.querySelectorAll('pre code').forEach(b => hljs.highlightElement(b));
+
+    if (window.renderMathInElement) {
+      renderMathInElement(el, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ],
+        throwOnError: false
+      });
+    }
+
+    el.querySelectorAll('code.language-mermaid').forEach(codeEl => {
+      const pre = codeEl.parentElement;
+      const div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = codeEl.textContent;
+      pre.replaceWith(div);
+    });
+    if (window.mermaid) mermaid.run({ querySelector: '.mermaid' });
+  }
+
+  function renderHTML(content, frame) {
+    const blob = new Blob([content], { type: 'text/html' });
+    const url  = URL.createObjectURL(blob);
+    frame.src  = url;
+    frame.style.display = 'block';
+  }
+
+  function renderCSV(content, el) {
+    const result = Papa.parse(content.trim(), {
+      header: true,
+      skipEmptyLines: true,
+      dynamicTyping: true
+    });
+    const cols = result.meta.fields || [];
+    const rows = result.data;
+
+    document.getElementById('stat-csv-info').style.display = 'inline';
+    document.getElementById('stat-rows').textContent = rows.length;
+    document.getElementById('stat-cols').textContent = cols.length;
+
+    let html = `<div class="csv-stats">${rows.length} rows × ${cols.length} columns</div>`;
+    html += `<div class="csv-wrapper"><table class="csv-table"><thead><tr>`;
+    html += `<th class="csv-row-num">#</th>`;
+    cols.forEach(c => html += `<th>${escHtml(String(c))}</th>`);
+    html += `</tr></thead><tbody>`;
+    rows.forEach((row, i) => {
+      html += `<tr><td class="csv-row-num">${i+1}</td>`;
+      cols.forEach(c => html += `<td>${escHtml(String(row[c] ?? ''))}</td>`);
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+    el.innerHTML = html;
+    el.style.display = 'block';
+  }
+
+  function renderJSON(content, el) {
+    try {
+      const obj = JSON.parse(content);
+      el.innerHTML = `<div class="md-body"><pre><code class="json-body">${syntaxHighlightJSON(obj)}</code></pre></div>`;
+    } catch(e) {
+      el.innerHTML = `<div class="md-body"><p style="color:var(--danger)">Invalid JSON: ${escHtml(e.message)}</p><pre class="plain-body">${escHtml(content)}</pre></div>`;
+    }
+    el.style.display = 'block';
+  }
+
+  function syntaxHighlightJSON(obj) {
+    return JSON.stringify(obj, null, 2)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, m => {
+        let cls = 'json-num';
+        if (/^"/.test(m)) cls = /:$/.test(m) ? 'json-key' : 'json-str';
+        else if (/true|false/.test(m)) cls = 'json-bool';
+        else if (/null/.test(m)) cls = 'json-null';
+        return `<span class="${cls}">${m}</span>`;
+      });
+  }
+
+  function renderXML(content, el) {
+    const pre = document.createElement('pre');
+    const code = document.createElement('code');
+    code.className = 'language-xml';
+    code.textContent = content;
+    pre.appendChild(code);
+    el.innerHTML = `<div class="md-body"></div>`;
+    el.querySelector('.md-body').appendChild(pre);
+    hljs.highlightElement(code);
+    el.style.display = 'block';
+  }
+
+  function renderText(content, el) {
+    el.innerHTML = `<div class="md-body"><pre class="plain-body">${escHtml(content)}</pre></div>`;
+    el.style.display = 'block';
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function hideEmptyState() {
+    document.getElementById('empty-state').style.display = 'none';
+  }
+  function showEmptyState() {
+    document.getElementById('empty-state').style.display = 'flex';
+    document.getElementById('preview-content').style.display = 'none';
+    document.getElementById('html-frame').style.display = 'none';
+    document.getElementById('stat-csv-info').style.display = 'none';
+  }
+
+  function updateStats() {
+    const val = editor.getValue();
+    document.getElementById('stat-lines').textContent = val.split('\n').length;
+    document.getElementById('stat-chars').textContent = val.length;
+  }
+
+  function toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+  }
+
+  function copyContent() {
+    navigator.clipboard.writeText(editor.getValue()).then(() => toast('Copied to clipboard!'));
+  }
+
+  function downloadFile() {
+    const content = editor.getValue();
+    const tab = tabs[activeTab];
+    const name = tab.file ? tab.file.name : (tab.name || 'untitled.txt');
+    const blob = new Blob([content], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    a.click();
+    toast(`Saved: ${name}`);
+  }
+
+  function clearAll() {
+    editor.setValue('');
+    const tab = tabs[activeTab];
+    tab.content = '';
+    tab.file = null;
+    tab.type = 'text';
+    currentFileName = '';
+    document.getElementById('file-badge').textContent = 'No file loaded';
+    document.getElementById('lang-badge').textContent = '—';
+    document.getElementById('stat-type').textContent = '—';
+    document.getElementById('stat-csv-info').style.display = 'none';
+    editor.setOption('mode', 'text/plain');
+    showEmptyState();
+    updateStats();
+    toast('Cleared');
+  }
+
+  // keyboard shortcuts
+  window.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && !e.shiftKey && !e.altKey) {
+      switch (e.key.toLowerCase()) {
+        case '1': e.preventDefault(); setMode('code'); break;
+        case '2': e.preventDefault(); setMode('split'); break;
+        case '3': e.preventDefault(); setMode('preview'); break;
+        case 'n': e.preventDefault(); newTab(); break;
+        case 'o': e.preventDefault(); document.getElementById('file-input').click(); break;
+        case 's': e.preventDefault(); downloadFile(); break;
+        case 'w': e.preventDefault(); closeTab(activeTab); break;
+        case '\t': 
+          e.preventDefault();
+          if (e.shiftKey) selectTab((activeTab-1+tabs.length)%tabs.length);
+          else selectTab((activeTab+1)%tabs.length);
+          break;
+      }
+    }
+    if (e.key === 'F5') { e.preventDefault(); renderPreview(); }
+  });
+
+  // UI button wiring
+  document.getElementById('btn-new').addEventListener('click', newTab);
+  document.getElementById('btn-open').addEventListener('click', () => document.getElementById('file-input').click());
+  document.getElementById('btn-copy').addEventListener('click', copyContent);
+  document.getElementById('btn-save').addEventListener('click', downloadFile);
+  document.getElementById('btn-clear').addEventListener('click', clearAll);
+  document.getElementById('btn-close-tab').addEventListener('click', () => closeTab(activeTab));
+
+  // delegate close clicks on tabs
+  document.getElementById('tabbar').addEventListener('click', (e) => {
+    const cl = e.target;
+    if (cl.classList.contains('close')) {
+      const idx = Number(cl.dataset.index);
+      closeTab(idx);
+    }
+  });
+
+  mermaid.initialize({startOnLoad:false,theme:'dark'});
+
+  // initialize one tab and UI
+  createTab('untitled-1', '');
+  setMode('code');
+  updateStats();
+  renderTabs();
+</script>
+</body>
+</html>

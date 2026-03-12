@@ -20,13 +20,13 @@
       { "name": ".games", "status": "live", "live": "https://quiz.tarique.me" },
       { "name": ".notes", "status": "live" },
       { "name": ".terminal", "status": "live", "live":"https://bash.tarique.me" },
-      { "name": "websitehanslabs", "status": "archived" },
       { "name": "yearofthesnake", "status": "live", "live": "https://snakecollection.vercel.app/" },
       { "name": "probabilityzero", "status": "live", "live": "https://probabilityzero.github.io/probabilityzero/projects" }
     ],
 
     "*A作品": [
       { "name": "K", "status": "live", "live":"https://k.hanslibrary.online" },
+      { "name": "W", "status": "archived" },
       { "name": "H", "status": "live", "live":"https://hanslibrary.online" }
     ],
 
@@ -61,7 +61,7 @@
     ],
 
     "Modeling": [
-      { "name": "arsenal", "status": "idea" },
+      { "name": "solace", "status": "idea" },
       { "name": "shisaku", "status": "idea" }
     ],
 
