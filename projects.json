@@ -62,7 +62,8 @@
 
     "Modeling": [
       { "name": "solace", "status": "idea" },
-      { "name": "shisaku", "status": "idea" }
+      { "name": "quelor", "status": "idea" },
+      { "name": "quetek", "status": "idea" }
     ],
 
     "Software": [ 
