@@ -39,7 +39,8 @@
 | Intelligence | [lessontube](https://github.com/probabilityzero/lessontube) | failed |
 |  | [llmcolony](https://github.com/probabilityzero/llmcolony) | archived |
 |  | [telegramllmbot](https://github.com/probabilityzero/telegramllmbot) | [successful](https://t.me/hansuserbot) |
-| Modeling | [shisaku](https://github.com/probabilityzero/shisaku) | idea |
+| Modeling | [quelor](https://github.com/probabilityzero/quelor) | idea |
+|  | [quetek](https://github.com/probabilityzero/quetek) | idea |
 |  | [solace](https://github.com/probabilityzero/solace) | idea |
 | Simulations | [astronomy](https://github.com/probabilityzero/astronomy) | successful |
 |  | [mash3d](https://github.com/probabilityzero/mash3d) <img src="assets/icons/lock.png" alt="private" width="14" /> | successful |
